@@ -1,11 +1,14 @@
 import { getNeighbors } from "./briefs.js";
+import { getHomeContent } from "./homeContent.js";
 import { localizeConfidence, t } from "./i18n.js";
+import { renderKnowledgeNetwork } from "./knowledge/index.js";
 import {
   buildBriefPath,
   buildHomePath,
   DEFAULT_SLUG,
   SUPPORTED_LOCALES,
 } from "./router.js";
+import { renderValidationLayer } from "./validation/renderLayer.js";
 
 export function renderApp({
   locale,
@@ -16,19 +19,21 @@ export function renderApp({
   cards,
   unavailable,
   fallbackLocale,
+  validationLayer = null,
 }) {
   const ui = t(locale);
   const htmlLang = locale === "zh" ? "zh-Hans" : "en";
 
   if (type === "home") {
+    const home = getHomeContent(locale);
     return {
       htmlLang,
-      title: `${ui.brand} — ${ui.collectionTitle}`,
-      description: ui.homeLede,
+      title: home.documentTitle,
+      description: home.documentDescription,
       body: `
         ${renderChrome({ locale, ui, productId: null, pathnameSlug: null, page: "home" })}
         <main id="main" class="home">
-          ${renderHomeIntro(ui)}
+          ${renderHomeStory(home)}
           <section class="collection" aria-labelledby="collection-title">
             ${renderCollection(cards ?? [], locale, ui)}
           </section>
@@ -104,6 +109,8 @@ export function renderApp({
           ${renderMatters(data, ui)}
           ${renderBeneficiaries(data, ui, locale)}
           ${renderReality(data, ui)}
+          ${renderValidationLayer(validationLayer, ui)}
+          ${renderKnowledgeNetwork(slug, locale)}
           ${renderBottom(data, ui)}
           ${renderSources(data, ui)}
           ${renderBriefNav(locale, slug, ui)}
@@ -146,27 +153,59 @@ function renderLangSwitch(locale, slug, ui, page) {
   `;
 }
 
-function renderHomeIntro(ui) {
-  const pillars = ui.homePillars
+function renderHomeStory(home) {
+  const principles = home.principles
     .map(
-      (pillar) => `
-      <li class="home-pillars__item">
-        <h3 class="home-pillars__title">${escapeHtml(pillar.title)}</h3>
-        <p class="home-pillars__text">${escapeHtml(pillar.text)}</p>
+      (item, index) => `
+      <li class="home-principles__item">
+        <p class="home-principles__index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</p>
+        <h3 class="home-principles__title">${escapeHtml(item.title)}</h3>
+        <p class="home-principles__text">${escapeHtml(item.text)}</p>
+      </li>`,
+    )
+    .join("");
+
+  const steps = home.methodSteps
+    .map(
+      (step) => `
+      <li class="home-method__item">
+        <h3 class="home-method__title">${escapeHtml(step.title)}</h3>
+        <p class="home-method__text">${escapeHtml(step.text)}</p>
       </li>`,
     )
     .join("");
 
   return `
     <header class="home-hero">
-      <p class="home-hero__eyebrow">${escapeHtml(ui.homeEyebrow)}</p>
-      <h1 class="home-hero__headline">${escapeHtml(ui.homeHeadline)}</h1>
-      <p class="home-hero__lede">${escapeHtml(ui.homeLede)}</p>
-      <section class="home-pillars" aria-label="${escapeAttr(ui.homePillarsTitle)}">
-        <h2 class="home-pillars__heading">${escapeHtml(ui.homePillarsTitle)}</h2>
-        <ol class="home-pillars__list">${pillars}</ol>
-      </section>
+      <p class="home-hero__eyebrow">${escapeHtml(home.eyebrow)}</p>
+      <h1 class="home-hero__brand">${escapeHtml(home.brand)}</h1>
+      <p class="home-hero__lede">${escapeHtml(home.lede)}</p>
+      <p class="home-hero__trust">${escapeHtml(home.trust)}</p>
     </header>
+
+    <section class="home-section home-section--why" aria-labelledby="home-why-title">
+      <h2 id="home-why-title" class="home-section__title">${escapeHtml(home.whyTitle)}</h2>
+      <div class="home-section__body">
+        <p>${escapeHtml(home.whyBody)}</p>
+        <p>${escapeHtml(home.whyClose)}</p>
+      </div>
+    </section>
+
+    <section class="home-section home-section--principles" aria-labelledby="home-principles-title">
+      <div class="home-section__intro">
+        <h2 id="home-principles-title" class="home-section__title">${escapeHtml(home.principlesTitle)}</h2>
+        <p class="home-section__lede">${escapeHtml(home.principlesLede)}</p>
+      </div>
+      <ol class="home-principles__list">${principles}</ol>
+    </section>
+
+    <section class="home-section home-section--method" aria-labelledby="home-method-title">
+      <div class="home-section__intro">
+        <h2 id="home-method-title" class="home-section__title">${escapeHtml(home.methodTitle)}</h2>
+        <p class="home-section__lede">${escapeHtml(home.methodLede)}</p>
+      </div>
+      <ol class="home-method__list">${steps}</ol>
+    </section>
   `;
 }
 

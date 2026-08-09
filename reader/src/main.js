@@ -8,6 +8,7 @@ import {
   SUPPORTED_LOCALES,
   switchLocalePath,
 } from "./router.js";
+import { buildValidationLayer } from "./validation/index.js";
 
 const root = document.getElementById("app");
 
@@ -84,6 +85,7 @@ function mount() {
         brief: parsed.brief,
         productId: extractProductId(parsed.brief.meta.product),
         cards: null,
+        validationLayer: buildValidationLayer(route.slug),
       }),
     );
     return;
