@@ -15,7 +15,7 @@ export const KN_LABELS = {
   },
   zh: {
     title: "知识网络",
-    lede: "点击标签查看关联简报。",
+    lede: "点标签，看相关简报。",
     relatedTitle: "相关",
     conceptsTitle: "概念",
     companyTitle: "公司",

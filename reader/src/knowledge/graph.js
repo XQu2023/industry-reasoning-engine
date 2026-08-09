@@ -12,7 +12,7 @@ export const BRIEF_NODES = {
     productId: "DB-001",
     title: {
       en: "NVIDIA Moves AI Computing From the Chip to the Rack",
-      zh: "英伟达把 AI 计算从芯片推到机架",
+      zh: "英伟达把 AI 算力从芯片推进到机柜",
     },
     company: ["NVIDIA", "TSMC"],
     technology: ["Blackwell", "NVLink", "NVSwitch", "rack-scale AI"],

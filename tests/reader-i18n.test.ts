@@ -95,10 +95,10 @@ describe("reader UI i18n", () => {
   it("ships Chinese unavailable notice without inviting mixed body", () => {
     assert.equal(
       t("zh").localeUnavailableBody,
-      "中文版正在整理中，请切换至英文阅读完整内容。",
+      "中文版还在准备。请先用英文阅读全文。",
     );
-    assert.equal(t("zh").switchToEnglish, "切换至英文");
-    assert.equal(t("zh").cardPendingTitle, "中文版整理中");
+    assert.equal(t("zh").switchToEnglish, "改用英文");
+    assert.equal(t("zh").cardPendingTitle, "中文版准备中");
     assert.equal(t("zh").briefNavLabel, "简报导航");
   });
 });
