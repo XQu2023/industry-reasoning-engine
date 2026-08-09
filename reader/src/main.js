@@ -46,27 +46,59 @@ function mount() {
 
   if (route.type === "brief" && route.slug) {
     const parsed = loadParsedBrief(route.slug, locale);
-    const view = renderApp({
-      locale,
-      type: parsed ? "brief" : "notfound",
-      slug: route.slug,
-      brief: parsed?.brief ?? null,
-      productId: parsed ? extractProductId(parsed.brief.meta.product) : null,
-      cards: null,
-    });
-    applyView(view);
+    if (!parsed) {
+      applyView(
+        renderApp({
+          locale,
+          type: "notfound",
+          slug: route.slug,
+          brief: null,
+          productId: null,
+          cards: null,
+        }),
+      );
+      return;
+    }
+
+    if (parsed.unavailable) {
+      applyView(
+        renderApp({
+          locale,
+          type: "locale-unavailable",
+          slug: route.slug,
+          brief: null,
+          productId: extractProductId(parsed.meta?.product) ?? route.slug.toUpperCase(),
+          cards: null,
+          unavailable: true,
+          fallbackLocale: parsed.fallbackLocale || "en",
+        }),
+      );
+      return;
+    }
+
+    applyView(
+      renderApp({
+        locale,
+        type: "brief",
+        slug: route.slug,
+        brief: parsed.brief,
+        productId: extractProductId(parsed.brief.meta.product),
+        cards: null,
+      }),
+    );
     return;
   }
 
-  const view = renderApp({
-    locale,
-    type: "notfound",
-    slug: route.slug,
-    brief: null,
-    productId: null,
-    cards: null,
-  });
-  applyView(view);
+  applyView(
+    renderApp({
+      locale,
+      type: "notfound",
+      slug: route.slug,
+      brief: null,
+      productId: null,
+      cards: null,
+    }),
+  );
 }
 
 function applyView(view) {

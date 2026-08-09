@@ -1,4 +1,4 @@
-/** UI chrome strings only. Brief body comes from locale .md files. */
+/** UI chrome strings only. Brief body comes from authored locale .md files. */
 
 export const UI = {
   en: {
@@ -7,12 +7,35 @@ export const UI = {
     readerMeta: "Reader",
     productLabel: "Decision Brief",
     collectionTitle: "Founding Collection",
-    collectionLede: "Ten Decision Briefs derived from completed Strategic Research Reports. Read-only. Not financial advice.",
+    homeEyebrow: "Public Beta",
+    homeHeadline: "Strategic research you can verify.",
+    homeLede:
+      "Research OS turns first-party evidence into Decision Briefs—clear on what changed, where value is moving, and what remains Unknown.",
+    homePillarsTitle: "Why it is different",
+    homePillars: [
+      {
+        title: "Primary sources only",
+        text: "Every brief is derived from completed first-party research. No secondhand narrative as foundation.",
+      },
+      {
+        title: "Evidence, then judgment",
+        text: "Facts stay separate from inference. Confidence is labeled. Unknown stays Unknown.",
+      },
+      {
+        title: "Trust before growth",
+        text: "No investment advice. No price targets. Validation over time is part of the system.",
+      },
+    ],
+    collectionEyebrow: "Founding Collection",
+    collectionLede:
+      "Ten Decision Briefs from completed Strategic Research Reports. Read-only. Not financial advice.",
     cardCategory: "Category",
     cardPublished: "Published",
     cardReadTime: "Read time",
     cardConfidence: "Confidence",
     cardLanguage: "Language",
+    cardPendingTitle: "Chinese edition in preparation",
+    translationPending: "Translation in preparation",
     previousBrief: "Previous Brief",
     nextBrief: "Next Brief",
     backToCollection: "Back to Collection",
@@ -54,32 +77,69 @@ export const UI = {
       developerTools: "Developer Tools",
       dataPlatforms: "Data Platforms",
     },
+    confidence: {
+      Medium: "Medium",
+      Low: "Low",
+      High: "High",
+      "—": "—",
+    },
     valueFlowLabel: "Value flow diagram",
     beneficiariesLabel: "Potential beneficiaries",
     parentResearch: "Parent research:",
     underlyingSource: "Underlying official source (P0 only, via parent SRE):",
-    footer: "Decision Brief Reader · Founding Collection · Read-only · Not financial advice",
+    footer: "Research OS · Founding Collection · Read-only · Not financial advice",
     notFound: "Brief not found.",
+    localeUnavailableTitle: "This language edition is not ready yet",
+    localeUnavailableBody:
+      "The Chinese edition is being prepared. Switch to English to read the full brief.",
+    localeUnavailableBodyGeneric:
+      "This language edition is being prepared. Switch to English to read the full brief.",
+    switchToEnglish: "Read in English",
     langEn: "EN",
     langZh: "中文",
     langSwitcher: "Language",
+    siteBarLabel: "Site",
+    briefNavLabel: "Brief navigation",
+    readingTimeFallback: "~5 minutes",
   },
   zh: {
     skipLink: "跳到内容",
     brand: "Research OS",
     readerMeta: "阅读器",
-    productLabel: "Decision Brief",
-    collectionTitle: "Founding Collection",
-    collectionLede: "十份由已完成战略研究报告派生的 Decision Brief。只读。不构成投资建议。",
+    productLabel: "决策简报",
+    collectionTitle: "创始合集",
+    homeEyebrow: "公开测试",
+    homeHeadline: "可核验的战略研究。",
+    homeLede:
+      "Research OS 把第一方证据写成决策简报——说清楚发生了什么、价值向何处迁移，以及哪些仍属未知（Unknown）。",
+    homePillarsTitle: "为何不同",
+    homePillars: [
+      {
+        title: "仅用第一方来源",
+        text: "每一份简报都派生自已完成的第一方研究，不以二手叙事作为基础。",
+      },
+      {
+        title: "先证据，后判断",
+        text: "事实与推断分开。置信度有标注。未知即保持 Unknown。",
+      },
+      {
+        title: "信任先于增长",
+        text: "不构成投资建议，无目标价。随时间验证是系统的一部分。",
+      },
+    ],
+    collectionEyebrow: "创始合集",
+    collectionLede: "十份源自已完成战略研究报告的决策简报。只读。不构成投资建议。",
     cardCategory: "类别",
     cardPublished: "发布日期",
     cardReadTime: "阅读时长",
     cardConfidence: "置信度",
     cardLanguage: "语言",
+    cardPendingTitle: "中文版整理中",
+    translationPending: "整理中",
     previousBrief: "上一篇",
     nextBrief: "下一篇",
     backToCollection: "返回合集",
-    readerPromiseTitle: "每一份 Decision Brief",
+    readerPromiseTitle: "每一份决策简报",
     readerPromise: [
       "仅基于第一方来源",
       "区分证据与推断",
@@ -117,18 +177,46 @@ export const UI = {
       developerTools: "开发者工具",
       dataPlatforms: "数据平台",
     },
+    confidence: {
+      Medium: "中等",
+      Low: "低",
+      High: "高",
+      "—": "—",
+    },
     valueFlowLabel: "价值流图",
     beneficiariesLabel: "潜在受益者",
     parentResearch: "上级研究：",
     underlyingSource: "底层官方来源（仅 P0，经由上级 SRE）：",
-    footer: "Decision Brief Reader · Founding Collection · 只读 · 不构成投资建议",
+    footer: "Research OS · 创始合集 · 只读 · 不构成投资建议",
     notFound: "未找到该简报。",
+    localeUnavailableTitle: "中文版正在整理中",
+    localeUnavailableBody: "中文版正在整理中，请切换至英文阅读完整内容。",
+    localeUnavailableBodyGeneric: "该语言版本正在整理中，请切换至英文阅读完整内容。",
+    switchToEnglish: "切换至英文",
     langEn: "EN",
     langZh: "中文",
     langSwitcher: "语言",
+    siteBarLabel: "站点",
+    briefNavLabel: "简报导航",
+    readingTimeFallback: "约 5 分钟",
   },
 };
 
 export function t(locale) {
   return UI[locale] ?? UI.en;
+}
+
+export function localizeConfidence(value, locale) {
+  const ui = t(locale);
+  const key = String(value ?? "").trim() || "—";
+  return ui.confidence[key] ?? key;
+}
+
+export function localizeReadingTime(value, locale) {
+  if (locale !== "zh") return value || t("en").readingTimeFallback;
+  if (!value) return t("zh").readingTimeFallback;
+  const match = String(value).match(/(\d+)/);
+  if (match) return `约 ${match[1]} 分钟`;
+  if (/分钟/.test(value)) return value;
+  return t("zh").readingTimeFallback;
 }

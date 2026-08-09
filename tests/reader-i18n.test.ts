@@ -81,13 +81,25 @@ describe("reader routing", () => {
 });
 
 describe("reader UI i18n", () => {
-  it("ships English and Chinese chrome strings for the collection", () => {
+  it("ships homepage and collection chrome for Public Beta", () => {
     assert.equal(t("en").collectionTitle, "Founding Collection");
-    assert.equal(t("zh").collectionTitle, "Founding Collection");
-    assert.equal(t("en").backToCollection, "Back to Collection");
-    assert.equal(t("zh").backToCollection, "返回合集");
+    assert.equal(t("zh").collectionTitle, "创始合集");
+    assert.ok(t("en").homeHeadline.length > 0);
+    assert.ok(t("zh").homeHeadline.length > 0);
+    assert.equal(t("en").homePillars.length, 3);
+    assert.equal(t("zh").homePillars.length, 3);
     assert.equal(UI.en.langEn, "EN");
     assert.equal(UI.zh.langZh, "中文");
+  });
+
+  it("ships Chinese unavailable notice without inviting mixed body", () => {
+    assert.equal(
+      t("zh").localeUnavailableBody,
+      "中文版正在整理中，请切换至英文阅读完整内容。",
+    );
+    assert.equal(t("zh").switchToEnglish, "切换至英文");
+    assert.equal(t("zh").cardPendingTitle, "中文版整理中");
+    assert.equal(t("zh").briefNavLabel, "简报导航");
   });
 });
 

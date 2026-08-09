@@ -9,6 +9,7 @@ import db007en from "../briefs/DB-007-GitHub-Copilot.en.md?raw";
 import db008en from "../briefs/DB-008-AMD-MI300.en.md?raw";
 import db009en from "../briefs/DB-009-Anthropic-Claude-API.en.md?raw";
 import db010en from "../briefs/DB-010-Databricks-Lakehouse.en.md?raw";
+import { localizeReadingTime, t } from "./i18n.js";
 import { parseBriefMarkdown } from "./parseBrief.js";
 
 /** Category keys map to i18n labels. Confidence from parent SRE standing. */
@@ -85,23 +86,49 @@ export function availableLocales(slug) {
   return Object.keys(entry);
 }
 
+export function hasLocale(slug, locale) {
+  return Boolean(BRIEF_FILES[slug]?.[locale]);
+}
+
+/**
+ * Load authored markdown for a locale.
+ * Never silently falls back to another language body.
+ */
 export function loadBriefMarkdown(slug, locale) {
   const entry = BRIEF_FILES[slug];
   if (!entry) return null;
-  const localized = entry[locale] ?? entry.en;
-  if (!localized) return null;
+  if (!entry[locale]) {
+    return {
+      slug,
+      locale,
+      unavailable: true,
+      availableLocales: Object.keys(entry),
+      fallbackLocale: entry.en ? "en" : Object.keys(entry)[0],
+    };
+  }
   return {
     slug,
-    locale: entry[locale] ? locale : "en",
-    contentLocale: entry[locale] ? locale : "en",
-    file: localized.file,
-    markdown: localized.markdown,
+    locale,
+    unavailable: false,
+    contentLocale: locale,
+    file: entry[locale].file,
+    markdown: entry[locale].markdown,
+    availableLocales: Object.keys(entry),
   };
 }
 
 export function loadParsedBrief(slug, locale) {
   const loaded = loadBriefMarkdown(slug, locale);
   if (!loaded) return null;
+  if (loaded.unavailable) {
+    const en = entryEnglishMeta(slug);
+    return {
+      ...loaded,
+      brief: null,
+      catalog: getCatalogEntry(slug),
+      meta: en,
+    };
+  }
   return {
     ...loaded,
     brief: parseBriefMarkdown(loaded.markdown),
@@ -109,21 +136,41 @@ export function loadParsedBrief(slug, locale) {
   };
 }
 
-/** Build Founding Collection cards from parsed brief metadata. */
+function entryEnglishMeta(slug) {
+  const entry = BRIEF_FILES[slug];
+  if (!entry?.en) return null;
+  const brief = parseBriefMarkdown(entry.en.markdown);
+  return {
+    product: brief.meta.product,
+    t0: brief.meta.t0,
+    readingTime: brief.meta.readingTime,
+    titleEn: brief.title,
+  };
+}
+
+/** Build Founding Collection cards. Titles never mix languages. */
 export function listCollectionCards(locale) {
+  const ui = t(locale);
   return CATALOG.map((entry) => {
-    const parsed = loadParsedBrief(entry.slug, locale);
-    const brief = parsed?.brief;
     const locales = availableLocales(entry.slug);
+    const hasRequested = hasLocale(entry.slug, locale);
+    const sourceLocale = hasRequested ? locale : "en";
+    const parsed = loadParsedBrief(entry.slug, sourceLocale);
+    const brief = parsed?.brief;
+    const productId = extractProductId(brief?.meta?.product) ?? entry.slug.toUpperCase();
+
     return {
       slug: entry.slug,
-      productId: extractProductId(brief?.meta?.product) ?? entry.slug.toUpperCase(),
-      title: brief?.title ?? entry.fileStem,
+      productId,
+      title: hasRequested
+        ? (brief?.title ?? productId)
+        : `${productId} · ${ui.cardPendingTitle}`,
       category: entry.category,
       publishedDate: brief?.meta?.t0 ?? "",
-      readingTime: brief?.meta?.readingTime ?? "",
+      readingTime: localizeReadingTime(brief?.meta?.readingTime, locale),
       confidence: entry.confidence,
       languages: locales,
+      translationReady: hasRequested,
       hrefLocale: locale,
     };
   });
