@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      NVIDIA Moves AI Computing From the Chip to the Rack — Decision Brief
+      DB-001
+    </title>
+    <meta
+      name="description"
+      content="Decision Brief DB-001: NVIDIA’s Blackwell launch reframes AI computing as a rack-scale platform. Derived from SRE-101. Not investment advice."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="/db-001-nvidia-blackwell.html" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="NVIDIA Moves AI Computing From the Chip to the Rack"
+    />
+    <meta
+      property="og:description"
+      content="A five-minute Decision Brief on NVIDIA Blackwell — what changed, where value moves, and what remains unknown."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to brief</a>
+
+    <header class="site-bar" aria-label="Product">
+      <p class="site-bar__brand">Decision Brief</p>
+      <p class="site-bar__meta">Reader · DB-001</p>
+    </header>
+
+    <main id="main">
+      <article class="brief" itemscope itemtype="https://schema.org/Article">
+        <header class="hero">
+          <p class="hero__eyebrow" itemprop="articleSection">Decision Brief</p>
+          <h1 class="hero__headline" itemprop="headline">
+            NVIDIA Moves AI Computing From the Chip to the Rack
+          </h1>
+          <p class="hero__deck">
+            NVIDIA’s Blackwell launch reframes AI computing as a rack-scale
+            platform, not a faster standalone chip — and that is where the value
+            story begins.
+          </p>
+          <dl class="hero__facts">
+            <div>
+              <dt>Reading time</dt>
+              <dd>~5 minutes</dd>
+            </div>
+            <div>
+              <dt>Published</dt>
+              <dd>
+                <time datetime="2024-03-18" itemprop="datePublished"
+                  >18 March 2024</time
+                >
+              </dd>
+            </div>
+            <div>
+              <dt>Brief ID</dt>
+              <dd>DB-001</dd>
+            </div>
+          </dl>
+          <p class="hero__disclaimer">
+            For long-term research context only. Not investment advice. Not a
+            recommendation to buy, sell, or hold any security.
+          </p>
+        </header>
+
+        <section class="section" aria-labelledby="exec-title">
+          <h2 id="exec-title">Executive Summary</h2>
+          <div class="callout callout--summary">
+            <p class="callout__label">Why should I care?</p>
+            <p>
+              On 18 March 2024, NVIDIA announced Blackwell as a full platform: a
+              liquid-cooled rack of linked GPUs that it says can act as one, plus
+              the networking and software to run it. If very large AI models need
+              many chips to work as one system, the scarce thing is that coherent
+              whole — not any single chip. NVIDIA sits at the center of that
+              design. What we do <strong>not</strong> know from the announcement
+              is price, or how any cost savings split between NVIDIA and its
+              customers. That split remains Unknown.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="changed-title">
+          <h2 id="changed-title">What Changed?</h2>
+          <p>
+            On 18 March 2024, NVIDIA said the Blackwell platform had arrived.
+          </p>
+          <ul class="fact-list">
+            <li>
+              Blackwell GPUs have 208 billion transistors, built on a custom TSMC
+              4NP process as two dies joined into one GPU.
+            </li>
+            <li>
+              Fifth-generation NVLink moves 1.8TB/s per GPU and can link up to
+              576 GPUs.
+            </li>
+            <li>
+              The flagship GB200 NVL72 is a liquid-cooled rack with 72 Blackwell
+              GPUs and 36 Grace CPUs; NVIDIA says it acts as a single GPU.
+            </li>
+            <li>
+              The same day, NVIDIA announced matching high-speed networking and
+              said its software stack supports the platform.
+            </li>
+            <li>
+              NVIDIA claims up to 30× higher LLM inference performance versus the
+              same number of H100 GPUs, and up to 25× lower cost and energy versus
+              the prior generation (vendor claims).
+            </li>
+            <li>
+              Partners were to offer products “starting later this year.” Early
+              clouds: AWS, Google Cloud, Microsoft Azure, Oracle Cloud. Expected
+              adopters include Amazon, Dell, Google, Meta, Microsoft, OpenAI,
+              Oracle, Tesla, and xAI.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section" aria-labelledby="matters-title">
+          <h2 id="matters-title">Why It Matters</h2>
+          <p>
+            Serving huge AI models in real time is not mainly a “make one chip
+            faster” problem. The model is too big for one accelerator, so many
+            chips must behave as one — at a cost and power level buyers can live
+            with.
+          </p>
+          <p>
+            Blackwell answers that with a <strong>rack</strong> that NVIDIA says
+            works as one GPU, not just a new board. Three shifts follow:
+          </p>
+          <ol class="shift-list">
+            <li>
+              <strong>Purchase unit moves up</strong> — from a chip or eight-GPU
+              board toward a coherent multi-GPU rack.
+            </li>
+            <li>
+              <strong>Data centers change</strong> — the flagship design is
+              liquid-cooled, not a simple air-cooled upgrade.
+            </li>
+            <li>
+              <strong>More of the stack is sold together</strong> — links between
+              chips, networking, data-processing units, and software arrive as one
+              platform.
+            </li>
+          </ol>
+          <p>
+            That is a structural change: buyers who want the largest coherent
+            domain must accept a proprietary link fabric and a denser facility
+            design. Whether most buyers choose the full rack or a simpler
+            eight-GPU board path is still Unknown.
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="value-title">
+          <h2 id="value-title">Where Value Is Moving</h2>
+          <p class="section__lede">
+            Value pressure moves away from buying chips and boards as separate
+            pieces, and toward whoever owns the rack-scale link fabric and the
+            software that treats the rack as one machine.
+          </p>
+
+          <figure class="flow" aria-label="Value flow diagram">
+            <ol class="flow__list">
+              <li class="flow__node">
+                <span class="flow__step">1</span>
+                <span class="flow__text">Board-level GPU / server buy</span>
+              </li>
+              <li class="flow__node">
+                <span class="flow__step">2</span>
+                <span class="flow__text"
+                  >Separately bought networking &amp; offload</span
+                >
+              </li>
+              <li class="flow__node flow__node--pivot">
+                <span class="flow__step">3</span>
+                <span class="flow__text"
+                  >Liquid-cooled rack that acts as one GPU</span
+                >
+              </li>
+              <li class="flow__node flow__node--pivot">
+                <span class="flow__step">4</span>
+                <span class="flow__text"
+                  >NVIDIA proprietary NVLink + platform software</span
+                >
+              </li>
+              <li class="flow__node">
+                <span class="flow__step">5</span>
+                <span class="flow__text"
+                  >Cloud &amp; AI builders who run large models</span
+                >
+              </li>
+            </ol>
+            <figcaption class="flow__caption">
+              NVIDIA is named as the platform owner. How much of any savings stays
+              with NVIDIA versus cloud buyers is Unknown. Potential reallocation;
+              Medium confidence; later verification required.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="section" aria-labelledby="beneficiaries-title">
+          <h2 id="beneficiaries-title">Potential Beneficiaries</h2>
+          <p class="section__note">
+            Companies below are named for further research only. Not a
+            recommendation. Not ranked by attractiveness. No price targets.
+          </p>
+
+          <div class="table-wrap" role="region" aria-label="Potential beneficiaries" tabindex="0">
+            <table class="beneficiaries">
+              <thead>
+                <tr>
+                  <th scope="col">Company</th>
+                  <th scope="col">Reason</th>
+                  <th scope="col">Confidence</th>
+                  <th scope="col">Unknown</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">NVIDIA</th>
+                  <td>
+                    Owns the proprietary NVLink fabric and platform software that
+                    reach the large coherent GPU domain; Tier 1 in SRE-101
+                  </td>
+                  <td><span class="badge badge--medium">Medium</span></td>
+                  <td>
+                    Product prices; how long the advantage lasts; share of any
+                    surplus kept vs passed to buyers
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">TSMC</th>
+                  <td>
+                    Named maker of the custom 4NP process for the dual-die GPU;
+                    Tier 2
+                  </td>
+                  <td><span class="badge badge--medium">Medium</span></td>
+                  <td>
+                    Contract terms, volumes, and TSMC’s share of economics
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Dell Technologies</th>
+                  <td>
+                    Named adopter; CEO says Dell will deliver next-generation
+                    accelerated products; Tier 3
+                  </td>
+                  <td><span class="badge badge--low">Low</span></td>
+                  <td>
+                    Whether Dell retains any surplus (no retention mechanism in
+                    the source)
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Microsoft, Amazon, Alphabet, Oracle
+                  </th>
+                  <td>
+                    Among first clouds expected to offer Blackwell instances;
+                    Tier 4 (potential)
+                  </td>
+                  <td><span class="badge badge--low">Low</span></td>
+                  <td>
+                    Whether they keep premium pricing or pass cost cuts to
+                    customers
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Synopsys, Cadence, Ansys</th>
+                  <td>
+                    Named as using Blackwell to speed engineering simulation
+                    software; Tier 3
+                  </td>
+                  <td><span class="badge badge--low">Low</span></td>
+                  <td>
+                    Whether software gains are kept or competed away
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">— (no company named)</th>
+                  <td>
+                    Advanced packaging, memory chips for the rack’s fast memory,
+                    and liquid-cooling gear are required by the design
+                  </td>
+                  <td><span class="badge badge--unknown">—</span></td>
+                  <td>
+                    Who supplies them, and whether any of these layers is the true
+                    bottleneck
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="reality-title">
+          <h2 id="reality-title">Reality Check</h2>
+          <div class="callout callout--reality">
+            <div class="reality-block">
+              <h3>Current thesis</h3>
+              <p>
+                If trillion-parameter real-time AI is limited by making many
+                accelerators act as one, value migrates to the owner of rack-scale
+                coherence — and NVIDIA is structurally placed to capture a large
+                share of that, with TSMC as a key manufacturing beneficiary.
+              </p>
+            </div>
+            <div class="reality-block">
+              <h3>What would prove us wrong?</h3>
+              <ul>
+                <li>
+                  A rival or open link standard that reaches a similar multi-GPU
+                  domain without NVIDIA’s fabric.
+                </li>
+                <li>
+                  Proof that the scarce layer is packaging, memory, or cooling —
+                  with pricing power outside NVIDIA.
+                </li>
+                <li>
+                  Buyers mostly taking eight-GPU boards instead of the full
+                  coherent rack.
+                </li>
+                <li>
+                  The claimed cost and energy gains not showing up in real
+                  production use.
+                </li>
+              </ul>
+            </div>
+            <div class="reality-block reality-block--next">
+              <h3>Next validation point</h3>
+              <p>
+                By end of calendar 2024 (per “later this year”): whether partners
+                are shipping Blackwell products, and whether clouds disclose
+                rack-scale (NVL72) deployments versus board-level (HGX B200)
+                builds. Filings that show platform pricing or margins would also
+                begin to close the surplus-split Unknown.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--bottom" aria-labelledby="bottom-title">
+          <h2 id="bottom-title">Bottom Line</h2>
+          <p class="bottom-line" itemprop="description">
+            Blackwell is less “a bigger chip” than “AI compute sold as a linked
+            rack.” That moves competition toward who controls coherence across
+            many GPUs. NVIDIA is the clearest structural beneficiary in the source
+            report; TSMC is next as the named wafer maker. Prices and who keeps
+            the claimed cost savings are still Unknown — so the direction of the
+            story is clearer than the size of anyone’s gain.
+          </p>
+        </section>
+
+        <section class="section section--sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">Sources</h2>
+          <ul class="sources">
+            <li>
+              <strong>Parent research:</strong> SRE-101 — NVIDIA Blackwell
+              (<span class="sources__path"
+                >reports/SRE-101-NVIDIA-Blackwell.md</span
+              >
+            </li>
+            <li>
+              <strong>Underlying official source (P0 only, via SRE-101):</strong>
+              NVIDIA press release, 18 March 2024 —
+              “NVIDIA Blackwell Platform Arrives to Power a New Era of Computing”
+              (<span class="sources__path">nvidianews.nvidia.com</span>
+            </li>
+          </ul>
+          <p class="sources__note">
+            No other sources used. No new research performed. Every statement is
+            traceable to SRE-101. Content mirrors Decision Brief DB-001.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Decision Brief Reader V1 · Read-only · Not financial advice</p>
+    </footer>
+  </body>
+</html>
