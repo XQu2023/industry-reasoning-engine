@@ -44,7 +44,14 @@ function splitSections(markdown) {
 }
 
 function sectionBody(sections, name) {
-  return sections.get(name) ?? "";
+  return stripHorizontalRules(sections.get(name) ?? "");
+}
+
+function stripHorizontalRules(text) {
+  return text
+    .replace(/^\s*---\s*$/gm, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 function firstHeadingTitle(markdown) {
@@ -175,10 +182,13 @@ function parseSources(body) {
   for (const line of text.split("\n")) {
     const match = line.match(/^-\s+\*\*(.+?)\*\*\s*(.+)$/);
     if (match) {
-      const pathMatch = match[2].match(/\(`?([^`)]+)`?\)\s*$/);
+      let rest = match[2].trim();
+      // Convert markdown links to plain "label path" without rewriting research.
+      rest = rest.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1");
+      const pathMatch = rest.match(/\(`?([^`)]+)`?\)\s*$/);
       items.push({
         label: match[1].replace(/:$/, ""),
-        text: match[2].replace(/\s*\(`?[^`)]+`?\)\s*$/, "").trim(),
+        text: rest.replace(/\s*\(`?[^`)]+`?\)\s*$/, "").trim(),
         path: pathMatch ? pathMatch[1] : "",
       });
     }
