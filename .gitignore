@@ -1,0 +1,6 @@
+.env
+.env.local
+node_modules/
+reader/node_modules/
+reader/dist/
+dist/

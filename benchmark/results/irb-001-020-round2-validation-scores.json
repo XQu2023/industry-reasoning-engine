@@ -1,0 +1,312 @@
+{
+  "averageIra": 95.5,
+  "categoryAverages": {
+    "facts": 20.0,
+    "customerProblem": 19.5,
+    "leadingSignal": 15.0,
+    "reasoning": 17.5,
+    "valueReallocation": 15.0,
+    "evidence": 8.5
+  },
+  "cases": {
+    "IRB-001": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-002": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-003": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 15,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 5
+      },
+      "ira": 85
+    },
+    "IRB-004": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-005": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-006": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-007": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 15,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 5
+      },
+      "ira": 85
+    },
+    "IRB-008": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 5
+      },
+      "ira": 90
+    },
+    "IRB-009": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 95
+    },
+    "IRB-010": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-011": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 5
+      },
+      "ira": 90
+    },
+    "IRB-012": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 95
+    },
+    "IRB-013": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-014": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 95
+    },
+    "IRB-015": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-016": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 5
+      },
+      "ira": 90
+    },
+    "IRB-017": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 5
+      },
+      "ira": 90
+    },
+    "IRB-018": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-019": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-020": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 95
+    }
+  },
+  "below90": [
+    "IRB-003",
+    "IRB-007"
+  ],
+  "above97": [
+    "IRB-001",
+    "IRB-002",
+    "IRB-004",
+    "IRB-005",
+    "IRB-006",
+    "IRB-010",
+    "IRB-013",
+    "IRB-015",
+    "IRB-018",
+    "IRB-019"
+  ],
+  "failurePatterns": [
+    {
+      "pattern": "Reasoning has one weak / incomplete link",
+      "count": 10,
+      "cases": [
+        "IRB-003",
+        "IRB-007",
+        "IRB-008",
+        "IRB-009",
+        "IRB-011",
+        "IRB-012",
+        "IRB-014",
+        "IRB-016",
+        "IRB-017",
+        "IRB-020"
+      ]
+    },
+    {
+      "pattern": "Winner / supply-chain over-extension beyond T0-named actors",
+      "count": 8,
+      "cases": [
+        "IRB-003",
+        "IRB-004",
+        "IRB-008",
+        "IRB-011",
+        "IRB-012",
+        "IRB-017",
+        "IRB-018",
+        "IRB-020"
+      ]
+    },
+    {
+      "pattern": "Evidence thin / announcement-repeat",
+      "count": 6,
+      "cases": [
+        "IRB-003",
+        "IRB-007",
+        "IRB-008",
+        "IRB-011",
+        "IRB-016",
+        "IRB-017"
+      ]
+    },
+    {
+      "pattern": "AI Computing domain framing bleed on non-AI / tangential cases",
+      "count": 5,
+      "cases": [
+        "IRB-001",
+        "IRB-008",
+        "IRB-011",
+        "IRB-016",
+        "IRB-018"
+      ]
+    },
+    {
+      "pattern": "Customer Problem drifts technical / incomplete buying framing",
+      "count": 2,
+      "cases": [
+        "IRB-003",
+        "IRB-007"
+      ]
+    }
+  ]
+}

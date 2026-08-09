@@ -1,0 +1,229 @@
+{
+  "round1": {
+    "IRB-001": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 10,
+        "evidence": 10
+      },
+      "ira": 90
+    },
+    "IRB-002": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 10,
+        "evidence": 10
+      },
+      "ira": 95
+    },
+    "IRB-003": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 15,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 10,
+        "evidence": 5
+      },
+      "ira": 80
+    },
+    "IRB-004": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 10,
+        "evidence": 10
+      },
+      "ira": 95
+    },
+    "IRB-005": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 10,
+        "evidence": 10
+      },
+      "ira": 95
+    },
+    "IRB-006": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 10,
+        "evidence": 10
+      },
+      "ira": 95
+    },
+    "IRB-007": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 15,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 10,
+        "evidence": 5
+      },
+      "ira": 80
+    },
+    "IRB-008": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 10,
+        "evidence": 5
+      },
+      "ira": 85
+    },
+    "IRB-009": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 5,
+        "evidence": 10
+      },
+      "ira": 85
+    },
+    "IRB-010": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 10,
+        "evidence": 10
+      },
+      "ira": 95
+    }
+  },
+  "round2": {
+    "IRB-001": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 95
+    },
+    "IRB-002": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-003": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 15,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 5
+      },
+      "ira": 85
+    },
+    "IRB-004": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-005": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-006": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    },
+    "IRB-007": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 15,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 5
+      },
+      "ira": 85
+    },
+    "IRB-008": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 5
+      },
+      "ira": 90
+    },
+    "IRB-009": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 15,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 95
+    },
+    "IRB-010": {
+      "scores": {
+        "facts": 20,
+        "customerProblem": 20,
+        "leadingSignal": 15,
+        "reasoning": 20,
+        "valueReallocation": 15,
+        "evidence": 10
+      },
+      "ira": 100
+    }
+  },
+  "averageIraRound1": 89.5,
+  "averageIraRound2": 95.0,
+  "delta": 5.5
+}

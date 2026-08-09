@@ -1,0 +1,638 @@
+========================================================================
+Case ID: IRB-001
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "An Apple press release dated 2008-07-10 states that more than 500 native applications will be available on the iPhone’s App Store when iPhone 3G goes on sale.",
+      "source": "Apple press release (2008-07-10)"
+    },
+    {
+      "text": "The Apple press release states that the App Store enables customers to wirelessly download applications directly onto their iPhones.",
+      "source": "Apple press release (2008-07-10)"
+    },
+    {
+      "text": "The Apple press release states that more than 125 applications are offered for free.",
+      "source": "Apple press release (2008-07-10)"
+    },
+    {
+      "text": "The Apple press release states that the App Store will be available beginning that day via iTunes 7.7.",
+      "source": "Apple press release (2008-07-10)"
+    },
+    {
+      "text": "The Apple press release states that the App Store will be available as part of the free iPhone 2.0 software update for iPhone customers on July 11.",
+      "source": "Apple press release (2008-07-10)"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "The end-system problem being solved is that iPhone customers need an easy, direct way to discover, obtain, and install additional software on their phones, expanding device functionality without requiring complicated or indirect distribution methods. The App Store addresses the customer need for convenient wireless access to applications directly on the iPhone.",
+    "leadingSignal": "The App Store will be available beginning July 10, 2008 via iTunes 7.7.",
+    "change": "Apple is launching the iPhone App Store: it becomes available on July 10, 2008 via iTunes 7.7, and on July 11, 2008 as part of the free iPhone 2.0 software update, with more than 500 native apps available when iPhone 3G goes on sale.",
+    "reasoning": "(1) Observable change: Apple launches the iPhone App Store, making it available via iTunes 7.7 on July 10, 2008 and via the iPhone 2.0 software update on July 11, with more than 500 native applications available when iPhone 3G goes on sale, and users can wirelessly download applications directly onto their iPhones.\n\n(2) What technical/system requirement changes: The software distribution model changes from Unknown to direct, wireless delivery of native applications to iPhones through the App Store.\n\n(3) Why the old/lower-spec solution becomes insufficient: Unknown.\n\n(4) What capability becomes more valuable: The capability to support distribution and installation of native iPhone applications directly on-device via wireless download becomes more valuable.\n\n(5) Why value reallocates: Value reallocates toward the parts of the system that enable and benefit from direct on-device app distribution and a larger catalog of native applications, because Apple has made the App Store available and launched it with more than 500 apps. Any further reallocation beyond that is Unknown.",
+    "valueReallocation": "Value is likely being reallocated within the mobile computing supply chain from preinstalled software distribution, carrier-controlled mobile services, and browser-only web experiences toward Apple’s app distribution platform, iPhone software developers, and demand for iPhone/iPhone 3G hardware enabled by downloadable native applications. Likely secondary reallocation is from paid software toward free app adoption because Apple states more than 125 applications are offered for free. Unknown for any more specific dollar capture by each participant.",
+    "winner": "Apple’s app distribution platform, iPhone software developers, and Apple’s iPhone/iPhone 3G hardware business likely capture the reallocated value. Likely losers are preinstalled software distribution, carrier-controlled mobile services, and browser-only web experiences. There may also be some shift away from paid software toward free apps because Apple states more than 125 applications are free. More specific value capture by participant is Unknown.",
+    "evidence": [
+      {
+        "text": "Apple states that more than 500 native applications will be available on the iPhone’s App Store when iPhone 3G goes on sale.",
+        "source": "Apple press release (2008-07-10)"
+      },
+      {
+        "text": "Apple states that the App Store enables customers to wirelessly download applications directly onto their iPhones.",
+        "source": "Apple press release (2008-07-10)"
+      },
+      {
+        "text": "Apple states that the App Store will be available beginning that day via iTunes 7.7.",
+        "source": "Apple press release (2008-07-10)"
+      },
+      {
+        "text": "Apple states that the App Store will be available as part of the free iPhone 2.0 software update for iPhone customers on July 11.",
+        "source": "Apple press release (2008-07-10)"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Apple states that more than 125 applications are offered for free.",
+        "source": "Apple press release (2008-07-10)"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Facts:\n- The cited source states Apple launched the App Store on July 10, 2008 via iTunes 7.7, with iPhone 2.0 support on July 11.\n- The cited source states more than 500 native apps would be available and that users could wirelessly download apps directly to iPhones.\n- The cited source does not itself prove value shifted away from preinstalled software, carrier-controlled services, browser-only web experiences, or paid software.\n\nWhat would verify the conclusion:\n- Evidence that App Store usage displaced prior software distribution methods, such as declines in preinstalled or sideload-like distribution relative to App Store installs.\n- Evidence that carrier-controlled mobile services lost usage, distribution control, or revenue share after App Store launch.\n- Evidence that native app usage on iPhone substituted for browser-only web experiences.\n- Evidence that iPhone hardware demand increased because downloadable native apps materially influenced purchase decisions.\n- Evidence that iPhone developers and Apple’s platform captured more revenue, engagement, or bargaining power after launch.\n- Evidence that free apps took share from paid apps, such as download mix, revenue mix, or user adoption data.\n\nWhat would falsify the conclusion:\n- Evidence that the App Store did not materially change user behavior, software distribution, or revenue allocation.\n- Evidence that preinstalled software, carrier-controlled services, or browser-based experiences maintained or increased their relative importance despite the App Store launch.\n- Evidence that iPhone purchase demand was unaffected by app availability.\n- Evidence that developers or Apple’s platform did not capture incremental value from App Store distribution.\n- Evidence that free apps did not gain meaningful adoption versus paid apps.\n\nReasoning:\n- The launch itself verifies only that direct on-device native app distribution became available.\n- The broader value-reallocation claims require post-launch evidence on substitution, usage, revenue, and control within the mobile computing supply chain.\n- Without such evidence, the conclusion remains only partially supported.",
+    "marketBlindSpot": "The likely market blind spot is underestimating how direct, on-device app distribution can shift control and value in mobile computing from preinstalled software and carrier-managed distribution toward the device platform owner and its developer ecosystem. Factually, the source only confirms that Apple launched the App Store with more than 500 native apps, enabled wireless downloads directly to iPhones, and offered more than 125 apps for free. Any stronger claim about the scale of displacement, revenue capture, or downstream supply-chain impact is Unknown from this evidence alone."
+  }
+}
+Ready for evaluator scoring.
+
+========================================================================
+Case ID: IRB-002
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "A NVIDIA press release dated 2023-11-13 announces the NVIDIA HGX H200 platform featuring the NVIDIA H200 Tensor Core GPU.",
+      "source": "NVIDIA press release (2023-11-13)"
+    },
+    {
+      "text": "NVIDIA states that the H200 is the first GPU to offer HBM3e.",
+      "source": "NVIDIA press release (2023-11-13)"
+    },
+    {
+      "text": "NVIDIA states that with HBM3e, the H200 delivers 141GB of memory at 4.8 terabytes per second.",
+      "source": "NVIDIA press release (2023-11-13)"
+    },
+    {
+      "text": "NVIDIA states that the H200's memory capacity is nearly double that of its predecessor, the NVIDIA A100.",
+      "source": "NVIDIA press release (2023-11-13)"
+    },
+    {
+      "text": "NVIDIA states that the H200 has 2.4x more bandwidth than its predecessor, the NVIDIA A100.",
+      "source": "NVIDIA press release (2023-11-13)"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "The underlying customer/system problem is that AI and accelerated computing workloads need much larger and faster GPU memory to handle increasingly large models and datasets without becoming memory-capacity or memory-bandwidth bottlenecks. The change is aimed at reducing those end-system bottlenecks so systems can process larger workloads more efficiently.",
+    "leadingSignal": "NVIDIA announced on 2023-11-13 that the NVIDIA H200 Tensor Core GPU is the first GPU to offer HBM3e.",
+    "change": "NVIDIA is introducing the HGX H200 platform with the H200 Tensor Core GPU, a concrete product change that adds HBM3e memory to a GPU for the first time. NVIDIA states the H200 provides 141GB of memory at 4.8 TB/s, with nearly double the memory capacity and 2.4x the bandwidth versus the A100.",
+    "reasoning": "(1) Observable change: NVIDIA introduced the HGX H200 platform with the H200 Tensor Core GPU and stated it is the first GPU to offer HBM3e, delivering 141GB of memory at 4.8 TB/s, with nearly double the memory capacity and 2.4x the bandwidth versus the A100.\n(2) Technical/system requirement change: The observable change indicates a higher memory-capacity and higher memory-bandwidth requirement at the GPU level.\n(3) Why the old/lower-spec solution becomes insufficient: Relative to the H200, the A100 provides lower memory capacity and lower memory bandwidth, so it becomes less sufficient where the higher GPU memory capacity and bandwidth are required.\n(4) What capability becomes more valuable: GPU solutions that provide HBM3e-enabled high-capacity, high-bandwidth memory capability become more valuable.\n(5) Why value reallocates: Value reallocates toward products and suppliers that can deliver the higher-capacity, higher-bandwidth GPU memory capability, because the new product change raises the importance of that capability relative to lower-spec alternatives.",
+    "valueReallocation": "Facts: NVIDIA announced the HGX H200 platform with the H200 Tensor Core GPU. NVIDIA stated the H200 is the first GPU to use HBM3e and provides 141GB of memory at 4.8 TB/s, with nearly double the memory capacity and 2.4x the bandwidth versus the A100. Reasoning: This change suggests value is being reallocated toward suppliers and parts of the AI hardware stack that enable higher-bandwidth advanced memory, especially HBM3e memory and the advanced GPU platforms that integrate it. Relative value may shift away from prior-generation GPU configurations using older memory standards. If asking which specific companies capture that value, the provided evidence is insufficient.",
+    "winner": "Suppliers and parts of the AI hardware stack that enable higher-bandwidth advanced memory, especially HBM3e memory and the advanced GPU platforms that integrate it. Relative value may shift away from prior-generation GPU configurations using older memory standards. Which specific companies capture that value is Unknown.",
+    "evidence": [
+      {
+        "text": "NVIDIA states that the H200 is the first GPU to offer HBM3e.",
+        "source": "NVIDIA press release (2023-11-13)"
+      },
+      {
+        "text": "NVIDIA states that with HBM3e, the H200 delivers 141GB of memory at 4.8 terabytes per second.",
+        "source": "NVIDIA press release (2023-11-13)"
+      },
+      {
+        "text": "NVIDIA states that the H200's memory capacity is nearly double that of its predecessor, the NVIDIA A100.",
+        "source": "NVIDIA press release (2023-11-13)"
+      },
+      {
+        "text": "NVIDIA states that the H200 has 2.4x more bandwidth than its predecessor, the NVIDIA A100.",
+        "source": "NVIDIA press release (2023-11-13)"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Facts: The provided evidence only confirms NVIDIA announced H200 with HBM3e, 141GB memory, and 4.8 TB/s bandwidth versus A100. It does not by itself prove value reallocation to any specific supplier or supply-chain segment. Reasoning: This conclusion would be verified if independent evidence shows that, after H200 launch, demand, design wins, production allocation, pricing power, or revenue mix shifted toward HBM3e-enabled memory components and the advanced GPU platforms integrating them, and away from prior-generation memory configurations. It would also be verified if customers adopted H200 specifically because memory capacity/bandwidth had been a binding bottleneck. It would be falsified if adoption was limited, if end-system performance gains were not meaningfully constrained by memory, if customers did not shift spending toward HBM3e-based platforms, or if prior-generation GPU memory configurations retained similar demand and economics despite H200.",
+    "marketBlindSpot": "The likely market blind spot is underestimating memory as the binding constraint in AI systems. Facts: NVIDIA said the H200 is the first GPU with HBM3e and that it delivers 141GB and 4.8 TB/s, versus the A100 with nearly half the capacity and lower bandwidth. Reasoning: If AI workload scaling is increasingly limited by memory capacity and bandwidth rather than only raw compute, then market participants focused mainly on GPU compute may miss that competitive advantage and value are shifting toward advanced high-bandwidth memory capability and the ability to integrate it into GPU platforms. Which specific suppliers benefit is Unknown."
+  }
+}
+Ready for evaluator scoring.
+
+========================================================================
+Case ID: IRB-003
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "A NVIDIA press release dated 2024-03-18 states that NVIDIA announces the Blackwell platform, including the NVIDIA GB200 NVL72.",
+      "source": "NVIDIA press release (2024-03-18)"
+    },
+    {
+      "text": "In the press release, NVIDIA describes the GB200 NVL72 as a multi-node, liquid-cooled, rack-scale system for the most compute-intensive workloads.",
+      "source": "NVIDIA press release (2024-03-18)"
+    },
+    {
+      "text": "In the press release, NVIDIA states that the GB200 NVL72 is connected by fifth-generation NVLink.",
+      "source": "NVIDIA press release (2024-03-18)"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "The end-system problem being addressed is the need for customers to run the most compute-intensive AI or accelerated-computing workloads at rack scale, where many nodes must operate together with very high interconnect bandwidth and system-level cooling. The described change targets the customer problem of insufficient system-level performance and scaling efficiency for these workloads.",
+    "leadingSignal": "2024-03-18: NVIDIA announced the Blackwell platform, including the NVIDIA GB200 NVL72.",
+    "change": "NVIDIA is introducing the Blackwell platform, including the GB200 NVL72, a new multi-node, liquid-cooled, rack-scale system connected by fifth-generation NVLink.",
+    "reasoning": "(1) Observable change: NVIDIA introduced the Blackwell platform, including the GB200 NVL72, which NVIDIA describes as a multi-node, liquid-cooled, rack-scale system for the most compute-intensive workloads, connected by fifth-generation NVLink.\n\n(2) What technical/system requirement changes: The described system implies a requirement for rack-scale, multi-node system design with liquid cooling and fifth-generation NVLink interconnect for the most compute-intensive workloads.\n\n(3) Why the old/lower-spec solution becomes insufficient: Lower-spec or older solutions become insufficient because they are not the newly introduced rack-scale, multi-node, liquid-cooled system connected by fifth-generation NVLink that NVIDIA is positioning for the most compute-intensive workloads.\n\n(4) What capability becomes more valuable: Capabilities that become more valuable are rack-scale multi-node integration, liquid cooling, and fifth-generation NVLink-based interconnect.\n\n(5) Why value reallocates: Value reallocates toward the capabilities embodied in the GB200 NVL72 because NVIDIA is associating the most compute-intensive workloads with systems that provide rack-scale multi-node design, liquid cooling, and fifth-generation NVLink connectivity.",
+    "valueReallocation": "Value is likely being reallocated toward suppliers and system integrators tied to rack-scale AI infrastructure: advanced GPU/CPU compute, high-bandwidth interconnects (NVLink-based scale-up networking), liquid-cooling equipment, power delivery, and rack-level integration for dense multi-node systems. Value may also shift away from less differentiated air-cooled or lower-density server configurations for the most demanding AI workloads. Facts: NVIDIA announced the Blackwell platform and the GB200 NVL72 as a multi-node, liquid-cooled, rack-scale system connected by fifth-generation NVLink. Reasoning: A rack-scale, liquid-cooled design increases the importance of components and services needed to build and deploy dense AI systems, which can capture a larger share of spend versus simpler server designs.",
+    "winner": "Suppliers and system integrators tied to rack-scale AI infrastructure capture the reallocated value: advanced GPU/CPU compute, NVLink-based scale-up interconnects, liquid-cooling equipment, power delivery, and rack-level integration for dense multi-node systems. Value may shift away from less differentiated air-cooled or lower-density server configurations for the most demanding AI workloads.",
+    "evidence": [
+      {
+        "text": "A NVIDIA press release dated 2024-03-18 states that NVIDIA announces the Blackwell platform, including the NVIDIA GB200 NVL72.",
+        "source": "NVIDIA press release (2024-03-18)"
+      },
+      {
+        "text": "In the press release, NVIDIA describes the GB200 NVL72 as a multi-node, liquid-cooled, rack-scale system for the most compute-intensive workloads.",
+        "source": "NVIDIA press release (2024-03-18)"
+      },
+      {
+        "text": "In the press release, NVIDIA states that the GB200 NVL72 is connected by fifth-generation NVLink.",
+        "source": "NVIDIA press release (2024-03-18)"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Facts:\nVerification would require evidence that, after the GB200 NVL72 announcement and deployment, customer purchases and system designs for the most compute-intensive AI workloads shift toward rack-scale, liquid-cooled, NVLink-based multi-node systems, with increased spend or design wins for rack-level integration, liquid-cooling, power-delivery, and NVIDIA scale-up interconnect-related components. It would also require evidence that these workloads materially prefer or adopt such systems over lower-density or air-cooled alternatives.\n\nFalsification would require evidence that customer deployments for these workloads do not shift toward such rack-scale liquid-cooled NVLink systems, that lower-density or air-cooled configurations remain equally or more preferred for the target workloads, or that spending/design wins do not increase for the cited rack-scale infrastructure categories.\n\nReasoning:\nThe conclusion claims value reallocation toward suppliers and integrators associated with dense rack-scale AI systems and away from less differentiated lower-density alternatives. That conclusion is verified if adoption, procurement, and supplier revenue/design-win patterns move in that direction; it is falsified if those patterns do not appear or move the other way.",
+    "marketBlindSpot": "The likely market blind spot is underestimating the shift from selling discrete AI servers to delivering rack-scale AI systems as the primary unit of competition and spending. Facts: NVIDIA announced GB200 NVL72 as a multi-node, liquid-cooled, rack-scale system connected by fifth-generation NVLink for the most compute-intensive workloads. Reasoning: If performance at the high end is increasingly determined by rack-level integration, scale-up interconnect, cooling, and power delivery rather than by individual chips or standard air-cooled servers alone, then the market may be overlooking how value migrates toward system-level infrastructure and integration capabilities across the AI computing supply chain."
+  }
+}
+Ready for evaluator scoring.
+
+========================================================================
+Case ID: IRB-004
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "A NVIDIA press release dated 2024-03-18 states that, as part of the Blackwell platform, NVIDIA announced fifth-generation NVLink.",
+      "source": "NVIDIA press release (2024-03-18)"
+    },
+    {
+      "text": "The press release states that fifth-generation NVLink delivers 1.8TB/s bidirectional throughput per GPU.",
+      "source": "NVIDIA press release (2024-03-18)"
+    },
+    {
+      "text": "The press release states that fifth-generation NVLink enables high-speed communication among up to 576 GPUs.",
+      "source": "NVIDIA press release (2024-03-18)"
+    },
+    {
+      "text": "The press release states that the high-speed communication among up to 576 GPUs is for complex large language models.",
+      "source": "NVIDIA press release (2024-03-18)"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "The underlying system-level problem is the need to run increasingly complex large language models that require very large GPU clusters to exchange data quickly and operate as a single high-performance system. Demand for this change comes from the bottleneck of inter-GPU communication bandwidth and scale when training or serving such models.",
+    "leadingSignal": "2024-03-18: NVIDIA announced fifth-generation NVLink as part of the Blackwell platform.",
+    "change": "NVIDIA is introducing fifth-generation NVLink as part of the Blackwell platform, increasing interconnect capability to 1.8TB/s bidirectional throughput per GPU and enabling high-speed communication across up to 576 GPUs for complex large language models.",
+    "reasoning": "(1) Observable change: NVIDIA announced fifth-generation NVLink as part of the Blackwell platform, with 1.8TB/s bidirectional throughput per GPU and high-speed communication among up to 576 GPUs for complex large language models.\n\n(2) What technical/system requirement changes: The announced system requirement shifts toward much higher GPU-to-GPU communication bandwidth and scaling across many more GPUs for complex large language models.\n\n(3) Why the old/lower-spec solution becomes insufficient: A lower-spec interconnect is insufficient if it cannot provide the required high-speed communication, bandwidth, or multi-GPU scale implied by complex large language models spanning up to 576 GPUs.\n\n(4) What capability becomes more valuable: High-bandwidth, large-scale GPU interconnect capability becomes more valuable, specifically interconnects that can sustain 1.8TB/s bidirectional throughput per GPU and coordinate communication across very large GPU counts.\n\n(5) Why value reallocates: Value reallocates toward solutions that meet the higher interconnect and scaling requirements for complex large language models, because those solutions can enable the stated high-speed communication at the specified throughput and GPU scale, while lower-spec alternatives are less able to satisfy those requirements.",
+    "valueReallocation": "Facts: NVIDIA announced fifth-generation NVLink within the Blackwell platform. The stated capability is 1.8TB/s bidirectional throughput per GPU and high-speed communication across up to 576 GPUs for large language model workloads. Reasoning: If interconnect performance and scale improve, value is typically reallocated toward suppliers and system layers that enable tightly coupled multi-GPU training and inference clusters, including GPU platform providers, NVLink/NVSwitch-enabled system vendors, advanced packaging and high-bandwidth interconnect components, and data center builders deploying very large AI clusters. Relative value may shift away from architectures and vendors that depend more on slower or less tightly integrated interconnects for the same large-scale workloads. Evidence limits: The press release does not quantify the magnitude of this reallocation or identify specific winners and losers beyond NVIDIA's platform capability.",
+    "winner": "GPU platform providers such as NVIDIA; NVLink/NVSwitch-enabled system vendors; suppliers of advanced packaging and high-bandwidth interconnect components; and data center builders deploying very large AI clusters. Relative value may shift away from architectures and vendors relying on slower or less tightly integrated interconnects for comparable large-scale workloads.",
+    "evidence": [
+      {
+        "text": "The NVIDIA press release dated 2024-03-18 states that, as part of the Blackwell platform, NVIDIA announced fifth-generation NVLink delivering 1.8TB/s bidirectional throughput per GPU and high-speed communication among up to 576 GPUs for complex large language models.",
+        "source": "NVIDIA press release (2024-03-18)"
+      },
+      {
+        "text": "The press release states that fifth-generation NVLink delivers 1.8TB/s bidirectional throughput per GPU.",
+        "source": "NVIDIA press release (2024-03-18)"
+      },
+      {
+        "text": "The press release states that fifth-generation NVLink enables high-speed communication among up to 576 GPUs.",
+        "source": "NVIDIA press release (2024-03-18)"
+      },
+      {
+        "text": "The press release states that the high-speed communication among up to 576 GPUs is for complex large language models.",
+        "source": "NVIDIA press release (2024-03-18)"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Facts: The cited evidence only verifies that NVIDIA announced fifth-generation NVLink with 1.8TB/s bidirectional throughput per GPU and communication across up to 576 GPUs for complex large language models. It does not by itself verify downstream value reallocation, adoption, performance in production, or displacement of lower-spec alternatives. Reasoning: This conclusion would be verified by evidence that hyperscalers, OEMs, and AI cluster builders actually adopt Blackwell systems using fifth-generation NVLink at meaningful scale; that benchmark or production results show materially better training or inference efficiency for large language models because of the higher interconnect bandwidth and scale; that competing slower or less tightly integrated interconnect approaches lose design wins, share, or workload relevance for these large-scale clusters; and that suppliers tied to NVLink/NVSwitch-style tightly coupled systems see increased demand. It would be falsified by evidence that customers do not adopt the platform broadly, that real-world workloads do not benefit materially from the higher interconnect capability, that alternative interconnect architectures match or exceed required performance for similar large-model workloads, or that cluster economics, software, power, networking, or memory constraints remain the dominant bottlenecks so inter-GPU bandwidth does not drive value reallocation.",
+    "marketBlindSpot": "The likely market blind spot is underestimating that interconnect bandwidth and scale, not just raw GPU compute, are becoming a primary constraint and value driver in AI systems. Facts: NVIDIA announced fifth-generation NVLink with 1.8TB/s bidirectional throughput per GPU and communication across up to 576 GPUs for complex large language models. Reasoning: This suggests the competitive battleground is shifting toward tightly coupled system architecture, including multi-GPU fabric, switch layers, packaging, and cluster design. A market focused mainly on GPU FLOPS or accelerator count may miss that large-model performance and deployability increasingly depend on the ability to make many GPUs behave like one system. Evidence is insufficient to quantify how much this changes supplier economics or which non-NVIDIA vendors benefit most."
+  }
+}
+Ready for evaluator scoring.
+
+========================================================================
+Case ID: IRB-005
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "An NVIDIA press release dated 2006-11-08 states that NVIDIA unveiled CUDA technology.",
+      "source": "NVIDIA press release (2006-11-08)"
+    },
+    {
+      "text": "The press release describes CUDA as a new architecture for computing on NVIDIA GPUs.",
+      "source": "NVIDIA press release (2006-11-08)"
+    },
+    {
+      "text": "The press release describes CUDA as the industry's first C-compiler development environment for the GPU.",
+      "source": "NVIDIA press release (2006-11-08)"
+    },
+    {
+      "text": "NVIDIA states that CUDA is available on the GeForce 8800.",
+      "source": "NVIDIA press release (2006-11-08)"
+    },
+    {
+      "text": "NVIDIA states that a CUDA Software Developers Kit is available through the NVIDIA registered developer program.",
+      "source": "NVIDIA press release (2006-11-08)"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "The end-system problem being addressed is the difficulty of using GPUs for general-purpose computing. By providing a GPU computing architecture plus a C-compiler development environment and SDK, CUDA targets the customer need to program GPUs more easily for non-graphics compute workloads, so developers can use GPU parallel processing for broader applications.",
+    "leadingSignal": "2006-11-08: NVIDIA unveiled CUDA technology, and stated that a CUDA Software Developers Kit was available through the NVIDIA registered developer program.",
+    "change": "NVIDIA is launching CUDA: a new GPU computing architecture and C-compiler development environment, with CUDA support available on the GeForce 8800 and the CUDA Software Developers Kit being made available through NVIDIA's registered developer program.",
+    "reasoning": "(1) Observable change: NVIDIA unveiled CUDA technology, described it as a new architecture for computing on NVIDIA GPUs and the industry's first C-compiler development environment for the GPU, stated CUDA is available on the GeForce 8800, and made a CUDA Software Developers Kit available through its registered developer program.\n\n(2) What technical/system requirement changes: GPU computing now requires support for the CUDA architecture and a development workflow that uses the CUDA C-compiler environment and SDK.\n\n(3) Why the old/lower-spec solution becomes insufficient: Prior GPU development approaches without CUDA support or without access to the CUDA C-compiler environment and SDK become insufficient for developers who want to build software using CUDA. The source does not provide more detail.\n\n(4) What capability becomes more valuable: GPUs that support CUDA, plus software-development capabilities tied to the CUDA architecture, C-compiler environment, and SDK, become more valuable.\n\n(5) Why value reallocates: Value reallocates toward hardware and software resources compatible with CUDA because the newly introduced computing architecture and developer environment make CUDA support necessary to participate in this GPU-computing workflow. Beyond that, Unknown.",
+    "valueReallocation": "Facts: NVIDIA announced CUDA as a new architecture for computing on NVIDIA GPUs, described it as the industry’s first C-compiler development environment for the GPU, said CUDA is available on the GeForce 8800, and said a CUDA Software Developers Kit is available through NVIDIA’s registered developer program. Reasoning: This change suggests value is being reallocated from general-purpose CPU-centric computing and proprietary or harder-to-use GPU programming approaches toward NVIDIA’s GPU hardware, its software development stack, and its developer ecosystem. It also suggests increasing value for developers and system builders able to use GPUs for compute workloads on CUDA-enabled NVIDIA platforms.",
+    "winner": "NVIDIA captures the reallocated value, specifically through its CUDA-enabled GPU hardware, software development stack, and registered developer ecosystem. Secondarily, developers and system builders using CUDA-enabled NVIDIA platforms may capture value.",
+    "evidence": [
+      {
+        "text": "An NVIDIA press release dated 2006-11-08 states that NVIDIA unveiled CUDA technology.",
+        "source": "NVIDIA press release (2006-11-08)"
+      },
+      {
+        "text": "The press release describes CUDA as a new architecture for computing on NVIDIA GPUs.",
+        "source": "NVIDIA press release (2006-11-08)"
+      },
+      {
+        "text": "The press release describes CUDA as the industry's first C-compiler development environment for the GPU.",
+        "source": "NVIDIA press release (2006-11-08)"
+      },
+      {
+        "text": "NVIDIA states that CUDA is available on the GeForce 8800.",
+        "source": "NVIDIA press release (2006-11-08)"
+      },
+      {
+        "text": "NVIDIA states that a CUDA Software Developers Kit is available through the NVIDIA registered developer program.",
+        "source": "NVIDIA press release (2006-11-08)"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Facts: The cited source only verifies that NVIDIA announced CUDA, said it was available on GeForce 8800, and made an SDK available through its developer program. It does not by itself verify downstream adoption, value capture, or competitive displacement.\n\nReasoning: This conclusion would be verified by evidence such as: rising developer adoption of the CUDA SDK; more non-graphics compute applications released on CUDA-enabled NVIDIA GPUs; broader shipment or deployment of CUDA-capable GPUs into compute use cases; ecosystem growth among developers, system builders, and software tools around CUDA; and evidence that customers chose CUDA-compatible NVIDIA platforms instead of prior CPU-centric or harder-to-program GPU approaches. It would be falsified by evidence such as: minimal developer uptake of the SDK; lack of meaningful compute applications built on CUDA; customers continuing to rely mainly on CPUs or alternative GPU programming models; no sustained ecosystem expansion around CUDA; or failure of CUDA support to influence purchasing, deployment, or design choices. Beyond that, Unknown.",
+    "marketBlindSpot": "The likely market blind spot is underestimating the strategic importance of the software layer in AI/accelerated computing. Facts: NVIDIA announced CUDA as a new GPU computing architecture, a C-compiler development environment for GPUs, support on GeForce 8800, and an SDK through its developer program. Reasoning: This reveals that the competitive bottleneck may not be GPU silicon alone, but developer usability, tooling, and ecosystem lock-in. A market focused mainly on chip performance or hardware volumes could miss that easier programmability can shift value toward the vendor that controls the software stack and developer access. Broader claims about actual market impact or adoption are not verified by this source alone."
+  }
+}
+Ready for evaluator scoring.
+
+========================================================================
+Case ID: IRB-006
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "An Amazon Web Services press release dated 2006-03-14 announced Amazon S3.",
+      "source": "Amazon Web Services press release (2006-03-14)"
+    },
+    {
+      "text": "The press release describes Amazon S3 as a simple storage service.",
+      "source": "Amazon Web Services press release (2006-03-14)"
+    },
+    {
+      "text": "The press release states that Amazon S3 offers software developers a highly scalable, reliable, and low-latency data storage infrastructure at very low costs.",
+      "source": "Amazon Web Services press release (2006-03-14)"
+    },
+    {
+      "text": "The press release states that S3 is available at http://aws.amazon.com/s3.",
+      "source": "Amazon Web Services press release (2006-03-14)"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "Software developers needed an end-system way to store application data that could scale with growing workloads while remaining reliable, low-latency, and low-cost. The change addresses the problem of building and operating data storage for applications when existing options made it harder or more expensive to get scalable, dependable storage infrastructure.",
+    "leadingSignal": "Amazon Web Services announced Amazon S3 on 2006-03-14 and stated that S3 is available at http://aws.amazon.com/s3.",
+    "change": "Amazon Web Services is launching Amazon S3, a simple storage service, and making it available at http://aws.amazon.com/s3.",
+    "reasoning": "(1) Observable change: Amazon Web Services launched Amazon S3 and made it available, describing it as a simple storage service that offers software developers highly scalable, reliable, and low-latency data storage infrastructure at very low costs.\n(2) What technical/system requirement changes: The requirement shifts toward using data storage infrastructure that is scalable, reliable, low-latency, and low-cost for software developers.\n(3) Why the old/lower-spec solution becomes insufficient: Storage solutions that do not provide the same level of scalability, reliability, low latency, and low cost become less sufficient for workloads requiring those attributes.\n(4) What capability becomes more valuable: The capability to provide storage infrastructure with high scalability, reliability, low latency, and very low cost becomes more valuable.\n(5) Why value reallocates: Value reallocates toward services and infrastructure providers that can deliver those storage capabilities, because the launch makes those attributes directly available to software developers as an offered service. Beyond that, Unknown.",
+    "valueReallocation": "Facts: AWS announced the launch of Amazon S3, a simple storage service, describing it as highly scalable, reliable, low-latency, and offered at very low cost. Reasoning: This reallocates value toward cloud infrastructure and storage service providers by moving storage capability from customers buying and operating their own storage hardware and software to consumption of AWS-managed storage as a service. Likely value shifts away from on-premises storage hardware vendors and some storage management software used for self-operated infrastructure, and toward AWS’s data-center infrastructure, storage operations, and related developer platform services.",
+    "winner": "AWS captures the reallocated value, along with cloud infrastructure and storage service providers more broadly. The value shifts away from customers buying and operating their own storage hardware and some self-managed storage software, and toward AWS-managed storage infrastructure, storage operations, and related developer platform services.",
+    "evidence": [
+      {
+        "text": "An Amazon Web Services press release dated 2006-03-14 announced Amazon S3.",
+        "source": "Amazon Web Services press release (2006-03-14)"
+      },
+      {
+        "text": "The press release describes Amazon S3 as a simple storage service.",
+        "source": "Amazon Web Services press release (2006-03-14)"
+      },
+      {
+        "text": "The press release states that Amazon S3 offers software developers a highly scalable, reliable, and low-latency data storage infrastructure at very low costs.",
+        "source": "Amazon Web Services press release (2006-03-14)"
+      },
+      {
+        "text": "The press release states that S3 is available at http://aws.amazon.com/s3.",
+        "source": "Amazon Web Services press release (2006-03-14)"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Facts: The cited evidence verifies only that AWS announced Amazon S3 on 2006-03-14, described it as a simple storage service for software developers, said it provided highly scalable, reliable, low-latency storage at very low cost, and said it was available at aws.amazon.com/s3. Reasoning: To verify the broader conclusion about value reallocation toward AWS/cloud storage providers and away from on-premises storage, you would need evidence such as: developer adoption of S3 after launch; workloads or customers migrating from self-managed storage to S3; reduced customer spending or slower demand growth for on-premises storage hardware/software attributable to S3-like services; revenue, usage, or capacity growth for AWS storage services; and statements from customers or competitors confirming substitution. The conclusion would be falsified or weakened by evidence showing little real adoption, no meaningful workload migration, no substitution away from self-managed storage, or that S3 mainly served new workloads without affecting prior storage purchasing patterns. Based on the provided source alone, those causal claims remain unverified.",
+    "marketBlindSpot": "The market blind spot is underestimating storage as an on-demand developer service rather than a product customers had to build and operate themselves. Facts: AWS announced S3 as a simple storage service for developers that was highly scalable, reliable, low-latency, and very low cost. Reasoning: This suggests incumbents may have been focused on selling storage hardware and self-managed software, while missing demand for API-accessible, utility-style infrastructure that abstracts operations and shifts purchasing from capital equipment to managed cloud consumption. Whether and how much this actually changed market share or spending patterns is Unknown from the provided evidence."
+  }
+}
+Ready for evaluator scoring.
+
+========================================================================
+Case ID: IRB-007
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as combining attributes of memory and storage.",
+      "source": "originalInput.text"
+    },
+    {
+      "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as providing a new data storage tier intended to break through data-access bottlenecks.",
+      "source": "originalInput.text"
+    },
+    {
+      "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as having high throughput, low latency, high endurance, and high QoS.",
+      "source": "originalInput.text"
+    },
+    {
+      "text": "Intel describes using the Optane SSD DC P4800X with Intel Memory Drive Technology to extend memory pools alongside DRAM.",
+      "source": "originalInput.text"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "The underlying system/customer problem is data-access bottlenecks in computing systems, where existing DRAM and storage tiers leave a gap between memory capacity and storage performance. The change is aimed at solving the end-system need for faster, more consistent access to data and larger effective memory pools for memory-constrained workloads.",
+    "leadingSignal": "2017 Intel product materials describe the Optane SSD DC P4800X as a new data storage tier combining attributes of memory and storage, and describe its use with Intel Memory Drive Technology to extend memory pools alongside DRAM.",
+    "change": "A concrete product introduction is occurring: Intel is positioning the Optane SSD DC P4800X as a new storage-memory tier that combines attributes of memory and storage to reduce data-access bottlenecks, and as a component used with Intel Memory Drive Technology to extend memory pools alongside DRAM.",
+    "reasoning": "(1) Observable change: Intel is introducing and positioning the Optane SSD DC P4800X as a new tier between memory and storage, described as combining attributes of both, reducing data-access bottlenecks, and being usable with Intel Memory Drive Technology to extend memory pools alongside DRAM.\n\n(2) What technical/system requirement changes: The described system requirement shifts toward needing a tier with high throughput, low latency, high endurance, high QoS, and the ability to expand effective memory pools alongside DRAM in order to address data-access bottlenecks.\n\n(3) Why the old/lower-spec solution becomes insufficient: Solutions that do not provide that intermediate memory-storage behavior, or that cannot deliver the cited throughput, latency, endurance, QoS, or memory-pool extension capability, become insufficient for the stated goal of breaking through data-access bottlenecks. Beyond that, Unknown.\n\n(4) What capability becomes more valuable: Capability that combines memory-like and storage-like characteristics in a new tier becomes more valuable, specifically fast low-latency persistent data access, high endurance, predictable QoS, and the ability to extend memory pools alongside DRAM.\n\n(5) Why value reallocates: Value reallocates toward products and components that satisfy those requirements because the introduced tier is positioned as solving the bottleneck and memory-extension problem better than alternatives lacking those characteristics. The source supports the direction of reallocation toward that capability class, but does not provide further evidence on specific downstream winners or the magnitude of reallocation.",
+    "valueReallocation": "Facts: Intel’s product materials position the Optane SSD DC P4800X as a new tier between traditional storage and memory, emphasizing low latency, high throughput, high endurance, high QoS, and use with Intel Memory Drive Technology to extend memory pools alongside DRAM. Reasoning: If a new storage-memory tier is adopted, value is likely reallocated from conventional NAND SSD storage and some higher-cost DRAM capacity expansion toward suppliers and system components that provide persistent low-latency media, compatible controllers/software, and platform integration for memory-tiering. This can also shift value toward server OEMs and platform vendors able to validate and sell systems optimized for this intermediate tier. Evidence does not establish the magnitude of the shift.",
+    "winner": "Persistent low-latency media suppliers, compatible controllers/software providers, and platform integrators/server OEMs optimized for memory-tiering; likely at the expense of some conventional NAND SSD storage and some higher-cost DRAM capacity expansion. Magnitude Unknown.",
+    "evidence": [
+      {
+        "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as combining attributes of memory and storage.",
+        "source": "originalInput.text"
+      },
+      {
+        "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as providing a new data storage tier intended to break through data-access bottlenecks.",
+        "source": "originalInput.text"
+      },
+      {
+        "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as having high throughput, low latency, high endurance, and high QoS.",
+        "source": "originalInput.text"
+      },
+      {
+        "text": "Intel describes using the Optane SSD DC P4800X with Intel Memory Drive Technology to extend memory pools alongside DRAM.",
+        "source": "originalInput.text"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Facts: Verification would require evidence that the Optane SSD DC P4800X and Intel Memory Drive Technology were actually adopted to address data-access bottlenecks and memory-capacity constraints, and that this led to measurable substitution away from some conventional NAND SSD usage and some higher-cost DRAM capacity expansion in relevant server deployments. Useful confirming evidence would include documented production deployments, benchmark or operational data showing better latency/throughput/QoS or larger effective memory pools versus prior configurations, OEM platform support, software ecosystem support, repeat purchases, and customer statements that they chose this tier instead of adding more DRAM or relying only on conventional SSDs. Falsification would require evidence that the product was not materially adopted for these use cases, did not deliver meaningful system-level improvement, was not used to reduce DRAM expansion or conventional SSD reliance, or that value did not shift to persistent low-latency media, compatible controllers/software, and platform integrators. Reasoning: The conclusion depends on real-world adoption, measurable workload benefit, and actual budget or design substitution. If those three do not occur, the claimed value reallocation is not supported.",
+    "marketBlindSpot": "A likely market blind spot is underestimating demand for an intermediate memory-storage tier and the surrounding platform stack. Facts: Intel’s 2017 materials position Optane SSD DC P4800X as a new tier between DRAM and traditional storage, emphasizing low latency, high throughput, high endurance, high QoS, and use with Intel Memory Drive Technology to extend memory pools alongside DRAM. Reasoning: If customers have a real bottleneck between expensive capacity DRAM and slower conventional SSDs, then the market may be too focused on compute, DRAM, and NAND as separate buckets and may miss value accruing to memory-tiering hardware, software, controllers, and system integration that reduce data-access bottlenecks and expand effective memory capacity. A second blind spot is assuming all memory-capacity growth must be met by more DRAM rather than by architectural tiering. Magnitude and actual adoption impact are Unknown."
+  }
+}
+Ready for evaluator scoring.
+
+========================================================================
+Case ID: IRB-008
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "A Google blog post dated 2019-03-19 announced Stadia as a video game platform.",
+      "source": "Google blog (2019-03-19)"
+    },
+    {
+      "text": "Google said Stadia would deliver instant access to games on screens such as TV, laptop, desktop, tablet, or mobile phone.",
+      "source": "Google blog (2019-03-19)"
+    },
+    {
+      "text": "Google stated a goal of resolutions up to 4K and 60 frames per second with HDR and surround sound for Stadia.",
+      "source": "Google blog (2019-03-19)"
+    },
+    {
+      "text": "Google said Stadia would launch later in 2019 in select countries including the U.S., Canada, U.K., and much of Europe.",
+      "source": "Google blog (2019-03-19)"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "The underlying customer/system problem being addressed is the difficulty of getting high-end, console/PC-quality games instantly and consistently across many devices without being tied to a specific gaming machine. Stadia is positioned to solve the end-user problem of hardware dependence and limited device access by enabling immediate play on TVs, laptops, desktops, tablets, and phones while targeting high-quality streaming performance such as up to 4K/60fps with HDR and surround sound.",
+    "leadingSignal": "2019-03-19: Google announced Stadia as a video game platform.",
+    "change": "Google is announcing Stadia, a cloud gaming platform, and plans to launch it later in 2019 in select countries including the U.S., Canada, U.K., and much of Europe, with a stated target of up to 4K/60fps HDR streaming across TV, laptop, desktop, tablet, and mobile.",
+    "reasoning": "(1) Observable change: Google announced Stadia as a video game platform, said it would provide instant access to games across TV, laptop, desktop, tablet, and mobile phone, and stated a target of up to 4K/60fps HDR with surround sound in an upcoming launch across select countries. (2) What technical/system requirement changes: The service requirement shifts to delivering high-quality game video streams with low-friction access across many screen types and geographies, at stated targets up to 4K/60fps HDR and surround sound. (3) Why the old/lower-spec solution becomes insufficient: Old/lower-spec solutions are insufficient because they do not meet the announced service target of instant access to games across many device types at up to 4K/60fps HDR and surround sound. (4) What capability becomes more valuable: Capability to support cloud delivery of game experiences across multiple device types at the announced quality target becomes more valuable. (5) Why value reallocates: Value reallocates toward the parts of the AI computing supply chain that enable that cloud-delivered, high-quality, multi-device game streaming model, because the announced platform goal makes those capabilities more necessary than lower-spec or non-cloud alternatives. Specific supply-chain winners or intermediate technical components are Unknown from the provided source.",
+    "valueReallocation": "Facts: Google announced Stadia as a cloud gaming platform intended to stream games instantly to TVs, laptops, desktops, tablets, and mobile phones, with a stated target of up to 4K/60fps HDR and launch in select countries including the U.S., Canada, U.K., and much of Europe later in 2019. Reasoning: This change would tend to reallocate value away from local gaming hardware and physical/disc-based distribution toward cloud infrastructure and streaming delivery, including data center compute/graphics capacity, networking/CDN services, and platform operators that control cloud game access and distribution.",
+    "winner": "Cloud infrastructure and streaming delivery providers, especially the platform operator (Google/Stadia), data center compute/graphics capacity suppliers, and networking/CDN service providers.",
+    "evidence": [
+      {
+        "text": "Google announced Stadia as a video game platform that would provide instant access to games on TV, laptop, desktop, tablet, or mobile phone, with a stated goal of up to 4K/60fps with HDR and surround sound, and a launch later in 2019 in select countries including the U.S., Canada, U.K., and much of Europe.",
+        "source": "Google blog (2019-03-19)"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Facts: The provided source only verifies that Google announced Stadia, described intended device coverage, quality targets up to 4K/60fps HDR with surround sound, and said it planned a later-2019 launch in select countries. It does not verify actual adoption, performance, infrastructure demand, or shifts in spending across the supply chain. Reasoning: This conclusion would be verified by later evidence showing that Stadia actually launched as described, achieved meaningful user adoption and engagement, delivered the stated streaming quality at scale, and caused measurable increases in demand or spending for cloud infrastructure, data-center compute/graphics capacity, and networking/CDN services, alongside reduced dependence on local gaming hardware or physical distribution for affected users. It would be falsified by later evidence showing that Stadia failed to launch broadly, failed to meet performance targets, saw weak adoption, was discontinued or strategically deprioritized, or did not produce measurable value reallocation toward cloud gaming infrastructure and away from local gaming hardware/distribution. Specific quantitative thresholds are Unknown from the provided source.",
+    "marketBlindSpot": "The likely market blind spot is underappreciation of cloud gaming as a demand driver for AI-computing-adjacent infrastructure: the announcement suggests value could shift from local gaming hardware and physical/software distribution toward centralized data-center compute/graphics capacity and network delivery across multiple device types. Facts: the source only confirms Google announced Stadia, its multi-device access model, and a target of up to 4K/60fps HDR in select countries. Reasoning: if that model gained traction, the overlooked implication would be that investors or operators focused on consumer devices might miss the importance of backend compute and delivery infrastructure. Specific supply-chain beneficiaries are Unknown from the provided source."
+  }
+}
+Ready for evaluator scoring.
+
+========================================================================
+Case ID: IRB-009
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "On 2010-02-22, ASML Holding NV announced that Taiwan Semiconductor Manufacturing Company will take delivery of a TWINSCAN NXE:3100 extreme ultra-violet (EUV) lithography system.",
+      "source": "originalInput.text"
+    },
+    {
+      "text": "The announcement states that this tool represents one of six NXE:3100 EUV systems for ASML’s worldwide partners and customers.",
+      "source": "originalInput.text"
+    },
+    {
+      "text": "The announcement states that TSMC is expected to be the first dedicated foundry conducting on-site EUV development.",
+      "source": "originalInput.text"
+    },
+    {
+      "text": "The announcement states that TSMC will install the system at Fab 12 for development of future technology nodes.",
+      "source": "originalInput.text"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "The end/system-level problem being addressed is enabling development and manufacturing of future semiconductor technology nodes that require more advanced lithography capability than existing tools provide. The announced EUV system is being installed for on-site EUV development at TSMC’s Fab 12 to support those future nodes.",
+    "leadingSignal": "ASML announced on 2010-02-22 that TSMC will take delivery of a TWINSCAN NXE:3100 EUV lithography system.",
+    "change": "TSMC is taking delivery of an ASML TWINSCAN NXE:3100 EUV lithography system and will install it at Fab 12 for on-site EUV development of future technology nodes, becoming the first dedicated foundry expected to conduct such development.",
+    "reasoning": "(1) Observable change: TSMC is taking delivery of an ASML TWINSCAN NXE:3100 EUV lithography system, will install it at Fab 12, and is expected to conduct on-site EUV development for future technology nodes.\n\n(2) What technical/system requirement changes: Development of future technology nodes now requires on-site EUV lithography development capability at the foundry. \n\n(3) Why the old/lower-spec solution becomes insufficient: If future node development requires EUV development capability, then non-EUV lithography capability alone is insufficient for that specific development work. \n\n(4) What capability becomes more valuable: EUV lithography system capability, and the ability to perform on-site EUV process development at a foundry, become more valuable. \n\n(5) Why value reallocates: Value reallocates toward suppliers and operators that provide the newly required EUV development capability, because that capability is now needed for development of future technology nodes while lower-spec alternatives are insufficient for that specific requirement.",
+    "valueReallocation": "Value is being reallocated toward EUV lithography equipment and early process-development capability at advanced foundries. Based on the announcement, ASML gains value through demand for its NXE:3100 EUV systems, while TSMC gains value through earlier access to on-site EUV development for future nodes at Fab 12. This suggests relative value shifts toward leading-edge lithography tool suppliers and foundries able to absorb and develop next-generation manufacturing technology. Any further reallocation across other supply-chain segments is Unknown.",
+    "winner": "ASML and TSMC capture the reallocated value. ASML captures value through demand for its NXE:3100 EUV lithography systems. TSMC captures value through early on-site EUV process-development capability at Fab 12 for future technology nodes. More specific value capture by other supply-chain participants is Unknown.",
+    "evidence": [
+      {
+        "text": "On 2010-02-22, ASML Holding NV announced that Taiwan Semiconductor Manufacturing Company will take delivery of a TWINSCAN NXE:3100 extreme ultra-violet (EUV) lithography system.",
+        "source": "originalInput.text"
+      },
+      {
+        "text": "The announcement states that TSMC will install the system at Fab 12 for development of future technology nodes.",
+        "source": "originalInput.text"
+      },
+      {
+        "text": "The announcement states that TSMC is expected to be the first dedicated foundry conducting on-site EUV development.",
+        "source": "originalInput.text"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "The announcement states that this tool represents one of six NXE:3100 EUV systems for ASML’s worldwide partners and customers.",
+        "source": "originalInput.text"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Verify:\n- Evidence that TSMC actually installed and used the NXE:3100 at Fab 12 for on-site EUV development of future nodes.\n- Evidence that EUV process-development capability became a required or clearly preferred path for those future nodes at TSMC.\n- Evidence of follow-on EUV orders, expanded ASML-TSMC EUV collaboration, or continued EUV tool deployment showing durable demand for EUV capability.\n- Evidence that TSMC’s early EUV development produced process-learning, node-development, or manufacturing advantages versus foundries without similar on-site EUV capability.\n- Evidence that non-EUV lithography alone was insufficient for the specific future-node development work referenced.\n\nFalsify:\n- Evidence that the NXE:3100 was not installed, was not used materially, or failed to support meaningful on-site EUV development.\n- Evidence that TSMC’s future nodes proceeded without relying on EUV development capability, implying the announced tool was not important to node advancement.\n- Evidence that EUV did not create sustained value for ASML or TSMC, such as no meaningful follow-on adoption, no development advantage, or abandonment/delay of the EUV path.\n- Evidence that alternative lithography approaches remained sufficient for the same future-node development requirements, undermining the claim that value shifted toward EUV capability.\n\nFacts:\n- The announcement says TSMC would take delivery of an ASML TWINSCAN NXE:3100 EUV system.\n- The announcement says TSMC would install it at Fab 12 for development of future technology nodes.\n- The announcement says TSMC was expected to be the first dedicated foundry conducting on-site EUV development.\n- The announcement says the tool was one of six NXE:3100 EUV systems for ASML partners and customers.\n\nReasoning:\n- The conclusion is supported only if the delivered tool translated into real EUV development capability that mattered for future-node progress.\n- The conclusion is weakened or falsified if the tool was not used effectively, if EUV was not actually needed, or if alternatives were sufficient for the same development objective.",
+    "marketBlindSpot": "A likely market blind spot is underestimating how early development-tool placements at leading foundries can create long-term strategic lock-in before volume production is visible. Facts: the announcement says TSMC will take delivery of an ASML NXE:3100 EUV system, install it at Fab 12 for future-node development, and be the first dedicated foundry expected to conduct on-site EUV development. Reasoning: this can reveal that the important signal is not just near-term tool revenue, but early process-learning concentration at the foundry-toolmaker interface, which may shift future competitive advantage toward companies with hands-on EUV development experience. Broader effects on other supply-chain segments are Unknown."
+  }
+}
+Ready for evaluator scoring.
+
+========================================================================
+Case ID: IRB-010
+Generated GoldCase:
+{
+  "facts": [
+    {
+      "text": "AWS What's New published an item dated 2006-08-24 announcing Amazon Elastic Compute Cloud (Amazon EC2) beta.",
+      "source": "AWS What's New (2006-08-24)"
+    },
+    {
+      "text": "Amazon described Amazon EC2 beta as a web service that provides resizable compute capacity in the cloud.",
+      "source": "AWS What's New (2006-08-24)"
+    },
+    {
+      "text": "Amazon stated that EC2 is designed to make web-scale computing easier for developers.",
+      "source": "AWS What's New (2006-08-24)"
+    },
+    {
+      "text": "Amazon stated that EC2 provides complete control of computing resources on Amazon’s computing environment.",
+      "source": "AWS What's New (2006-08-24)"
+    },
+    {
+      "text": "Amazon stated that new server instances can be obtained and booted in minutes to scale capacity up and down.",
+      "source": "AWS What's New (2006-08-24)"
+    },
+    {
+      "text": "Amazon stated that customers pay only for capacity actually used.",
+      "source": "AWS What's New (2006-08-24)"
+    }
+  ],
+  "goldCase": {
+    "customerProblem": "The underlying customer/system problem is that developers and web applications need computing capacity that can be provisioned quickly, adjusted up or down with changing demand, and paid for based on actual usage, because traditional ways of getting servers make web-scale computing harder and less flexible.",
+    "leadingSignal": "2006-08-24: AWS What's New announced Amazon Elastic Compute Cloud (Amazon EC2) beta.",
+    "change": "Amazon is launching Amazon Elastic Compute Cloud (Amazon EC2) in beta, introducing a cloud service that provides resizable compute capacity and lets customers obtain and boot server instances within minutes on a pay-for-usage basis.",
+    "reasoning": "(1) Observable change: Amazon launched Amazon EC2 beta, described as a cloud web service offering resizable compute capacity, server instances that can be obtained and booted in minutes, and pay-only-for-capacity-used pricing.\n\n(2) Technical/system requirement change: Systems can now require compute capacity that is quickly adjustable, rapidly provisioned, and controllable within Amazon’s computing environment to support web-scale computing more easily.\n\n(3) Why the old/lower-spec solution becomes insufficient: A solution that cannot scale capacity up and down quickly, cannot provision new server instances within minutes, or does not align cost with actual usage becomes less sufficient for the stated goal of making web-scale computing easier.\n\n(4) What capability becomes more valuable: Resizable on-demand compute capacity, rapid instance provisioning, usage-based consumption, and programmatic control of computing resources become more valuable.\n\n(5) Why value reallocates: Value reallocates toward offerings that better satisfy the new requirement for fast scaling, quick provisioning, controllable cloud compute, and pay-for-usage economics, because those attributes more directly match the announced operating model.",
+    "valueReallocation": "Facts: Amazon announced Amazon EC2 beta on 2006-08-24 as a web service offering resizable compute capacity in the cloud. Amazon said customers could obtain and boot server instances within minutes, scale capacity up and down, and pay only for capacity used. Reasoning: This change reallocates value away from upfront purchases and ownership of on-premises servers and related data-center capacity toward usage-based cloud infrastructure operated by Amazon. It also shifts some value from slower, manually provisioned hosting and internal IT provisioning toward Amazon’s managed, rapidly provisioned compute service.",
+    "winner": "Amazon captures the reallocated value as the operator of the usage-based cloud compute service. Value shifts away from sellers and operators tied to upfront on-premises server purchases, owned data-center capacity, and slower manual provisioning, toward Amazon EC2’s pay-for-what-you-use infrastructure service.",
+    "evidence": [
+      {
+        "text": "AWS What's New published an item dated 2006-08-24 announcing Amazon Elastic Compute Cloud (Amazon EC2) beta.",
+        "source": "AWS What's New (2006-08-24)"
+      },
+      {
+        "text": "Amazon described Amazon EC2 beta as a web service that provides resizable compute capacity in the cloud.",
+        "source": "AWS What's New (2006-08-24)"
+      },
+      {
+        "text": "Amazon stated that new server instances can be obtained and booted in minutes to scale capacity up and down.",
+        "source": "AWS What's New (2006-08-24)"
+      },
+      {
+        "text": "Amazon stated that customers pay only for capacity actually used.",
+        "source": "AWS What's New (2006-08-24)"
+      },
+      {
+        "text": "Amazon stated that EC2 provides complete control of computing resources on Amazon’s computing environment.",
+        "source": "AWS What's New (2006-08-24)"
+      },
+      {
+        "text": "Amazon stated that EC2 is designed to make web-scale computing easier for developers.",
+        "source": "AWS What's New (2006-08-24)"
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      },
+      {
+        "text": "Unknown: source does not provide evidence for this causal step."
+      }
+    ],
+    "verification": "Facts: The provided evidence confirms only that Amazon announced EC2 beta with resizable compute, rapid provisioning, and pay-for-usage claims. It does not by itself confirm actual customer adoption, workload migration, spending shifts, or supplier displacement. Reasoning: To verify the conclusion that value reallocated from on-premises servers and slower hosting/internal provisioning toward Amazon EC2, evidence would need to show that customers actually moved workloads or budgets to EC2 because of those attributes. Verification would include observed EC2 adoption growth, customer case studies showing substitution away from owned servers or traditional hosting, reduced time-to-provision relative to prior methods, and measurable spending mix shifts toward usage-based cloud compute. Falsification would include evidence that EC2 beta saw little meaningful adoption, was used mainly for incremental/non-substitute workloads, did not materially reduce provisioning friction, or did not reduce spending on on-premises capacity or traditional hosting. It would also weaken the conclusion if competing offerings captured the shift instead of Amazon.",
+    "marketBlindSpot": "A likely market blind spot is underestimating how quickly compute would shift from a purchased hardware product to an on-demand service abstraction. Facts: the evidence only shows that Amazon announced EC2 beta with resizable capacity, rapid provisioning in minutes, and pay-only-for-use pricing. Reasoning: if those attributes matter, the blind spot is not just server demand, but the strategic importance of orchestration software, metering/billing, API-driven provisioning, and data-center operators that can turn compute into elastic utility consumption. It also suggests a risk of over-focusing on unit server sales or manual hosting models while underestimating the value of cloud control planes and usage-based infrastructure platforms. Because the source does not provide adoption or market reaction evidence, any stronger claim is Unknown."
+  }
+}
+Ready for evaluator scoring.

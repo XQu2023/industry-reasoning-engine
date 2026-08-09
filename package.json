@@ -1,0 +1,22 @@
+{
+  "name": "industry-reasoning-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Industry Reasoning Engine V0.1",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "build": "npm run build --prefix reader",
+    "benchmark": "node --experimental-strip-types benchmark/run-benchmark.ts",
+    "benchmark:10": "node --experimental-strip-types benchmark/run-benchmark.ts",
+    "manual:ai-001": "node --experimental-strip-types scripts/run-ai-001.ts"
+  },
+  "dependencies": {
+    "openai": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^5.8.2"
+  }
+}

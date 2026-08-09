@@ -1,0 +1,1492 @@
+[
+  {
+    "id": "IRB-001",
+    "result": {
+      "facts": [
+        {
+          "text": "Apple issued a press release dated 2008-07-10.",
+          "source": "Apple press release (2008-07-10)"
+        },
+        {
+          "text": "Apple announced that more than 500 native applications would be available on the iPhone’s App Store when iPhone 3G went on sale.",
+          "source": "Apple press release (2008-07-10)"
+        },
+        {
+          "text": "Apple stated that the App Store enables customers to wirelessly download applications directly onto their iPhones.",
+          "source": "Apple press release (2008-07-10)"
+        },
+        {
+          "text": "Apple stated that more than 125 applications are offered for free.",
+          "source": "Apple press release (2008-07-10)"
+        },
+        {
+          "text": "Apple stated that the App Store would be available beginning that day via iTunes 7.7.",
+          "source": "Apple press release (2008-07-10)"
+        },
+        {
+          "text": "Apple stated that the App Store would be available as part of the free iPhone 2.0 software update for iPhone customers on July 11.",
+          "source": "Apple press release (2008-07-10)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The end-user problem being addressed is limited access and convenience for expanding iPhone functionality. Customers need an easy way to discover, obtain, and install a wide range of mobile applications directly on the device, without relying on more cumbersome distribution or installation methods.",
+        "leadingSignal": "Apple stated that the App Store would be available beginning that day via iTunes 7.7.",
+        "change": "Apple is launching the iPhone App Store, making it available that day through iTunes 7.7 and on July 11 through the free iPhone 2.0 software update, with more than 500 native apps available when iPhone 3G goes on sale.",
+        "reasoning": "(1) Observable change: Apple is launching the iPhone App Store, making it available via iTunes 7.7 and the free iPhone 2.0 software update, with more than 500 native applications available and wireless direct download to iPhones.\n\n(2) What technical/system requirement changes: The iPhone software and distribution system now need to support discovery, delivery, installation, and updating of native applications directly on the device and through iTunes. \n\n(3) Why the old/lower-spec solution becomes insufficient: A model without an App Store or without built-in support for direct native app distribution is insufficient because it does not provide the announced mechanism for accessing and installing the large catalog of native applications wirelessly and through iTunes.\n\n(4) What capability becomes more valuable: Capability to support a native application ecosystem on the iPhone becomes more valuable, including software/platform support for app distribution and direct on-device installation.\n\n(5) Why value reallocates: Value reallocates toward the parts of the consumer electronics product experience that enable access to and use of native applications, because the announced change makes application availability and distribution a more important part of the iPhone’s functionality and user experience.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation from preinstalled/mobile web-only software distribution toward on-device native application distribution within consumer electronics smartphones, supported by Apple launching the App Store with more than 500 native apps and direct wireless download to iPhones. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: Potential value reallocation toward Apple’s smartphone platform ecosystem and away from alternative mobile software distribution channels, if app availability and direct device-based downloads increase user engagement and developer participation. Requires later market verification.",
+        "winner": "Potential value capture within consumer electronics smartphones appears to shift toward Apple’s iPhone platform ecosystem and developers distributing native apps through the App Store, relative to preinstalled software and mobile web-only distribution channels. Evidence only supports this as a potential reallocation at launch; realized capture requires later market verification.",
+        "evidence": [
+          {
+            "text": "Apple announced that more than 500 native applications would be available on the iPhone’s App Store when iPhone 3G went on sale.",
+            "source": "Apple press release (2008-07-10)"
+          },
+          {
+            "text": "Apple stated that the App Store would be available beginning that day via iTunes 7.7.",
+            "source": "Apple press release (2008-07-10)"
+          },
+          {
+            "text": "Apple stated that the App Store would be available as part of the free iPhone 2.0 software update for iPhone customers on July 11.",
+            "source": "Apple press release (2008-07-10)"
+          },
+          {
+            "text": "Apple stated that the App Store enables customers to wirelessly download applications directly onto their iPhones.",
+            "source": "Apple press release (2008-07-10)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification: evidence within consumer electronics smartphones that iPhone users actually adopted direct App Store distribution after launch, such as usage or download data, growth in active developers and app catalog, sustained availability and use of iPhone 2.0/App Store features, and signs that app distribution became more important to the iPhone user experience than preinstalled or mobile-web-only software access. Additional verification would include evidence that developers and users shifted activity toward the App Store relative to alternative mobile software distribution channels. Falsification: evidence that the App Store launch did not materially change how iPhone functionality was expanded, such as low user adoption, limited app downloads or engagement, weak developer participation, failure of the direct on-device distribution model to gain traction, or no observable shift away from preinstalled/mobile-web-only software distribution. Where the conclusion claims value capture or value reallocation beyond launch, later market evidence is required; the press release alone does not prove realized reallocation.",
+        "marketBlindSpot": "The likely market blind spot is underestimating software distribution and application availability as a core competitive factor in smartphones within consumer electronics. The announcement suggests that market participants focused mainly on handset hardware or preinstalled features may have missed that easy, direct on-device access to a large catalog of native apps could become a major driver of user value and platform differentiation. Evidence for realized market impact beyond this launch is not provided, so this remains a launch-stage inference."
+      }
+    }
+  },
+  {
+    "id": "IRB-002",
+    "result": {
+      "facts": [
+        {
+          "text": "A NVIDIA press release dated 2023-11-13 states that NVIDIA announced the NVIDIA HGX H200 platform featuring the NVIDIA H200 Tensor Core GPU.",
+          "source": "NVIDIA press release (2023-11-13)"
+        },
+        {
+          "text": "NVIDIA states that the H200 is the first GPU to offer HBM3e.",
+          "source": "NVIDIA press release (2023-11-13)"
+        },
+        {
+          "text": "NVIDIA states that, with HBM3e, the H200 delivers 141GB of memory at 4.8 terabytes per second.",
+          "source": "NVIDIA press release (2023-11-13)"
+        },
+        {
+          "text": "NVIDIA states that the H200 provides nearly double the capacity and 2.4x more bandwidth compared with its predecessor, the NVIDIA A100.",
+          "source": "NVIDIA press release (2023-11-13)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The end/system-level problem indicated by the facts is the need for AI computing systems to handle workloads that require much larger GPU memory capacity and much higher memory bandwidth than prior platforms provided. The change addresses the bottleneck of fitting and feeding data fast enough for AI workloads, by increasing available memory and memory throughput versus the prior A100-based system.",
+        "leadingSignal": "2023-11-13: NVIDIA announced the NVIDIA HGX H200 platform featuring the NVIDIA H200 Tensor Core GPU.",
+        "change": "NVIDIA is introducing the HGX H200 platform with the H200 Tensor Core GPU, marking the addition of HBM3e memory to a GPU; compared with the A100, this new GPU is stated to provide 141GB memory, 4.8 TB/s bandwidth, nearly double capacity, and 2.4x more bandwidth.",
+        "reasoning": "(1) Observable change: NVIDIA announced the HGX H200 platform with the H200 Tensor Core GPU, and stated that it is the first GPU to offer HBM3e. NVIDIA also stated that the H200 delivers 141GB of memory and 4.8 TB/s bandwidth, with nearly double the capacity and 2.4x more bandwidth versus the A100.\n\n(2) What technical/system requirement changes: Within AI computing, the observable change indicates a higher requirement for GPU memory capacity and memory bandwidth at the platform level.\n\n(3) Why the old/lower-spec solution becomes insufficient: Relative to the announced H200, the prior A100-class specification has lower memory capacity and lower memory bandwidth, so it becomes less sufficient where the higher memory and bandwidth levels are required.\n\n(4) What capability becomes more valuable: GPU capability that provides higher-bandwidth, higher-capacity memory becomes more valuable, specifically HBM3e-enabled GPU memory performance.\n\n(5) Why value reallocates: Value reallocates toward products and platforms that can supply the higher memory capacity and bandwidth, because the announced performance step-up makes those capabilities more aligned with the updated technical requirements than lower-spec alternatives.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation toward AI accelerator platforms that can integrate HBM3e-based GPUs, as NVIDIA states the H200 introduces HBM3e and materially improves memory capacity and bandwidth versus the A100. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: Potential value reallocation toward suppliers and ecosystem participants tied to HBM3e memory and HGX H200 platform adoption within AI computing, if customers prioritize higher-memory-bandwidth GPU systems. Requires later market verification.",
+        "winner": "Within AI computing, the evidence-supported potential value capture is by NVIDIA’s AI accelerator platform (HGX H200 / H200 GPU), since NVIDIA states H200 is the first GPU with HBM3e and offers materially higher memory capacity and bandwidth versus the A100. A reasonable but unverified extension is potential value capture by HBM3e-related suppliers and ecosystem participants if HGX H200 adoption follows. Market capture beyond NVIDIA is not established by the provided evidence and requires later verification.",
+        "evidence": [
+          {
+            "text": "A NVIDIA press release dated 2023-11-13 states that NVIDIA announced the NVIDIA HGX H200 platform featuring the NVIDIA H200 Tensor Core GPU.",
+            "source": "NVIDIA press release (2023-11-13)"
+          },
+          {
+            "text": "NVIDIA states that the H200 is the first GPU to offer HBM3e.",
+            "source": "NVIDIA press release (2023-11-13)"
+          },
+          {
+            "text": "NVIDIA states that, with HBM3e, the H200 delivers 141GB of memory at 4.8 terabytes per second.",
+            "source": "NVIDIA press release (2023-11-13)"
+          },
+          {
+            "text": "NVIDIA states that the H200 provides nearly double the capacity and 2.4x more bandwidth compared with its predecessor, the NVIDIA A100.",
+            "source": "NVIDIA press release (2023-11-13)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verify: evidence that AI computing customers adopt HGX H200/H200 systems because larger GPU memory capacity and higher memory bandwidth matter in practice, such as design wins, deployments, purchase commitments, workload benchmarks showing memory-capacity or memory-bandwidth bottlenecks are reduced versus A100-class systems, and credible evidence that HBM3e-enabled platforms gain share or pricing power relative to lower-spec alternatives. For the broader value-reallocation hypothesis, verification would also require evidence that HBM3e-related suppliers or ecosystem participants see increased orders, revenue exposure, or capacity commitments tied specifically to H200/HGX H200 adoption. Falsify: evidence that announced H200 memory and bandwidth improvements do not translate into meaningful AI computing adoption or economic value, such as weak deployment, customers not needing the added memory/bandwidth, competing platforms meeting the same workload needs without HBM3e, or no observable increase in demand for HBM3e-enabled AI computing systems or related suppliers. The supplier/ecosystem extension is falsified if no measurable commercial benefit appears for HBM3e-linked participants despite the product announcement.",
+        "marketBlindSpot": "Within AI computing, the likely market blind spot is underappreciation of memory capacity and memory bandwidth as a primary system bottleneck, relative to focusing mainly on raw GPU compute. The facts indicate that NVIDIA positioned the H200 upgrade around HBM3e-enabled memory capacity and bandwidth gains versus the A100, which suggests that AI workload scaling may be constrained as much by fitting and feeding data as by compute itself. A related blind spot is potential underestimation of the importance of platforms that deliver materially higher on-package memory performance for AI workloads. Broader market implications beyond this are unverified by the provided evidence."
+      }
+    }
+  },
+  {
+    "id": "IRB-003",
+    "result": {
+      "facts": [
+        {
+          "text": "A NVIDIA press release dated 2024-03-18 states that NVIDIA announced the Blackwell platform.",
+          "source": "NVIDIA press release (2024-03-18)"
+        },
+        {
+          "text": "The NVIDIA press release states that the Blackwell platform includes the NVIDIA GB200 NVL72.",
+          "source": "NVIDIA press release (2024-03-18)"
+        },
+        {
+          "text": "The NVIDIA press release describes GB200 NVL72 as a multi-node, liquid-cooled, rack-scale system.",
+          "source": "NVIDIA press release (2024-03-18)"
+        },
+        {
+          "text": "The NVIDIA press release states that GB200 NVL72 is for the most compute-intensive workloads.",
+          "source": "NVIDIA press release (2024-03-18)"
+        },
+        {
+          "text": "The NVIDIA press release states that GB200 NVL72 is connected by fifth-generation NVLink.",
+          "source": "NVIDIA press release (2024-03-18)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The change appears to address the end-system problem of running the most compute-intensive AI workloads, which require very high compute density and fast interconnect across multiple nodes at rack scale. Evidence does not specify a more detailed customer problem beyond supporting these compute-intensive AI workloads.",
+        "leadingSignal": "2024-03-18: NVIDIA announced the Blackwell platform, including the NVIDIA GB200 NVL72.",
+        "change": "NVIDIA is introducing the Blackwell AI computing platform, including the GB200 NVL72, a new multi-node, liquid-cooled, rack-scale system connected by fifth-generation NVLink for compute-intensive workloads.",
+        "reasoning": "(1) Observable change: NVIDIA introduced the Blackwell AI computing platform, including the GB200 NVL72, described as a multi-node, liquid-cooled, rack-scale system connected by fifth-generation NVLink for the most compute-intensive workloads.\n\n(2) What technical/system requirement changes: The disclosed system characteristics imply demand for AI computing deployments that operate at rack scale, span multiple nodes, use liquid cooling, and rely on high-bandwidth interconnect across nodes via fifth-generation NVLink for the most compute-intensive workloads.\n\n(3) Why the old/lower-spec solution becomes insufficient: Lower-spec or smaller-scale configurations become insufficient where they cannot provide the required multi-node rack-scale architecture, liquid-cooling support, or the stated fifth-generation NVLink connectivity for the most compute-intensive workloads.\n\n(4) What capability becomes more valuable: More value accrues to capabilities that enable rack-scale AI system integration, multi-node scaling, liquid-cooled deployment, and advanced node-to-node interconnect compatible with fifth-generation NVLink.\n\n(5) Why value reallocates: Value reallocates because spend for the most compute-intensive AI workloads shifts toward solutions that satisfy these higher system-level requirements, while solutions lacking those capabilities are less able to serve the newly emphasized workload and deployment profile.",
+        "valueReallocation": "Evidence-supported value reallocation: None directly supported by the provided evidence.\n\nReasonable hypothesis requiring later verification: Potential value reallocation toward rack-scale AI systems, liquid-cooling infrastructure, and high-bandwidth interconnect technologies associated with fifth-generation NVLink, if adoption of NVIDIA Blackwell and GB200 NVL72 materially increases demand in those areas. Potential value reallocation. Requires later market verification.",
+        "winner": "Unknown",
+        "evidence": [
+          {
+            "text": "A NVIDIA press release dated 2024-03-18 states that NVIDIA announced the Blackwell platform.",
+            "source": "NVIDIA press release (2024-03-18)"
+          },
+          {
+            "text": "The NVIDIA press release states that the Blackwell platform includes the NVIDIA GB200 NVL72.",
+            "source": "NVIDIA press release (2024-03-18)"
+          },
+          {
+            "text": "The NVIDIA press release describes GB200 NVL72 as a multi-node, liquid-cooled, rack-scale system.",
+            "source": "NVIDIA press release (2024-03-18)"
+          },
+          {
+            "text": "The NVIDIA press release states that GB200 NVL72 is for the most compute-intensive workloads.",
+            "source": "NVIDIA press release (2024-03-18)"
+          },
+          {
+            "text": "The NVIDIA press release states that GB200 NVL72 is connected by fifth-generation NVLink.",
+            "source": "NVIDIA press release (2024-03-18)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verify: evidence of material adoption of Blackwell GB200 NVL72 or similar rack-scale AI systems, such as customer deployments, purchase commitments, revenue mix shift toward rack-scale liquid-cooled AI systems, increased demand for fifth-generation NVLink-based multi-node configurations, or data showing the most compute-intensive AI workloads are moving to these architectures. Falsify: evidence that adoption is limited, delayed, or immaterial; that customers continue to meet these workloads with lower-spec or non-rack-scale alternatives; or that spending does not measurably shift toward rack-scale, liquid-cooled, high-bandwidth interconnect AI systems. Facts: the provided evidence only confirms NVIDIA announced Blackwell and described GB200 NVL72 as a multi-node, liquid-cooled, rack-scale system connected by fifth-generation NVLink for compute-intensive workloads. Reasoning: the conclusion would be verified or falsified by subsequent market adoption and spending evidence, which is not provided here.",
+        "marketBlindSpot": "The likely market blind spot is underestimating the importance of system-level AI infrastructure requirements beyond the chip itself. Within AI Computing, the announcement highlights that the most compute-intensive workloads may depend on rack-scale, multi-node architecture, liquid cooling, and very high-bandwidth node-to-node interconnect, not just accelerator performance. A related blind spot is assuming lower-scale or conventional deployments remain sufficient for top-end AI workloads. Fact: NVIDIA announced Blackwell and described GB200 NVL72 as a multi-node, liquid-cooled, rack-scale system connected by fifth-generation NVLink for the most compute-intensive workloads. Reasoning: this suggests market attention may be too focused on processor capability alone and may underappreciate the growing importance of full-system design requirements for leading AI workloads."
+      }
+    }
+  },
+  {
+    "id": "IRB-004",
+    "result": {
+      "facts": [
+        {
+          "text": "A NVIDIA press release dated 2024-03-18 is referenced.",
+          "source": "NVIDIA press release (2024-03-18)"
+        },
+        {
+          "text": "NVIDIA announced fifth-generation NVLink as part of the Blackwell platform.",
+          "source": "NVIDIA press release (2024-03-18)"
+        },
+        {
+          "text": "The announced fifth-generation NVLink delivers 1.8TB/s bidirectional throughput per GPU.",
+          "source": "NVIDIA press release (2024-03-18)"
+        },
+        {
+          "text": "The announced fifth-generation NVLink provides high-speed communication among up to 576 GPUs for complex large language models.",
+          "source": "NVIDIA press release (2024-03-18)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying system-level problem is that complex large language models require many GPUs to work together, and this creates a need for very high-bandwidth, low-latency communication across a large GPU cluster. The change is aimed at solving inter-GPU communication bottlenecks that can limit the ability to scale training or inference for these models.",
+        "leadingSignal": "2024-03-18: NVIDIA announced fifth-generation NVLink as part of the Blackwell platform.",
+        "change": "NVIDIA is introducing fifth-generation NVLink within its Blackwell AI computing platform, increasing interconnect capability to 1.8TB/s bidirectional throughput per GPU and enabling high-speed communication across up to 576 GPUs for large language model workloads.",
+        "reasoning": "(1) Observable change: NVIDIA introduced fifth-generation NVLink within the Blackwell AI computing platform, with 1.8TB/s bidirectional throughput per GPU and high-speed communication across up to 576 GPUs for complex large language model workloads.\n\n(2) What technical/system requirement changes: AI systems for complex large language models require higher inter-GPU communication throughput and the ability to maintain high-speed communication across much larger GPU clusters.\n\n(3) Why the old/lower-spec solution becomes insufficient: Lower-spec interconnect solutions become insufficient when they cannot provide the throughput or scale needed to support high-speed communication among up to 576 GPUs for these workloads.\n\n(4) What capability becomes more valuable: High-bandwidth, large-scale GPU-to-GPU interconnect capability becomes more valuable.\n\n(5) Why value reallocates: Value reallocates toward platforms and components that can deliver the required interconnect throughput and scaling for large language model systems, because those capabilities are more necessary to support the stated workload complexity and cluster size.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation toward AI computing platforms and interconnect components that enable larger multi-GPU clusters, because the evidence shows NVIDIA introduced fifth-generation NVLink with higher per-GPU throughput and support for communication across up to 576 GPUs within the Blackwell platform. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: If customers value tighter large-scale GPU communication for large language model workloads, spending could shift toward NVIDIA-integrated scale-up architectures and away from lower-performance interconnect alternatives for those specific workloads. Potential value reallocation. Requires later market verification.",
+        "winner": "Within AI computing, the evidence-supported likely captor of any reallocated value is NVIDIA’s integrated AI computing platform, including its NVLink interconnect components, because the cited announcement ties higher per-GPU throughput and communication across up to 576 GPUs to the Blackwell platform. A secondary, still unverified possibility is that value shifts toward suppliers and products aligned with large multi-GPU scale-up architectures for large language model workloads, and away from lower-performance interconnect alternatives for those specific workloads. This remains a potential reallocation and requires later market verification.",
+        "evidence": [
+          {
+            "text": "NVIDIA announced fifth-generation NVLink as part of the Blackwell platform.",
+            "source": "NVIDIA press release (2024-03-18)"
+          },
+          {
+            "text": "The announced fifth-generation NVLink delivers 1.8TB/s bidirectional throughput per GPU.",
+            "source": "NVIDIA press release (2024-03-18)"
+          },
+          {
+            "text": "The announced fifth-generation NVLink provides high-speed communication among up to 576 GPUs for complex large language models.",
+            "source": "NVIDIA press release (2024-03-18)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification: customer deployments of Blackwell systems using fifth-generation NVLink for large language model training or inference; benchmark or production evidence showing better scaling, throughput, latency, or time-to-train/time-to-serve versus lower-spec interconnect approaches; evidence that buyers increase spending on NVIDIA integrated multi-GPU scale-up systems or NVLink-related components for these workloads; evidence that competing lower-performance interconnect options are displaced in relevant AI computing deployments. Falsification: lack of meaningful adoption of Blackwell NVLink at scale; evidence that customers achieve similar or better large-model scaling with alternative interconnect architectures; evidence that the announced 1.8TB/s per GPU and up-to-576-GPU capability does not translate into material system-level performance or purchasing preference; evidence that spending does not shift toward NVIDIA integrated scale-up platforms for these workloads.",
+        "marketBlindSpot": "A likely market blind spot in AI computing is underestimating interconnect as a primary system bottleneck and value driver, rather than treating GPU performance alone as the main scaling constraint. The evidence suggests that for complex large language models, the ability to sustain high-speed communication across very large GPU clusters may become a decisive platform requirement. A related blind spot may be underappreciating how value could shift toward tightly integrated scale-up architectures and interconnect technologies, and away from lower-performance alternatives, for workloads that need communication across hundreds of GPUs. Market verification is still required."
+      }
+    }
+  },
+  {
+    "id": "IRB-005",
+    "result": {
+      "facts": [
+        {
+          "text": "A NVIDIA press release dated 2006-11-08 states that NVIDIA unveiled CUDA technology.",
+          "source": "NVIDIA press release (2006-11-08)"
+        },
+        {
+          "text": "The press release describes CUDA as a new architecture for computing on NVIDIA GPUs.",
+          "source": "NVIDIA press release (2006-11-08)"
+        },
+        {
+          "text": "The press release describes CUDA as the industry's first C-compiler development environment for the GPU.",
+          "source": "NVIDIA press release (2006-11-08)"
+        },
+        {
+          "text": "NVIDIA states that CUDA is available on the GeForce 8800.",
+          "source": "NVIDIA press release (2006-11-08)"
+        },
+        {
+          "text": "NVIDIA states that a CUDA Software Developers Kit is available through the NVIDIA registered developer program.",
+          "source": "NVIDIA press release (2006-11-08)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The end/system-level problem appears to be the difficulty of using GPUs for general-purpose computing and application development. CUDA is presented as a new GPU computing architecture and a C-compiler development environment, indicating demand from developers and systems that need a more practical way to program GPUs for computation beyond graphics.",
+        "leadingSignal": "NVIDIA unveiled CUDA technology on 2006-11-08.",
+        "change": "NVIDIA is introducing CUDA, a new GPU computing architecture and C-compiler development environment for NVIDIA GPUs, with availability on the GeForce 8800 and a CUDA SDK being made available through NVIDIA’s registered developer program.",
+        "reasoning": "(1) Observable change: NVIDIA introduced CUDA as a new architecture for computing on NVIDIA GPUs, described as the industry's first C-compiler development environment for the GPU, with availability on GeForce 8800 and an SDK through NVIDIA's registered developer program.\n\n(2) What technical/system requirement changes: GPU computing now requires a software development environment that supports programming NVIDIA GPUs through CUDA and its C-compiler-based tooling.\n\n(3) Why the old/lower-spec solution becomes insufficient: Prior GPU use without this CUDA architecture and C-compiler development environment is insufficient for the new CUDA-based GPU computing workflow because it does not provide the newly introduced programming model and associated SDK access.\n\n(4) What capability becomes more valuable: The capability to develop software for computation on NVIDIA GPUs using CUDA, including use of a C-compiler-based GPU development environment and SDK support, becomes more valuable.\n\n(5) Why value reallocates: Value reallocates toward hardware and developer-enablement offerings that support CUDA-based GPU computing, because the introduction of a new GPU computing architecture and development environment increases the importance of compatibility, tooling, and access to the CUDA software ecosystem. Beyond that, Unknown.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation toward NVIDIA within AI computing software tooling and the NVIDIA GPU ecosystem, supported by evidence that NVIDIA introduced CUDA, described it as a GPU computing architecture, and made a CUDA SDK available to registered developers. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: If developer adoption grows, value could shift toward NVIDIA-compatible GPU computing platforms and away from less accessible or less developer-friendly GPU computing approaches. Requires later verification.",
+        "winner": "Within AI computing, the evidence supports potential reallocated value toward NVIDIA, specifically in GPU computing software tooling and the NVIDIA GPU ecosystem, because NVIDIA introduced CUDA as a GPU computing architecture and provided a CUDA SDK to developers. A further possible shift toward NVIDIA-compatible GPU computing platforms and away from less developer-friendly alternatives is only a hypothesis and requires later market verification.",
+        "evidence": [
+          {
+            "text": "A NVIDIA press release dated 2006-11-08 states that NVIDIA unveiled CUDA technology.",
+            "source": "NVIDIA press release (2006-11-08)"
+          },
+          {
+            "text": "The press release describes CUDA as a new architecture for computing on NVIDIA GPUs.",
+            "source": "NVIDIA press release (2006-11-08)"
+          },
+          {
+            "text": "The press release describes CUDA as the industry's first C-compiler development environment for the GPU.",
+            "source": "NVIDIA press release (2006-11-08)"
+          },
+          {
+            "text": "NVIDIA states that CUDA is available on the GeForce 8800.",
+            "source": "NVIDIA press release (2006-11-08)"
+          },
+          {
+            "text": "NVIDIA states that a CUDA Software Developers Kit is available through the NVIDIA registered developer program.",
+            "source": "NVIDIA press release (2006-11-08)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verify: evidence that developers actually adopted CUDA for GPU computing, such as growth in CUDA SDK registrations/downloads, third-party applications released using CUDA, broader NVIDIA GPU support beyond GeForce 8800, continued NVIDIA investment in CUDA tooling, and ecosystem uptake showing CUDA-based development became an important practical standard for general-purpose GPU computing. Verify also with evidence that NVIDIA captured greater ecosystem importance in AI computing through CUDA-enabled software tooling and platform dependence. Falsify: evidence that CUDA saw little developer adoption, limited software output, poor continuity of tooling/support, minimal ecosystem dependence, or that alternative GPU programming approaches remained preferred such that CUDA did not materially increase NVIDIA's position or reallocate value within AI computing. For the stronger hypothesis about value shifting away from less developer-friendly alternatives, verification would require comparative adoption or usage evidence showing developers chose CUDA over those alternatives; without such comparative evidence, that part remains unverified.",
+        "marketBlindSpot": "The likely market blind spot within AI computing is underestimating software tooling and developer accessibility as a core source of platform power in GPU computing. The evidence shows NVIDIA did not just introduce GPU hardware; it introduced CUDA as a computing architecture plus a C-compiler-based development environment and SDK access. That suggests the overlooked issue was that ease of programming GPUs for computation could become as important as raw chip capability in determining ecosystem control. Beyond that, whether the market recognized the long-term importance of this shift at the time is Unknown."
+      }
+    }
+  },
+  {
+    "id": "IRB-006",
+    "result": {
+      "facts": [
+        {
+          "text": "Amazon Web Services issued a press release dated 2006-03-14.",
+          "source": "Amazon Web Services press release (2006-03-14)"
+        },
+        {
+          "text": "Amazon announced Amazon S3.",
+          "source": "Amazon Web Services press release (2006-03-14)"
+        },
+        {
+          "text": "Amazon described Amazon S3 as a simple storage service.",
+          "source": "Amazon Web Services press release (2006-03-14)"
+        },
+        {
+          "text": "Amazon stated that Amazon S3 offers software developers a highly scalable, reliable, and low-latency data storage infrastructure at very low costs.",
+          "source": "Amazon Web Services press release (2006-03-14)"
+        },
+        {
+          "text": "Amazon stated that Amazon S3 is available at http://aws.amazon.com/s3.",
+          "source": "Amazon Web Services press release (2006-03-14)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "Software developers need a data storage infrastructure problem solved at the system level: storing growing application data with scalability, reliability, and low latency while keeping costs very low.",
+        "leadingSignal": "Amazon Web Services announced Amazon S3 on 2006-03-14 and stated that the service was available at http://aws.amazon.com/s3.",
+        "change": "Amazon Web Services is launching and making available Amazon S3, a simple cloud storage service that provides software developers scalable, reliable, low-latency data storage at low cost.",
+        "reasoning": "(1) Observable change: Amazon Web Services launched and made available Amazon S3, described as a simple storage service offering software developers highly scalable, reliable, and low-latency data storage infrastructure at very low costs.\n\n(2) What technical/system requirement changes: Within cloud infrastructure, the required storage baseline shifts toward infrastructure that can deliver scalability, reliability, low latency, and low cost for software developers.\n\n(3) Why the old/lower-spec solution becomes insufficient: Older or lower-spec storage approaches become insufficient to the extent they do not provide that same combination of scalability, reliability, low latency, and low cost.\n\n(4) What capability becomes more valuable: The more valuable capability is operating storage infrastructure as a simple service that delivers scalable, reliable, low-latency storage at very low cost.\n\n(5) Why value reallocates: Value reallocates toward the provider and infrastructure that can meet this higher utility and lower-cost storage requirement, because developers gain access to storage with the specified performance and cost characteristics through the newly available service.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation from developers maintaining or procuring their own data storage infrastructure toward AWS-managed cloud storage services, supported by AWS announcing S3 as an available low-cost, scalable, reliable, low-latency storage service for software developers. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: If adoption occurs, some infrastructure spending and operational responsibility within cloud infrastructure could shift from self-managed storage approaches to AWS’s hosted storage offering, but the provided evidence does not confirm that this shift is already occurring.",
+        "winner": "Within cloud infrastructure, the reallocated value would potentially be captured by AWS through its managed cloud storage service (Amazon S3), to the extent developers shift spending and operational responsibility away from self-managed storage infrastructure. The evidence supports this only as a potential capture path, not a confirmed realized shift.",
+        "evidence": [
+          {
+            "text": "Amazon announced Amazon S3.",
+            "source": "Amazon Web Services press release (2006-03-14)"
+          },
+          {
+            "text": "Amazon stated that Amazon S3 is available at http://aws.amazon.com/s3.",
+            "source": "Amazon Web Services press release (2006-03-14)"
+          },
+          {
+            "text": "Amazon described Amazon S3 as a simple storage service.",
+            "source": "Amazon Web Services press release (2006-03-14)"
+          },
+          {
+            "text": "Amazon stated that Amazon S3 offers software developers a highly scalable, reliable, and low-latency data storage infrastructure at very low costs.",
+            "source": "Amazon Web Services press release (2006-03-14)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification within cloud infrastructure would come from later evidence that software developers or organizations actually adopted Amazon S3 and shifted storage workloads, spending, or operational responsibility from self-managed or other storage approaches to AWS-managed storage. Examples include documented S3 customer adoption, growth in stored data or usage, reported reductions in customer-owned storage operations tied to S3 use, or AWS disclosures showing S3 became a meaningful cloud storage platform. Falsification would come from later evidence that S3 did not achieve meaningful adoption, did not displace or reduce reliance on prior storage approaches, failed to deliver the stated scalability, reliability, low-latency, or low-cost characteristics in practice, or was unavailable or not meaningfully used despite the launch announcement. The press release alone does not verify realized value reallocation; it only verifies service launch and claimed availability. Therefore, realized shift remains unverified from the provided evidence.",
+        "marketBlindSpot": "The likely market blind spot within cloud infrastructure is underestimating developer demand for storage delivered as an on-demand managed service rather than as self-managed infrastructure. The announcement suggests that scalability, reliability, low latency, and very low cost could be packaged as a simple cloud service, implying that incumbents focused on selling or operating traditional storage setups may have missed how much value developers place on reducing storage operations complexity. However, the provided evidence only confirms the launch and claims for S3, not actual market adoption, so any broader blind spot beyond this implication remains unverified."
+      }
+    }
+  },
+  {
+    "id": "IRB-007",
+    "result": {
+      "facts": [
+        {
+          "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as combining attributes of memory and storage.",
+          "source": "originalInput"
+        },
+        {
+          "text": "Intel product materials from 2017 state that the Optane SSD DC P4800X provides a new data storage tier intended to break through data-access bottlenecks.",
+          "source": "originalInput"
+        },
+        {
+          "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as having high throughput, low latency, high endurance, and high QoS.",
+          "source": "originalInput"
+        },
+        {
+          "text": "Intel product materials from 2017 describe using the Optane SSD DC P4800X with Intel Memory Drive Technology to extend memory pools alongside DRAM.",
+          "source": "originalInput"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying system problem is data-access bottlenecks in computing systems caused by a gap between DRAM and conventional storage. The change is intended to solve the need for a new memory/storage tier that delivers faster, lower-latency, high-endurance access with consistent quality of service, while also helping systems extend effective memory capacity alongside DRAM.",
+        "leadingSignal": "Intel product materials from 2017 describe the Optane SSD DC P4800X as a new data storage tier combining attributes of memory and storage.",
+        "change": "A new semiconductor storage product tier is being introduced: Intel’s Optane SSD DC P4800X is positioned as combining memory and storage characteristics, with intended use to reduce data-access bottlenecks and to extend memory pools alongside DRAM via Intel Memory Drive Technology.",
+        "reasoning": "(1) Observable change: A new semiconductor storage product tier is introduced: Intel’s Optane SSD DC P4800X is positioned as combining attributes of memory and storage, with high throughput, low latency, high endurance, high QoS, intended to break through data-access bottlenecks and to extend memory pools alongside DRAM via Intel Memory Drive Technology.\n\n(2) What technical/system requirement changes: Systems now require an intermediate tier that better serves bottlenecked data access and memory-pool extension use cases, rather than relying only on a conventional separation between DRAM and storage.\n\n(3) Why the old/lower-spec solution becomes insufficient: If the stated goal is to reduce data-access bottlenecks and support memory-pool extension alongside DRAM, then a conventional storage-only tier is insufficient because it does not provide the combination of memory-like and storage-like attributes being highlighted. Beyond that, Unknown.\n\n(4) What capability becomes more valuable: Capabilities associated with this new tier become more valuable: high throughput, low latency, high endurance, high QoS, and the ability to function between memory and storage or alongside DRAM to extend memory pools.\n\n(5) Why value reallocates: Value reallocates toward semiconductor products and system approaches that satisfy the new intermediate-tier requirement, because they are positioned to address the identified bottlenecks and memory-extension use case better than lower-spec or conventionally separated solutions.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation. Requires later market verification. The evidence supports that Intel introduced and positioned a new semiconductor storage tier (Optane SSD DC P4800X) between traditional memory and storage, with claimed performance/endurance/QoS benefits and use alongside DRAM via Intel Memory Drive Technology. This supports only a potential shift of value toward semiconductor products that blur memory-storage boundaries and toward system architectures using such devices to address bottlenecks or extend memory pools.\n\nReasonable hypothesis requiring later verification: If adoption occurs, value could shift within semiconductors from conventional standalone storage or some DRAM-adjacent workloads toward persistent memory / storage-class memory products and related platform-enabling components. Requires later market verification.",
+        "winner": "Within semiconductors, the evidence supports only a potential value capture by Intel’s Optane persistent-memory / storage-class memory products and by related platform-enabling semiconductor components used in architectures that pair Optane with DRAM to reduce bottlenecks or extend memory pools. Any broader shift away from conventional storage or some DRAM-adjacent workloads requires later market verification.",
+        "evidence": [
+          {
+            "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as combining attributes of memory and storage.",
+            "source": "originalInput"
+          },
+          {
+            "text": "Intel product materials from 2017 state that the Optane SSD DC P4800X provides a new data storage tier intended to break through data-access bottlenecks.",
+            "source": "originalInput"
+          },
+          {
+            "text": "Intel product materials from 2017 describe the Optane SSD DC P4800X as having high throughput, low latency, high endurance, and high QoS.",
+            "source": "originalInput"
+          },
+          {
+            "text": "Intel product materials from 2017 describe using the Optane SSD DC P4800X with Intel Memory Drive Technology to extend memory pools alongside DRAM.",
+            "source": "originalInput"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification: evidence that, in semiconductor deployments, Optane SSD DC P4800X or similar storage-class memory products were actually adopted for the stated use cases and delivered the claimed system-level benefits. This would include customer deployment evidence showing reduced data-access bottlenecks, use as an intermediate tier between DRAM and conventional storage, successful memory-pool extension alongside DRAM via Intel Memory Drive Technology, and measurable performance characteristics consistent with the claims such as higher throughput, lower latency, high endurance, and high QoS versus conventional storage-only approaches. It would also include evidence that system architectures and semiconductor purchasing shifted toward such intermediate-tier products rather than remaining with conventional DRAM-plus-storage designs.\n\nFalsification: evidence that the product did not achieve meaningful adoption for those semiconductor use cases, did not materially reduce bottlenecks in practice, failed to provide durable advantage over conventional storage or DRAM-plus-storage architectures, was not used in memory-pool extension alongside DRAM in production, or that customers continued to rely primarily on existing DRAM and conventional storage tiers without meaningful value shift toward storage-class memory products. If later evidence showed no sustained platform uptake or no measurable reallocation within semiconductor memory/storage architectures, the conclusion would be falsified.",
+        "marketBlindSpot": "The market blind spot is underestimating demand within semiconductors for an intermediate memory-storage tier. The materials suggest that a meaningful system bottleneck existed between DRAM and conventional storage, but traditional market segmentation may have treated memory and storage as separate categories rather than recognizing demand for products combining low latency, high endurance, high QoS, and memory-pool extension alongside DRAM. Beyond that, whether the market broadly recognized or acted on this need is Unknown."
+      }
+    }
+  },
+  {
+    "id": "IRB-008",
+    "result": {
+      "facts": [
+        {
+          "text": "A Google blog post dated 2019-03-19 announced Stadia as a video game platform.",
+          "source": "Google blog (2019-03-19)"
+        },
+        {
+          "text": "The Google blog post said Stadia delivers instant access to games on screens such as TV, laptop, desktop, tablet, or mobile phone.",
+          "source": "Google blog (2019-03-19)"
+        },
+        {
+          "text": "The Google blog post stated a goal of resolutions up to 4K and 60 frames per second with HDR and surround sound.",
+          "source": "Google blog (2019-03-19)"
+        },
+        {
+          "text": "The Google blog post said Stadia would launch later in 2019 in select countries including the U.S., Canada, U.K., and much of Europe.",
+          "source": "Google blog (2019-03-19)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "Enable cloud delivery of high-quality video games with instant access across many device types, addressing the end-user problem of needing dedicated local gaming hardware or installation to play advanced games.",
+        "leadingSignal": "Google blog post dated 2019-03-19 announcing Stadia as a video game platform delivering instant access to games across TV, laptop, desktop, tablet, and mobile phone.",
+        "change": "Google is introducing Stadia, a cloud-based game streaming platform, with a planned later-2019 launch in select countries and a stated service target of up to 4K/60fps with HDR and surround sound across TV, laptop, desktop, tablet, and mobile screens.",
+        "reasoning": "(1) Observable change: Google announced Stadia as a cloud-based game streaming platform intended to provide instant access to games across TV, laptop, desktop, tablet, and mobile phone, with a stated target of up to 4K at 60 frames per second with HDR and surround sound, launching later in 2019 in select countries.\n\n(2) What technical/system requirement changes: Within cloud infrastructure, this implies a requirement to deliver interactive game streams from the cloud to many device types while supporting high-resolution, high-frame-rate audiovisual output. It also implies a need for infrastructure coverage in the announced launch geographies. Beyond that, Unknown.\n\n(3) Why the old/lower-spec solution becomes insufficient: Lower-spec cloud delivery would be insufficient if it cannot consistently support the stated service target of up to 4K/60fps with HDR and surround sound across multiple endpoint types. Why specifically older solutions fail beyond that is Unknown.\n\n(4) What capability becomes more valuable: More valuable capabilities are cloud infrastructure that can support interactive game streaming at the stated quality target across multiple screen types and in the planned launch regions. More specific capabilities are Unknown.\n\n(5) Why value reallocates: Value reallocates toward cloud infrastructure capable of meeting the announced service requirements, because the platform design depends on delivering the gaming experience from the cloud rather than from local game execution on each device. If some infrastructure cannot meet those requirements, it captures relatively less value. More specific reallocation paths are Unknown.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation. Requires later market verification. The evidence supports only that Google announced a planned cloud-based game streaming service in select countries with stated performance targets across multiple device types. Within Cloud Infrastructure, this could potentially shift some value toward cloud game delivery infrastructure and away from local device-based game execution, but no actual market reallocation is evidenced in the provided facts.\n\nReasonable hypothesis requiring later verification: If Stadia achieved adoption at launch and beyond, value could potentially accrue to cloud hosting, networking, and streaming delivery layers supporting interactive game workloads, with possible pressure on parts of the traditional local hardware-centric gaming delivery model. This remains a hypothesis because the provided evidence is only an announcement and launch plan, not proof of usage, revenue shift, or infrastructure spending reallocation.",
+        "winner": "Potentially cloud game delivery infrastructure and related hosting/networking/streaming layers, with possible pressure on local device-based game execution; however, based on the provided facts, no actual value reallocation is evidenced, so confirmed capture is Unknown.",
+        "evidence": [
+          {
+            "text": "A Google blog post dated 2019-03-19 announced Stadia as a video game platform.",
+            "source": "Google blog (2019-03-19)"
+          },
+          {
+            "text": "The Google blog post said Stadia delivers instant access to games on screens such as TV, laptop, desktop, tablet, or mobile phone.",
+            "source": "Google blog (2019-03-19)"
+          },
+          {
+            "text": "The Google blog post stated a goal of resolutions up to 4K and 60 frames per second with HDR and surround sound.",
+            "source": "Google blog (2019-03-19)"
+          },
+          {
+            "text": "The Google blog post said Stadia would launch later in 2019 in select countries including the U.S., Canada, U.K., and much of Europe.",
+            "source": "Google blog (2019-03-19)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verify: evidence that Stadia actually launched in the announced regions, delivered the stated cloud service experience to users across the listed device types, and drove measurable cloud-infrastructure usage or spending tied to interactive game streaming. Useful confirming evidence would include service availability records, user adoption/engagement, performance outcomes relative to the stated up to 4K/60fps HDR target, and observable demand for hosting/networking/streaming capacity attributable to the service. Falsify: evidence that Stadia did not launch as announced, failed to achieve meaningful usage, could not reliably deliver the stated service levels, or did not produce measurable cloud-infrastructure demand or value reallocation within cloud game delivery. More specific verification thresholds are Unknown.",
+        "marketBlindSpot": "The likely market blind spot within Cloud Infrastructure is underestimating cloud-native interactive streaming as a distinct infrastructure workload. The announcement suggests demand may not be limited to traditional cloud computing or video streaming, but could extend to infrastructure capable of low-latency, high-quality game delivery across many device types and regions. A related blind spot is assuming end-user devices remain the primary performance bottleneck; this announcement indicates some performance expectations may shift toward cloud delivery capability instead. However, because the evidence is only an announcement, any actual market impact or spending shift remains unverified."
+      }
+    }
+  },
+  {
+    "id": "IRB-009",
+    "result": {
+      "facts": [
+        {
+          "text": "On 2010-02-22, ASML Holding NV announced that Taiwan Semiconductor Manufacturing Company will take delivery of a TWINSCAN NXE:3100 extreme ultra-violet lithography system.",
+          "source": "ASML / TSMC announcement (2010-02-22)"
+        },
+        {
+          "text": "The announcement states that the tool represents one of six NXE:3100 EUV systems for ASML’s worldwide partners and customers.",
+          "source": "ASML / TSMC announcement (2010-02-22)"
+        },
+        {
+          "text": "The announcement states that TSMC is expected to be the first dedicated foundry conducting on-site EUV development.",
+          "source": "ASML / TSMC announcement (2010-02-22)"
+        },
+        {
+          "text": "The announcement states that the system will be installed at Fab 12 for development of future technology nodes.",
+          "source": "ASML / TSMC announcement (2010-02-22)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The end-system problem being addressed is the need to develop manufacturing capability for future semiconductor technology nodes. The EUV lithography system is being used for on-site development at TSMC’s Fab 12 so the foundry can support continued chip scaling at future nodes.",
+        "leadingSignal": "On 2010-02-22, ASML Holding NV announced that Taiwan Semiconductor Manufacturing Company will take delivery of a TWINSCAN NXE:3100 extreme ultra-violet lithography system.",
+        "change": "TSMC is taking delivery of an ASML TWINSCAN NXE:3100 EUV lithography system for installation at Fab 12, enabling on-site EUV development for future semiconductor technology nodes and making TSMC the expected first dedicated foundry to conduct such development.",
+        "reasoning": "(1) Observable change: TSMC is taking delivery of an ASML TWINSCAN NXE:3100 EUV lithography system, installing it at Fab 12 for development of future technology nodes, and is expected to be the first dedicated foundry conducting on-site EUV development.\n\n(2) What technical/system requirement changes: Development of future technology nodes now requires on-site EUV lithography development capability at the foundry.\n\n(3) Why the old/lower-spec solution becomes insufficient: Unknown.\n\n(4) What capability becomes more valuable: EUV lithography system capability, and specifically the capability to conduct on-site EUV development for future semiconductor technology nodes, becomes more valuable.\n\n(5) Why value reallocates: Value reallocates toward suppliers and manufacturers with EUV lithography tools and on-site EUV development capability because the observable change shows those capabilities are being adopted for future node development, while the source does not provide enough evidence to specify displacement of any older solution beyond that.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation. Requires later market verification. The announcement supports that ASML is supplying an EUV lithography system to TSMC and that TSMC is expected to gain early on-site EUV development capability for future semiconductor nodes. Within the semiconductor domain, this directly supports a potential shift of development capability and process-innovation positioning toward TSMC as an early EUV development foundry customer, with ASML positioned as the enabling equipment supplier. Reasonable hypothesis requiring later verification: If this early EUV access translates into manufacturable process advantages, value could later reallocate toward ASML in advanced lithography equipment and toward TSMC in leading-edge foundry services, potentially relative to semiconductor manufacturers or foundries without comparable EUV development access. This later commercial value shift is not proven by the announcement alone.",
+        "winner": "Potential value reallocation within semiconductors appears to favor ASML and TSMC. Factually, ASML is the supplier of the EUV lithography system and TSMC is positioned as an early foundry user with on-site EUV development capability for future nodes. Based on the announcement alone, the likely value capture would be ASML as the enabling lithography equipment provider and TSMC as the early advanced-process development foundry, while any broader commercial reallocation beyond that remains unverified.",
+        "evidence": [
+          {
+            "text": "The announcement states that TSMC is expected to be the first dedicated foundry conducting on-site EUV development.",
+            "source": "ASML / TSMC announcement (2010-02-22)"
+          },
+          {
+            "text": "The announcement states that the system will be installed at Fab 12 for development of future technology nodes.",
+            "source": "ASML / TSMC announcement (2010-02-22)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "On 2010-02-22, ASML Holding NV announced that Taiwan Semiconductor Manufacturing Company will take delivery of a TWINSCAN NXE:3100 extreme ultra-violet lithography system.",
+            "source": "ASML / TSMC announcement (2010-02-22)"
+          },
+          {
+            "text": "The announcement states that the tool represents one of six NXE:3100 EUV systems for ASML’s worldwide partners and customers.",
+            "source": "ASML / TSMC announcement (2010-02-22)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification: evidence that TSMC’s early on-site EUV development at Fab 12 led to measurable semiconductor manufacturing advantage, such as successful process-development milestones for future nodes, earlier or better EUV-enabled node readiness versus other foundries, higher adoption of TSMC leading-edge foundry services attributable to EUV capability, additional EUV tool purchases or deeper ASML-TSMC engagement, and sustained commercial positioning for ASML in advanced lithography and TSMC in leading-edge foundry services. Falsification: evidence that the NXE:3100 installation did not translate into usable process-development progress, was delayed, underutilized, or abandoned; that competing foundries achieved comparable or better future-node development without this early EUV access; or that no subsequent commercial or technical advantage accrued to ASML or TSMC from this early EUV development effort.",
+        "marketBlindSpot": "The likely semiconductor market blind spot is underestimating how early access to on-site EUV development at a foundry could shift future-node process learning and ecosystem positioning before high-volume manufacturing impact is visible. The announcement indicates TSMC may become the first dedicated foundry conducting on-site EUV development and that only six such systems existed among ASML partners and customers, suggesting scarcity and early learning advantages may be more important than the market recognizes at this stage. Unknown whether this would translate into durable commercial advantage."
+      }
+    }
+  },
+  {
+    "id": "IRB-010",
+    "result": {
+      "facts": [
+        {
+          "text": "On 2006-08-24, AWS What's New announced the beta of Amazon Elastic Compute Cloud (Amazon EC2).",
+          "source": "AWS What's New (2006-08-24)"
+        },
+        {
+          "text": "Amazon EC2 is described as a web service that provides resizable compute capacity in the cloud.",
+          "source": "AWS What's New (2006-08-24)"
+        },
+        {
+          "text": "Amazon states that EC2 is designed to make web-scale computing easier for developers.",
+          "source": "AWS What's New (2006-08-24)"
+        },
+        {
+          "text": "Amazon states that EC2 provides complete control of computing resources on Amazon’s computing environment.",
+          "source": "AWS What's New (2006-08-24)"
+        },
+        {
+          "text": "Amazon states that new server instances can be obtained and booted in minutes to scale capacity up and down.",
+          "source": "AWS What's New (2006-08-24)"
+        },
+        {
+          "text": "Amazon states that customers pay only for the capacity they actually use.",
+          "source": "AWS What's New (2006-08-24)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying customer problem is the difficulty of running and scaling web-scale applications with traditional fixed infrastructure. Developers need compute resources they can provision quickly, control directly, scale up or down within minutes as demand changes, and pay for only when used, rather than being constrained by slower, less flexible, always-on capacity.",
+        "leadingSignal": "On 2006-08-24, AWS announced the beta of Amazon Elastic Compute Cloud (Amazon EC2).",
+        "change": "AWS is launching the beta of Amazon Elastic Compute Cloud (Amazon EC2), introducing a cloud infrastructure service that provides resizable compute capacity, lets customers provision and boot server instances in minutes, scale capacity up or down, and pay only for the capacity used.",
+        "reasoning": "(1) Observable change: AWS launched the beta of Amazon EC2, a cloud infrastructure service offering resizable compute capacity, the ability to obtain and boot new server instances in minutes, scale capacity up or down, and pay only for capacity used.\n\n(2) What technical/system requirement changes: The requirement shifts toward infrastructure that can be provisioned quickly, scaled elastically, and controlled programmatically within a cloud computing environment, while aligning capacity consumption with actual usage.\n\n(3) Why the old/lower-spec solution becomes insufficient: A lower-flexibility approach is less sufficient because the observable change emphasizes getting new server instances in minutes, scaling up and down, and paying only for actual usage; solutions that cannot provide that level of speed, elasticity, and usage-based consumption are less aligned with the new requirement. \n\n(4) What capability becomes more valuable: Resizable on-demand compute capacity, rapid provisioning of server instances, elastic scaling, and usage-based infrastructure delivery become more valuable.\n\n(5) Why value reallocates: Value reallocates toward cloud infrastructure offerings that deliver fast provisioning, elastic scaling, user control over computing resources, and pay-for-use consumption, because those capabilities better satisfy the changed infrastructure requirement described in the announcement.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation from traditional fixed-capacity or self-managed server provisioning toward on-demand cloud infrastructure consumption within Cloud Infrastructure. The evidence supports that Amazon EC2 offers resizable compute capacity, rapid provisioning in minutes, elastic scaling, and usage-based pricing. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: If customers adopt EC2 at scale, value could shift toward cloud infrastructure providers that monetize flexible, pay-per-use compute services and away from models dependent on upfront server capacity commitments and slower provisioning. Potential value reallocation. Requires later market verification.",
+        "winner": "Within Cloud Infrastructure, the evidence supports potential value reallocation toward Amazon as a cloud infrastructure provider offering on-demand, resizable, usage-based compute capacity. The announcement indicates value may move away from traditional fixed-capacity or self-managed server provisioning models and toward providers monetizing elastic, rapidly provisioned infrastructure services. Market-scale capture beyond this potential shift is not established by the evidence.",
+        "evidence": [
+          {
+            "text": "On 2006-08-24, AWS What's New announced the beta of Amazon Elastic Compute Cloud (Amazon EC2).",
+            "source": "AWS What's New (2006-08-24)"
+          },
+          {
+            "text": "Amazon EC2 is described as a web service that provides resizable compute capacity in the cloud.",
+            "source": "AWS What's New (2006-08-24)"
+          },
+          {
+            "text": "Amazon states that new server instances can be obtained and booted in minutes to scale capacity up and down.",
+            "source": "AWS What's New (2006-08-24)"
+          },
+          {
+            "text": "Amazon states that EC2 provides complete control of computing resources on Amazon’s computing environment.",
+            "source": "AWS What's New (2006-08-24)"
+          },
+          {
+            "text": "Amazon states that customers pay only for the capacity they actually use.",
+            "source": "AWS What's New (2006-08-24)"
+          },
+          {
+            "text": "Amazon states that EC2 is designed to make web-scale computing easier for developers.",
+            "source": "AWS What's New (2006-08-24)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification: sustained customer adoption of EC2 within cloud infrastructure; evidence that developers and businesses actually use EC2 for production or scaling workloads; measurable migration from fixed-capacity or self-managed server provisioning toward on-demand cloud compute; usage growth consistent with rapid provisioning, elastic scaling, and pay-per-use consumption; and evidence that these capabilities reduce the operational difficulty of running web-scale applications. Falsification: little or no meaningful customer adoption; customers continue relying primarily on traditional fixed infrastructure despite EC2 availability; inability of EC2 in practice to deliver rapid provisioning, elastic scaling, direct control, or usage-based consumption as described; or evidence that these capabilities do not materially change infrastructure purchasing or deployment behavior. Market-scale value reallocation beyond potential shift remains Unknown without later adoption and behavior evidence.",
+        "marketBlindSpot": "A likely market blind spot within Cloud Infrastructure is underestimating demand for infrastructure as an on-demand service model rather than as preplanned, fixed-capacity provisioning. The announcement suggests customers may value speed of provisioning, elastic scaling, direct control, and usage-based pricing as core infrastructure requirements, not secondary features. That reveals a blind spot for providers anchored to slower procurement cycles, always-on capacity assumptions, and upfront infrastructure commitments. Market-scale impact beyond this implication is Unknown."
+      }
+    }
+  },
+  {
+    "id": "IRB-011",
+    "result": {
+      "facts": [
+        {
+          "text": "On 2014-06-10, the Google Open Source Blog published a post by Eric Brewer announcing Kubernetes.",
+          "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+        },
+        {
+          "text": "Google described Kubernetes as an open-source container manager.",
+          "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+        },
+        {
+          "text": "Google stated that Kubernetes deploys containers into a fleet of machines.",
+          "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+        },
+        {
+          "text": "Google stated that Kubernetes provides health management capabilities.",
+          "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+        },
+        {
+          "text": "Google stated that Kubernetes provides replication capabilities.",
+          "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+        },
+        {
+          "text": "Google stated that Kubernetes makes it easy for containers to connect to one another and the outside world.",
+          "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+        },
+        {
+          "text": "Google stated that Kubernetes was developed from the outset to be an extensible, community-supported project.",
+          "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+        },
+        {
+          "text": "Google stated that Kubernetes source and documentation were on GitHub.",
+          "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying cloud infrastructure problem is managing containerized applications reliably across a fleet of machines. The demand comes from the need to deploy containers at scale, keep them healthy, replicate them for resilience/availability, and enable networking between containers and external services more easily.",
+        "leadingSignal": "2014-06-10: Google announced Kubernetes as an open-source container manager.",
+        "change": "Google is introducing Kubernetes in cloud infrastructure: an open-source container management platform that deploys containers across fleets of machines, adds health management and replication, enables container connectivity, and is being launched as an extensible, community-supported project with source and documentation on GitHub.",
+        "reasoning": "(1) Observable change: In cloud infrastructure, Google introduced Kubernetes as an open-source container manager that deploys containers across a fleet of machines, provides health management and replication, enables connectivity between containers and the outside world, and is launched as an extensible, community-supported project with source and documentation on GitHub.\n\n(2) What technical/system requirement changes: The required system capability shifts toward managing containers across fleets of machines while also providing health management, replication, connectivity, and extensibility in a community-supported form.\n\n(3) Why the old/lower-spec solution becomes insufficient: Solutions that do not provide fleet-level container deployment, health management, replication, container connectivity, or extensibility/community support are insufficient for the newly introduced operating model.\n\n(4) What capability becomes more valuable: Open-source container orchestration/management capability becomes more valuable, specifically the ability to deploy and manage containers across fleets of machines with health management, replication, connectivity, and extensibility.\n\n(5) Why value reallocates: Value reallocates toward platforms, tools, and ecosystems that provide those container management capabilities because the observable change makes those capabilities part of the required cloud infrastructure functionality, while comparatively less value remains with lower-spec approaches that lack them.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation. Requires later market verification. The evidence supports that Google introduced an open-source container management platform in cloud infrastructure with deployment, health management, replication, connectivity, extensibility, and community-supported development on GitHub. This could potentially shift some value toward open-source container orchestration ecosystems and complementary cloud infrastructure tools built around extensibility and community adoption, but no actual market value shift is evidenced here.\n\nReasonable hypothesis requiring later verification: Potential value reallocation. Requires later market verification. If Kubernetes gains adoption, value could move from proprietary or less extensible container management approaches toward open-source, community-driven orchestration layers and related services in cloud infrastructure. This is not established by the provided evidence alone.",
+        "winner": "Potential value reallocation in cloud infrastructure is most plausibly captured by the open-source container orchestration ecosystem and complementary infrastructure/service providers built around Kubernetes, but the provided evidence does not verify any actual value shift. Because the source only establishes Google's launch of Kubernetes as an extensible, community-supported open-source project, who ultimately captures the reallocated value remains unverified.",
+        "evidence": [
+          {
+            "text": "Google described Kubernetes as an open-source container manager.",
+            "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+          },
+          {
+            "text": "Google stated that Kubernetes deploys containers into a fleet of machines.",
+            "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+          },
+          {
+            "text": "Google stated that Kubernetes provides health management capabilities.",
+            "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+          },
+          {
+            "text": "Google stated that Kubernetes provides replication capabilities.",
+            "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+          },
+          {
+            "text": "Google stated that Kubernetes makes it easy for containers to connect to one another and the outside world.",
+            "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+          },
+          {
+            "text": "Google stated that Kubernetes was developed from the outset to be an extensible, community-supported project.",
+            "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+          },
+          {
+            "text": "Google stated that Kubernetes source and documentation were on GitHub.",
+            "source": "Google Open Source Blog (2014-06-10, Eric Brewer)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verify: subsequent cloud infrastructure evidence that Kubernetes achieved meaningful adoption and ecosystem pull, such as production deployment across fleets of machines by multiple users, growth in community contributions on GitHub, integration/support by complementary infrastructure tools and services, or documented replacement of less extensible/proprietary container management approaches. Also verify with evidence that these capabilities became selection requirements in cloud infrastructure and that usage or spending shifted toward Kubernetes-centered orchestration and related services. Falsify: evidence that Kubernetes failed to gain meaningful adoption, failed to build a community/ecosystem, did not become a required capability for managing containerized applications across fleets, or that incumbent/proprietary and lower-spec approaches remained dominant without material displacement or complementary ecosystem formation.",
+        "marketBlindSpot": "The likely market blind spot in cloud infrastructure is underestimating container orchestration as a foundational control layer rather than a point tool. The evidence shows Google introduced an open-source, extensible, community-supported system for deploying containers across fleets with health management, replication, and connectivity. That suggests the blind spot is not just container deployment itself, but the importance of an open orchestration layer that could become a standard integration point for surrounding infrastructure and services. Actual market impact remains unverified from the provided evidence alone."
+      }
+    }
+  },
+  {
+    "id": "IRB-012",
+    "result": {
+      "facts": [
+        {
+          "text": "An arXiv preprint with identifier 1706.03762 titled “Attention Is All You Need” was submitted on 2017-06-12.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "The authors propose the Transformer, a sequence transduction architecture based solely on attention mechanisms.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "The preprint states that the Transformer dispenses with recurrence and convolutions entirely.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "The authors report 28.4 BLEU on WMT 2014 English-to-German.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "The authors report a new single-model state-of-the-art 41.8 BLEU on WMT 2014 English-to-French.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "The preprint states that the 41.8 BLEU result was achieved after training 3.5 days on eight GPUs.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "The preprint states that the model is more parallelizable than prior dominant recurrent/convolutional encoder-decoder approaches.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "The preprint states that the model requires significantly less time to train than prior dominant recurrent/convolutional encoder-decoder approaches.",
+          "source": "originalInput.text"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying system-level problem is that existing sequence transduction systems, especially recurrent and convolutional encoder-decoder models, were too slow and insufficiently parallelizable to train efficiently at high quality. This created demand for an architecture that could deliver state-of-the-art translation performance while reducing training time and improving parallel execution on available AI computing hardware.",
+        "leadingSignal": "2017-06-12: arXiv preprint 1706.03762 “Attention Is All You Need” was submitted, disclosing the Transformer architecture based solely on attention mechanisms and dispensing with recurrence and convolutions entirely.",
+        "change": "A new AI model architecture is being introduced: the Transformer, which replaces recurrent and convolutional sequence transduction approaches with an attention-only design that is more parallelizable and faster to train, while reporting state-of-the-art machine translation results.",
+        "reasoning": "(1) Observable change: A new AI model architecture is introduced in sequence transduction: the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions, while reporting state-of-the-art translation results, greater parallelizability, and significantly less training time than prior recurrent/convolutional encoder-decoder approaches.\n\n(2) What technical/system requirement changes: The relevant requirement shifts toward architectures that can support higher parallelization during training while still delivering strong sequence transduction accuracy and lower training time.\n\n(3) Why the old/lower-spec solution becomes insufficient: Prior dominant recurrent/convolutional encoder-decoder approaches become less sufficient because the source states the Transformer is more parallelizable and requires significantly less time to train, while also achieving state-of-the-art results. That means the older approaches no longer match the new observed combination of performance and training efficiency.\n\n(4) What capability becomes more valuable: Attention-only sequence modeling capability becomes more valuable, specifically architectures that can replace recurrence and convolutions while enabling more parallelizable training and strong task performance.\n\n(5) Why value reallocates: Value reallocates because, within AI computing, the architecture that better satisfies the updated requirement—strong sequence transduction results with greater parallelizability and lower training time—becomes more attractive than prior recurrent/convolutional approaches. As a result, comparative value shifts away from recurrence/convolution-based encoder-decoder designs toward attention-based Transformer designs.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation. Requires later market verification. The evidence supports that, within AI computing for sequence transduction/model training, the Transformer may shift technical value toward attention-based architectures and parallelizable GPU training workflows, relative to recurrent and convolutional encoder-decoder approaches, because the paper reports state-of-the-art translation results and faster training on eight GPUs.\n\nReasonable hypothesis requiring later verification: If subsequent adoption confirms these reported advantages, value could move away from RNN/CNN-based sequence model development and optimization toward Transformer-based model development, software frameworks, and compute setups optimized for highly parallel attention training. Potential value reallocation. Requires later market verification.",
+        "winner": "Within AI computing, the reallocated value is potentially captured by attention-based model architectures and the GPU-centric, highly parallel training workflow used to train them, relative to recurrent and convolutional encoder-decoder approaches. On the evidence given, likely beneficiaries are Transformer-based model development and software/compute setups optimized for parallel attention training. Market-level capture beyond this is unverified, so broader allocation is Unknown.",
+        "evidence": [
+          {
+            "text": "The authors propose the Transformer, a sequence transduction architecture based solely on attention mechanisms.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "The preprint states that the Transformer dispenses with recurrence and convolutions entirely.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "The authors report 28.4 BLEU on WMT 2014 English-to-German.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "The authors report a new single-model state-of-the-art 41.8 BLEU on WMT 2014 English-to-French.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "The preprint states that the 41.8 BLEU result was achieved after training 3.5 days on eight GPUs.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "The preprint states that the model is more parallelizable than prior dominant recurrent/convolutional encoder-decoder approaches.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "The preprint states that the model requires significantly less time to train than prior dominant recurrent/convolutional encoder-decoder approaches.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification: independent replications showing the Transformer consistently matches or exceeds recurrent/convolutional encoder-decoder models on sequence transduction quality while using less training time and benefiting from greater parallel execution on available GPU hardware; subsequent adoption in research or production replacing RNN/CNN sequence models for these advantages; benchmark and systems evidence that attention-based training workflows scale efficiently on parallel GPU setups. Falsification: failed replications of the reported quality or training-efficiency gains; evidence that RNN/CNN encoder-decoder models remain superior or equally efficient when compared fairly on the same tasks and hardware; or lack of meaningful downstream adoption of Transformer-based approaches despite the paper's claims.",
+        "marketBlindSpot": "The market blind spot is underestimating how much model architecture, not just better chips or larger datasets, could unlock AI computing performance by aligning workloads with parallel GPU execution. The evidence suggests prior focus on recurrent/convolutional sequence models missed that an attention-only design could deliver both state-of-the-art quality and materially better training efficiency, implying the market may have been optimizing around incumbent model structures rather than recognizing a coming shift toward architectures built for parallel compute."
+      }
+    }
+  },
+  {
+    "id": "IRB-013",
+    "result": {
+      "facts": [
+        {
+          "text": "Apple Newsroom published an announcement dated 2020-11-10 about M1.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple announced M1 as the first chip designed specifically for the Mac.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple described M1 as the most powerful chip it had ever created.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple stated that M1 is a system on a chip (SoC) with unified memory architecture.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple stated that M1 was the first personal computer chip built using 5-nanometer process technology.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple stated that M1 has 16 billion transistors.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple claimed up to 3.5x faster CPU performance for M1.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple claimed up to 6x faster GPU performance for M1.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple claimed up to 15x faster machine learning performance for M1.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple claimed battery life up to 2x longer than previous-generation Macs for systems using M1.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple stated that M1 powers the new MacBook Air.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple stated that M1 powers the new 13-inch MacBook Pro.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple stated that M1 powers the new Mac mini.",
+          "source": "Apple Newsroom (2020-11-10)"
+        },
+        {
+          "text": "Apple stated that the transition to Apple silicon would take about two years to complete.",
+          "source": "Apple Newsroom (2020-11-10)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying customer/system problem is the need for Macs to deliver substantially better overall computing efficiency at the device level: higher CPU, GPU, and machine-learning performance while also extending battery life. The change is aimed at solving end-user demand for faster, more capable personal computers that can run demanding workloads without sacrificing portability and power efficiency.",
+        "leadingSignal": "Apple announced M1 on 2020-11-10 as the first chip designed specifically for the Mac.",
+        "change": "Apple is introducing the M1 as its first Mac-specific chip and beginning a transition of Mac computers to Apple silicon, starting with the new MacBook Air, 13-inch MacBook Pro, and Mac mini, with the broader transition expected to take about two years.",
+        "reasoning": "(1) Observable change: Apple introduced M1 as its first chip designed specifically for the Mac, began shipping it in the new MacBook Air, 13-inch MacBook Pro, and Mac mini, and said the transition to Apple silicon would take about two years.\n\n(2) What technical/system requirement changes: The Mac platform shifts toward systems built around Apple silicon, specifically an SoC with unified memory architecture, 5-nanometer process technology, and the performance and efficiency characteristics Apple cited for M1.\n\n(3) Why the old/lower-spec solution becomes insufficient: The prior Mac chip approach becomes less aligned with the new platform direction because Apple is explicitly transitioning the Mac lineup to Apple silicon and presenting M1 as delivering materially higher CPU, GPU, machine learning performance, and longer battery life versus previous-generation Macs.\n\n(4) What capability becomes more valuable: Capability to provide or support Mac-specific Apple silicon SoC performance, unified memory architecture integration, advanced process-node implementation, and higher performance-per-watt becomes more valuable.\n\n(5) Why value reallocates: Value reallocates toward the solutions and ecosystem elements that are compatible with and enable Apple’s Apple-silicon-based Mac transition, because Apple is moving the Mac product line in that direction and attributing major performance and battery-life gains to that architecture.",
+        "valueReallocation": "Evidence-supported value reallocation: Apple is beginning to internalize more of the Mac chip design layer by introducing its own Mac-specific processor and starting a two-year transition of Mac computers to Apple silicon. This supports a value reallocation within General Technology from external PC processor suppliers toward Apple’s in-house silicon and system-level integration for the covered Mac products. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: If the two-year transition is completed broadly across the Mac line and Apple’s stated performance, power-efficiency, and battery-life benefits are realized in market adoption, more value could shift from third-party PC chip providers to Apple through tighter hardware-software integration and product differentiation. Potential value reallocation. Requires later market verification.",
+        "winner": "Apple appears to capture the reallocated value within General Technology by internalizing the Mac processor design layer and increasing control over system-level integration across the covered Mac products. The value appears to shift away from external PC processor suppliers toward Apple’s in-house silicon and hardware-software integration, but broader capture beyond the covered products remains unverified.",
+        "evidence": [
+          {
+            "text": "Apple announced M1 as the first chip designed specifically for the Mac.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple stated that M1 powers the new MacBook Air.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple stated that M1 powers the new 13-inch MacBook Pro.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple stated that M1 powers the new Mac mini.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple stated that the transition to Apple silicon would take about two years to complete.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple stated that M1 is a system on a chip (SoC) with unified memory architecture.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple stated that M1 was the first personal computer chip built using 5-nanometer process technology.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple stated that M1 has 16 billion transistors.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple claimed up to 3.5x faster CPU performance for M1.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple claimed up to 6x faster GPU performance for M1.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple claimed up to 15x faster machine learning performance for M1.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Apple claimed battery life up to 2x longer than previous-generation Macs for systems using M1.",
+            "source": "Apple Newsroom (2020-11-10)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verify: evidence that Apple completed or substantially executed the stated two-year Mac transition to Apple silicon across the broader Mac lineup; evidence that shipped M1-based Macs actually delivered the claimed performance-per-watt, battery-life, and workload advantages in real-world products; evidence that Apple continued expanding in-house Mac chip adoption beyond the initial MacBook Air, 13-inch MacBook Pro, and Mac mini; and evidence that external PC processor suppliers lost Mac processor design share as Apple internalized that layer. Falsify: evidence that the broader Mac transition did not occur or was materially reversed or delayed; evidence that real-world M1-based Macs did not deliver meaningful CPU, GPU, machine-learning, or battery-life improvements versus prior Macs; evidence that Apple remained materially dependent on external PC processors for the Mac lineup beyond the transition window; or evidence that no meaningful value shifted away from third-party Mac processor suppliers toward Apple’s in-house silicon and system integration.",
+        "marketBlindSpot": "The likely market blind spot is underestimating how much value in personal computing could shift from standalone component performance to tightly integrated system design. Apple’s M1 announcement suggests that buyers may care more about performance-per-watt, battery life, and hardware-software-memory integration at the device level than about traditional processor comparisons alone. It also reveals a possible blind spot around the strategic risk to external PC processor suppliers when a platform owner internalizes a core technology layer and uses it to differentiate the full product experience. Broader market impact beyond the announced Mac products requires later verification."
+      }
+    }
+  },
+  {
+    "id": "IRB-014",
+    "result": {
+      "facts": [
+        {
+          "text": "On 2014-02-26, Tesla Motors published a blog post titled “Gigafactory.”",
+          "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+        },
+        {
+          "text": "Tesla’s 2014-02-26 SEC Form 8-K references the Tesla Motors blog post titled “Gigafactory.”",
+          "source": "Tesla SEC Form 8-K (2014-02-26)"
+        },
+        {
+          "text": "Tesla states it is planning to build a large-scale factory with strategic battery manufacturing partners.",
+          "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+        },
+        {
+          "text": "Tesla states the planned factory is intended to achieve economies of scale and minimize battery costs.",
+          "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+        },
+        {
+          "text": "Tesla states the Gigafactory is designed to reduce cell costs much faster than the status quo.",
+          "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+        },
+        {
+          "text": "Tesla states that by 2020 the Gigafactory would produce more lithium-ion batteries annually than were produced worldwide in 2013.",
+          "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+        },
+        {
+          "text": "Tesla expects that by the end of the first year of volume production of its mass-market vehicle, the Gigafactory will have reduced battery pack cost per kWh by more than 30 percent.",
+          "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying system-level problem is that battery costs were too high under the status quo, limiting economically viable volume production of Tesla’s planned mass-market vehicle. The change is intended to solve the end-customer manufacturing problem of making enough lithium-ion batteries at materially lower cost per kWh to support large-scale, lower-cost vehicle production.",
+        "leadingSignal": "2014-02-26: Tesla stated it is planning to build a large-scale factory with strategic battery manufacturing partners.",
+        "change": "Tesla is planning to build a large-scale battery factory with strategic manufacturing partners to expand lithium-ion battery production capacity and lower battery costs through economies of scale.",
+        "reasoning": "(1) Observable change: Tesla states it is planning to build a large-scale battery factory with strategic manufacturing partners, intended to achieve economies of scale, minimize battery costs, reduce cell costs faster than the status quo, and produce battery volume by 2020 exceeding worldwide 2013 lithium-ion output.\n\n(2) What technical/system requirement changes: The implied requirement shifts toward much larger-scale battery manufacturing capacity and production systems capable of materially lower cell and pack cost per kWh. \n\n(3) Why the old/lower-spec solution becomes insufficient: The status quo becomes insufficient because Tesla explicitly states the Gigafactory is designed to reduce cell costs much faster than the status quo, and expects more than a 30 percent reduction in battery pack cost per kWh; that indicates existing manufacturing scale and cost structure do not meet the targeted output and cost objectives.\n\n(4) What capability becomes more valuable: Large-scale battery manufacturing capability, including the ability to coordinate with strategic manufacturing partners and achieve economies of scale that lower cell and pack costs, becomes more valuable.\n\n(5) Why value reallocates: Value reallocates toward manufacturing approaches and participants that can deliver higher battery output and lower cost per kWh, because Tesla’s stated objective is that scale and partner-enabled production reduce costs faster than the prior approach. As lower battery cost and higher volume become more important, the relative value shifts away from the status quo manufacturing setup toward large-scale, scale-efficient battery production capability.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation. Requires later market verification. The available evidence supports only that Tesla planned to internalize and expand battery manufacturing capacity with strategic partners in order to lower lithium-ion cell and pack costs through economies of scale within manufacturing. This implies a potential shift of manufacturing value toward large-scale battery cell and pack production integrated with Tesla and its partners, but the evidence does not confirm that such value reallocation had already occurred.\n\nReasonable hypothesis requiring later verification: If the planned cost reductions and capacity expansion were achieved, manufacturing value could shift from higher-cost incumbent battery production toward scaled manufacturers participating in Tesla’s Gigafactory model, with possible pressure on other battery producers that could not match cost declines or scale. Potential value reallocation. Requires later market verification.",
+        "winner": "Within manufacturing, the available evidence suggests potential value capture by Tesla and its strategic battery manufacturing partners through large-scale integrated battery cell and pack production, driven by economies of scale and lower lithium-ion battery costs. However, the evidence does not confirm that this value reallocation had already occurred, so any broader shift away from higher-cost incumbent battery manufacturers remains unverified.",
+        "evidence": [
+          {
+            "text": "Tesla states it is planning to build a large-scale factory with strategic battery manufacturing partners.",
+            "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+          },
+          {
+            "text": "Tesla states the planned factory is intended to achieve economies of scale and minimize battery costs.",
+            "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+          },
+          {
+            "text": "Tesla states the Gigafactory is designed to reduce cell costs much faster than the status quo.",
+            "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+          },
+          {
+            "text": "Tesla states that by 2020 the Gigafactory would produce more lithium-ion batteries annually than were produced worldwide in 2013.",
+            "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+          },
+          {
+            "text": "Tesla expects that by the end of the first year of volume production of its mass-market vehicle, the Gigafactory will have reduced battery pack cost per kWh by more than 30 percent.",
+            "source": "Tesla Motors blog “Gigafactory” (2014-02-26)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verify: evidence that the factory was actually built and ramped with strategic battery manufacturing partners; measured lithium-ion cell and pack cost per kWh falling materially versus the prior status quo, including whether battery pack cost per kWh fell by more than 30 percent by the end of the first year of volume production of Tesla’s mass-market vehicle; demonstrated battery output reaching the planned scale, including whether annual production by 2020 exceeded worldwide 2013 lithium-ion battery output; and manufacturing economics showing economies of scale were achieved and value capture shifted toward Tesla and participating manufacturing partners through higher battery volume and lower unit costs. Falsify: evidence that the factory was not built as planned, was materially delayed, lacked the stated strategic partners, failed to achieve the targeted production scale, did not reduce cell costs faster than the status quo, did not deliver the expected pack cost reduction per kWh, or failed to shift manufacturing value toward scaled battery production because costs and output remained similar to the prior setup.",
+        "marketBlindSpot": "The likely market blind spot within manufacturing was underestimating battery production scale as the core cost lever. The status quo appears to have treated battery supply as an external input to optimize incrementally, while Tesla’s stated plan implies that manufacturing advantage could instead come from vertically coordinated, very large-scale cell and pack production with partners. In manufacturing terms, the blind spot was failing to recognize that production architecture and factory scale itself could become a primary source of cost reduction and capacity advantage, rather than just incremental process improvement under existing supplier structures. However, the evidence only supports this as a potential blind spot revealed by Tesla’s stated plan, not as a confirmed market outcome."
+      }
+    }
+  },
+  {
+    "id": "IRB-015",
+    "result": {
+      "facts": [
+        {
+          "text": "An Amazon press release dated 2014-11-13 states that at AWS re:Invent, Amazon Web Services announced AWS Lambda, a compute service that runs developers’ code in response to events and automatically manages the compute resources.",
+          "source": "Amazon press release (2014-11-13)"
+        },
+        {
+          "text": "AWS stated that Lambda starts running code within milliseconds of an event such as an image upload, in-app activity, website click, or connected-device output, without provisioning or managing virtual servers.",
+          "source": "Amazon press release (2014-11-13)"
+        },
+        {
+          "text": "AWS stated that developers pay only for requests served and compute time, charged in 100-millisecond increments.",
+          "source": "Amazon press release (2014-11-13)"
+        },
+        {
+          "text": "The preview of AWS Lambda started on 2014-11-13.",
+          "source": "Amazon press release (2014-11-13)"
+        },
+        {
+          "text": "Customers write JavaScript for AWS Lambda to act on events such as S3 uploads, DynamoDB updates, and Kinesis streams.",
+          "source": "Amazon press release (2014-11-13)"
+        },
+        {
+          "text": "AWS stated that Lambda scales compute across Availability Zones as needed.",
+          "source": "Amazon press release (2014-11-13)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying cloud-infrastructure problem is the need to execute application logic immediately in response to unpredictable events without having to provision, manage, or continuously pay for virtual server capacity. The end/system-level problem being solved is event-driven application processing that must scale automatically across infrastructure as demand changes, while reducing idle capacity and operational overhead.",
+        "leadingSignal": "2014-11-13: AWS announced AWS Lambda and started its preview at AWS re:Invent.",
+        "change": "AWS is launching AWS Lambda in preview, adding an event-driven compute service to its cloud infrastructure that runs code in response to events without customers provisioning or managing virtual servers, with usage-based billing and automatic scaling across Availability Zones.",
+        "reasoning": "(1) Observable change: AWS launched Lambda in preview as an event-driven compute service that runs code in response to events, starts within milliseconds, automatically manages compute resources, scales across Availability Zones, and charges only for requests served and compute time in 100-millisecond increments.\n\n(2) What technical/system requirement changes: The requirement shifts from provisioning and managing virtual servers for event-triggered workloads to using a service that can execute code on demand in response to events, start quickly, auto-scale, and meter usage at fine time increments.\n\n(3) Why the old/lower-spec solution becomes insufficient: Provisioned virtual servers become less suitable for these workloads because Lambda is described as operating without customers provisioning or managing virtual servers while starting within milliseconds of events and charging only for actual requests and compute time. This implies always-on or manually managed server-based approaches are less aligned with bursty, event-triggered execution needs.\n\n(4) What capability becomes more valuable: More valuable capability includes event-driven execution, automatic compute management, rapid invocation within milliseconds, automatic scaling across Availability Zones, and fine-grained usage-based billing.\n\n(5) Why value reallocates: Value reallocates toward cloud infrastructure services that provide those capabilities because they remove server provisioning and management work for developers while aligning cost and scaling more closely to actual event-driven usage. Within cloud infrastructure, this shifts value from basic provisioned virtual-server usage toward managed event-driven compute services.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation. Requires later market verification. The launch evidence supports only that AWS is introducing a new cloud infrastructure consumption model within its platform: event-driven compute with no customer server provisioning/management and fine-grained usage-based billing. This could shift workload value within cloud infrastructure from customer-managed virtual server usage toward managed event-driven compute services on AWS for supported event-triggered use cases.\n\nReasonable hypothesis requiring later verification: If adoption materializes, some value within cloud infrastructure could move from traditional always-on or manually provisioned compute instances toward serverless/function-style services, and toward AWS-managed operational control rather than customer infrastructure administration. This remains a hypothesis because the provided evidence does not show actual workload migration, customer spending shifts, or competitive share changes.",
+        "winner": "Potentially AWS captures the reallocated value within cloud infrastructure, specifically through a shift from customer-managed virtual server usage and customer-run infrastructure administration toward AWS-managed event-driven compute services for supported workloads. The press release supports only a potential reallocation mechanism: no server provisioning/management by customers, automatic scaling across Availability Zones, and fine-grained pay-per-request/compute-time billing. It does not provide evidence of actual customer spending shifts, workload migration, or competitor value loss, so any broader capture beyond AWS is unverified.",
+        "evidence": [
+          {
+            "text": "An Amazon press release dated 2014-11-13 states that at AWS re:Invent, Amazon Web Services announced AWS Lambda, a compute service that runs developers’ code in response to events and automatically manages the compute resources.",
+            "source": "Amazon press release (2014-11-13)"
+          },
+          {
+            "text": "The preview of AWS Lambda started on 2014-11-13.",
+            "source": "Amazon press release (2014-11-13)"
+          },
+          {
+            "text": "AWS stated that Lambda starts running code within milliseconds of an event such as an image upload, in-app activity, website click, or connected-device output, without provisioning or managing virtual servers.",
+            "source": "Amazon press release (2014-11-13)"
+          },
+          {
+            "text": "AWS stated that developers pay only for requests served and compute time, charged in 100-millisecond increments.",
+            "source": "Amazon press release (2014-11-13)"
+          },
+          {
+            "text": "Customers write JavaScript for AWS Lambda to act on events such as S3 uploads, DynamoDB updates, and Kinesis streams.",
+            "source": "Amazon press release (2014-11-13)"
+          },
+          {
+            "text": "AWS stated that Lambda scales compute across Availability Zones as needed.",
+            "source": "Amazon press release (2014-11-13)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification within cloud infrastructure would require later evidence such as: sustained customer adoption of AWS Lambda after preview; measurable migration of event-driven workloads from customer-managed virtual servers to Lambda; growth in Lambda usage or revenue associated with use cases previously handled on EC2 or other provisioned compute; customer evidence that operational overhead and idle capacity were reduced; and evidence that AWS captured more workload value through managed event-driven compute rather than traditional server provisioning for those use cases. Falsification would come from evidence that Lambda preview saw limited adoption, that event-driven workloads largely remained on provisioned virtual servers, that customers did not materially reduce server management or idle capacity, or that Lambda did not produce meaningful workload or spending shifts within cloud infrastructure. Claims about broader industry value reallocation beyond AWS would require competitor and market-share evidence; without that, such broader reallocation remains unverified.",
+        "marketBlindSpot": "The likely market blind spot within cloud infrastructure is underestimating demand for managed, event-driven compute as a distinct consumption model separate from provisioned virtual servers. The launch suggests that many workloads did not mainly need persistent server instances; they needed immediate execution on unpredictable events, automatic scaling, and billing aligned to actual invocation time. A related blind spot is viewing cloud compute primarily as infrastructure customers provision and manage themselves, rather than as infrastructure abstractions that remove server operations entirely for certain use cases. Beyond that, evidence is insufficient to confirm actual market adoption or spending shifts, so any broader blind spot about competitive impact remains unverified."
+      }
+    }
+  },
+  {
+    "id": "IRB-016",
+    "result": {
+      "facts": [
+        {
+          "text": "A Cloudflare press release is dated 2010-09-27.",
+          "source": "Cloudflare press release (2010-09-27)"
+        },
+        {
+          "text": "Cloudflare, Inc. announced the launch of the public beta of its performance and security service at TechCrunch Disrupt.",
+          "source": "Cloudflare press release (2010-09-27)"
+        },
+        {
+          "text": "CEO Matthew Prince stated that Cloudflare addresses two problems for website operators: making sites fast and making them secure.",
+          "source": "Cloudflare press release (2010-09-27)"
+        },
+        {
+          "text": "CEO Matthew Prince stated that Cloudflare brings performance and security tools previously available only to Internet giants to anyone with a website.",
+          "source": "Cloudflare press release (2010-09-27)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "Website operators need to make their sites fast and secure, but many lack access to the performance and security capabilities previously available only to large Internet companies.",
+        "leadingSignal": "2010-09-27: Cloudflare, Inc. announced the launch of the public beta of its performance and security service at TechCrunch Disrupt.",
+        "change": "Cloudflare is launching the public beta of its cloud-based website performance and security service, expanding access to performance and security tools from large Internet companies to any website operator.",
+        "reasoning": "(1) Observable change: Cloudflare launched the public beta of a cloud-based website performance and security service, expanding access to performance and security tools that were previously available only to Internet giants to any website operator.\n\n(2) What technical/system requirement changes: Website operators can now obtain performance and security capabilities as an externally provided service rather than only through capabilities historically limited to large Internet companies.\n\n(3) Why the old/lower-spec solution becomes insufficient: The older status quo is insufficient because those performance and security tools were previously available only to Internet giants, which implies many smaller website operators did not have equivalent access under the prior model.\n\n(4) What capability becomes more valuable: Broadly deployable cloud-delivered website performance and security capability becomes more valuable.\n\n(5) Why value reallocates: Value reallocates toward providers that can package and deliver Internet-giant-level website performance and security capabilities to a broad base of website operators, because the launch makes those capabilities accessible beyond the small set of operators that could previously obtain them.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation from incumbent providers of standalone website performance and security tools for large or sophisticated website operators toward cloud-based service providers offering bundled performance and security capabilities to a broader base of website operators. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: If adoption occurs, smaller website operators may shift spending away from in-house optimization/security efforts or specialized point solutions toward integrated cloud infrastructure services that combine both functions.",
+        "winner": "Within cloud infrastructure, the press release supports a potential shift of value toward cloud-based providers that bundle website performance and security services for a broad set of website operators, including smaller sites. The potentially displaced value appears to come from incumbent standalone performance and security tool providers serving larger or more sophisticated operators, and possibly from some in-house optimization and security efforts by website operators. This is only a potential reallocation based on the launch positioning and requires later market verification.",
+        "evidence": [
+          {
+            "text": "Cloudflare, Inc. announced the launch of the public beta of its performance and security service at TechCrunch Disrupt.",
+            "source": "Cloudflare press release (2010-09-27)"
+          },
+          {
+            "text": "CEO Matthew Prince stated that Cloudflare addresses two problems for website operators: making sites fast and making them secure.",
+            "source": "Cloudflare press release (2010-09-27)"
+          },
+          {
+            "text": "CEO Matthew Prince stated that Cloudflare brings performance and security tools previously available only to Internet giants to anyone with a website.",
+            "source": "Cloudflare press release (2010-09-27)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification within cloud infrastructure would come from later evidence that website operators broadly adopted Cloudflare’s bundled performance-and-security service, especially smaller sites that previously lacked such capabilities; that spending or usage shifted from standalone website performance/security tools or in-house approaches toward integrated cloud-delivered services; and that competing cloud infrastructure providers responded with similar bundled offerings. Falsification would come from evidence that adoption remained limited, that website operators continued to rely mainly on incumbent standalone tools or in-house methods, or that no meaningful spending, usage, or competitive shift followed the public beta launch. The press release alone does not verify the reallocation; it only establishes the launch and positioning.",
+        "marketBlindSpot": "The likely market blind spot within cloud infrastructure is underestimating demand from smaller website operators for integrated, cloud-delivered performance and security services. The press release indicates these capabilities had been viewed as tools mainly for Internet giants, which suggests the market may have overlooked a broader customer segment that wanted the same outcomes without building them in-house. A related blind spot is failing to see that bundling performance and security into a single service could expand the market beyond traditional standalone tools. This is a plausible implication from the launch positioning, not verified market evidence."
+      }
+    }
+  },
+  {
+    "id": "IRB-017",
+    "result": {
+      "facts": [
+        {
+          "text": "Apple Newsroom dated 2007-01-09 states that Apple introduced iPhone.",
+          "source": "Apple Newsroom (2007-01-09)"
+        },
+        {
+          "text": "Apple states that iPhone combines a mobile phone, a widescreen iPod with touch controls, and an Internet communications device into one handheld.",
+          "source": "Apple Newsroom (2007-01-09)"
+        },
+        {
+          "text": "Apple states that the Internet communications device features desktop-class email, web browsing, searching, and maps.",
+          "source": "Apple Newsroom (2007-01-09)"
+        },
+        {
+          "text": "Apple states that iPhone introduces a multi-touch user interface controlled with fingers.",
+          "source": "Apple Newsroom (2007-01-09)"
+        },
+        {
+          "text": "Apple states that iPhone will be available in the US in June 2007.",
+          "source": "Apple Newsroom (2007-01-09)"
+        },
+        {
+          "text": "Apple states that iPhone will be offered in 4GB and 8GB models.",
+          "source": "Apple Newsroom (2007-01-09)"
+        },
+        {
+          "text": "Apple states that the 4GB model is priced at $499.",
+          "source": "Apple Newsroom (2007-01-09)"
+        },
+        {
+          "text": "Apple states that the 8GB model is priced at $599.",
+          "source": "Apple Newsroom (2007-01-09)"
+        },
+        {
+          "text": "Apple states that iPhone will be sold through Apple and Cingular retail and online stores.",
+          "source": "Apple Newsroom (2007-01-09)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying customer problem is the need for a single portable consumer device that replaces carrying separate products for calling, music playback, and Internet communication, while making mobile access to email, web browsing, search, and maps easier through a finger-based touch interface.",
+        "leadingSignal": "Apple introduced iPhone on 2007-01-09.",
+        "change": "Apple is introducing the iPhone in consumer electronics: a new handheld device that combines a mobile phone, a widescreen iPod with touch controls, and an Internet communications device with desktop-class email, web browsing, searching, and maps, using a finger-based multi-touch interface. Apple also states the product is set to launch in the US in June 2007 in 4GB and 8GB models through Apple and Cingular retail and online stores.",
+        "reasoning": "(1) Observable change: In consumer electronics, Apple introduced iPhone as a single handheld device that combines a mobile phone, a widescreen iPod with touch controls, and an Internet communications device with desktop-class email, web browsing, searching, and maps, and it uses a finger-based multi-touch user interface.\n\n(2) What technical/system requirement changes: The device concept shifts the product requirement from serving one primary function to supporting multiple functions in one handheld, including touch-controlled media use and desktop-class Internet communication features. It also implies a user-interface requirement centered on finger-based multi-touch interaction.\n\n(3) Why the old/lower-spec solution becomes insufficient: A lower-spec or older single-purpose handheld solution becomes insufficient because it does not match the newly introduced integrated product requirement of combining phone, media, Internet communication, and finger-based multi-touch interaction in one device.\n\n(4) What capability becomes more valuable: The more valuable capability becomes the ability to deliver an integrated handheld consumer device that supports multiple functions together, especially desktop-class Internet features and a finger-based multi-touch user interface.\n\n(5) Why value reallocates: Value reallocates toward products and offerings that can meet this higher integrated-function and interface requirement, because the observable change redefines what the device is expected to do within one handheld product. As a result, solutions aligned with integrated multifunction use and multi-touch interaction become relatively more valuable than lower-spec or more limited alternatives.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation. Requires later market verification. The available evidence supports only that Apple plans to offer a single consumer electronics handheld combining functions previously associated with a mobile phone, an iPod/media player, and an Internet communications device, through Apple and Cingular channels.\n\nReasonable hypothesis requiring later verification: If consumer adoption occurs, value could shift within consumer electronics from standalone portable media players and other single-purpose handheld devices toward integrated multifunction smartphones with touch interfaces. Distribution value could also potentially shift toward the announced Apple and Cingular retail/online channels for this product. These are hypotheses only and are not shown as already occurring in the provided evidence.",
+        "winner": "Within consumer electronics, the available evidence supports only a potential reallocation hypothesis, not a confirmed outcome. If adoption occurs, likely value capture could shift toward Apple as the integrated device maker combining phone, media player, and internet functions, and toward the announced Apple and Cingular retail/online sales channels. Potentially displaced value could come from standalone portable media players and other single-purpose handheld device categories. However, confirmed value capture is Unknown based on the provided evidence alone.",
+        "evidence": [
+          {
+            "text": "Apple states that iPhone combines a mobile phone, a widescreen iPod with touch controls, and an Internet communications device into one handheld.",
+            "source": "Apple Newsroom (2007-01-09)"
+          },
+          {
+            "text": "Apple states that the Internet communications device features desktop-class email, web browsing, searching, and maps.",
+            "source": "Apple Newsroom (2007-01-09)"
+          },
+          {
+            "text": "Apple states that iPhone introduces a multi-touch user interface controlled with fingers.",
+            "source": "Apple Newsroom (2007-01-09)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Apple states that iPhone will be available in the US in June 2007.",
+            "source": "Apple Newsroom (2007-01-09)"
+          },
+          {
+            "text": "Apple states that iPhone will be offered in 4GB and 8GB models.",
+            "source": "Apple Newsroom (2007-01-09)"
+          },
+          {
+            "text": "Apple states that the 4GB model is priced at $499.",
+            "source": "Apple Newsroom (2007-01-09)"
+          },
+          {
+            "text": "Apple states that the 8GB model is priced at $599.",
+            "source": "Apple Newsroom (2007-01-09)"
+          },
+          {
+            "text": "Apple states that iPhone will be sold through Apple and Cingular retail and online stores.",
+            "source": "Apple Newsroom (2007-01-09)"
+          }
+        ],
+        "verification": "Verification: In consumer electronics, this conclusion would be verified by post-launch evidence showing that the announced iPhone actually reached the market as described, achieved meaningful consumer adoption, and caused measurable substitution away from standalone portable media players or other single-purpose handheld devices toward integrated multifunction smartphones with touch interfaces. Useful confirming evidence would include launch execution in June 2007 through Apple and Cingular channels, sales volumes, consumer usage showing replacement of multiple devices with one handheld, category mix shifts within portable devices, and market-share or revenue-share gains for integrated smartphones relative to standalone devices.\n\nFalsification: The conclusion would be falsified if post-launch evidence showed that iPhone did not launch as announced, had weak adoption, did not materially change consumer purchasing behavior, or failed to shift value away from standalone or single-purpose handheld consumer electronics. It would also be weakened or falsified if consumers continued buying separate phone, music, and internet-access devices at similar rates, or if the multi-touch integrated format did not become more valuable in practice.\n\nKnown limits from the provided evidence: The source only confirms the product announcement, planned features, pricing, timing, and channels. It does not by itself confirm adoption, substitution effects, category value shifts, or winner/loser outcomes.",
+        "marketBlindSpot": "The likely market blind spot within consumer electronics is underestimating demand for device convergence: consumers may value one handheld that combines phone, media playback, and Internet functions with a finger-based multi-touch interface more than separate single-purpose devices. A related blind spot is assuming existing product categories and interfaces remain sufficient when the announcement suggests a new expectation for integrated functionality and easier mobile Internet use. However, confirmed market impact is Unknown based on the provided evidence alone."
+      }
+    }
+  },
+  {
+    "id": "IRB-018",
+    "result": {
+      "facts": [
+        {
+          "text": "Apple Newsroom published an announcement dated 2014-09-09.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple unveiled Apple Watch.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple described Apple Watch as its most personal device ever.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple Watch has a Digital Crown navigation interface.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple Watch includes wrist communication features such as messages, iPhone calls, and Digital Touch including heartbeat.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple Watch includes health and fitness apps.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple stated that Apple Watch would be available in three collections: Apple Watch, Apple Watch Sport, and Apple Watch Edition.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple stated that Apple Watch would be available in early 2015.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple stated that Apple Watch would start at $349 in the US.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple stated that Apple Watch is compatible with iPhone 5, iPhone 5c, iPhone 5s, iPhone 6, and iPhone 6 Plus running the latest iOS 8.",
+          "source": "Apple Newsroom (2014-09-09)"
+        },
+        {
+          "text": "Apple introduced WatchKit for developers to create wrist experiences.",
+          "source": "Apple Newsroom (2014-09-09)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The end-user problem appears to be the need for more immediate, convenient, and personal access to communication, notifications, and health/fitness functions without having to repeatedly take out and use an iPhone. The announcement supports this through wrist-based messaging and calls, a navigation interface designed for the wrist, health and fitness apps, and developer tools for wrist experiences.",
+        "leadingSignal": "Apple unveiled Apple Watch on 2014-09-09.",
+        "change": "Apple is entering the consumer wearables market by unveiling Apple Watch and is preparing an early 2015 launch of a new smartwatch product line in three collections, along with WatchKit for developer support.",
+        "reasoning": "(1) Observable change: Apple unveiled Apple Watch as a new smartwatch product line, with three collections, compatibility with certain iPhone models running iOS 8, and WatchKit for developers to create wrist experiences.\n\n(2) What technical/system requirement changes: The system requirement shifts from phone-only interaction to supporting wrist-based interaction and companion functionality tied to compatible iPhones, including navigation through the Digital Crown, wrist communication features, health and fitness apps, and developer-built wrist experiences through WatchKit.\n\n(3) Why the old/lower-spec solution becomes insufficient: A phone-only consumer electronics setup becomes insufficient for the new use case because the announced product is specifically designed for wrist-based access, communication, and health/fitness interaction. Older solutions that do not support compatible iPhone pairing, dedicated wrist interaction, or WatchKit-based experiences cannot deliver the announced Apple Watch experience.\n\n(4) What capability becomes more valuable: Capabilities that become more valuable are wrist-optimized hardware and software experiences, compatibility with supported iPhones and iOS 8, app development for wrist experiences via WatchKit, and features enabling quick communication, navigation, and health/fitness use on the wrist.\n\n(5) Why value reallocates: Value reallocates toward products, components, software, and developer efforts that enable the announced smartwatch category and its companion ecosystem, because the observable change creates demand for consumer electronics offerings that support Apple Watch-specific use cases and compatibility requirements, while solutions limited to prior phone-only interaction are less aligned with the new product experience.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation from existing consumer electronics spending toward smartwatches/wearables, specifically within Apple’s product ecosystem, supported by Apple’s unveiling of a new Apple Watch product line, stated pricing, planned launch timing, iPhone compatibility requirements, and WatchKit developer support. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: Consumer spending and developer attention could shift from some adjacent consumer electronics categories or accessory categories toward smartwatch hardware, watch-specific apps, and iPhone-linked wearable experiences if adoption materializes, but this is not yet established by the available evidence.",
+        "winner": "Within consumer electronics, the reallocated value would most directly be captured by Apple’s own smartwatch hardware line and related Apple ecosystem activity, based on the announced Apple Watch product collections, entry pricing, iPhone compatibility requirement, and WatchKit support. If the hypothesized shift occurs, value could also move toward watch-specific apps and iPhone-linked wearable accessories/services within Apple’s ecosystem. Beyond that, evidence is insufficient, so broader winners are Unknown.",
+        "evidence": [
+          {
+            "text": "Apple unveiled Apple Watch.",
+            "source": "Apple Newsroom (2014-09-09)"
+          },
+          {
+            "text": "Apple stated that Apple Watch would be available in three collections: Apple Watch, Apple Watch Sport, and Apple Watch Edition.",
+            "source": "Apple Newsroom (2014-09-09)"
+          },
+          {
+            "text": "Apple stated that Apple Watch would be available in early 2015.",
+            "source": "Apple Newsroom (2014-09-09)"
+          },
+          {
+            "text": "Apple stated that Apple Watch would start at $349 in the US.",
+            "source": "Apple Newsroom (2014-09-09)"
+          },
+          {
+            "text": "Apple stated that Apple Watch is compatible with iPhone 5, iPhone 5c, iPhone 5s, iPhone 6, and iPhone 6 Plus running the latest iOS 8.",
+            "source": "Apple Newsroom (2014-09-09)"
+          },
+          {
+            "text": "Apple introduced WatchKit for developers to create wrist experiences.",
+            "source": "Apple Newsroom (2014-09-09)"
+          },
+          {
+            "text": "Apple Watch has a Digital Crown navigation interface.",
+            "source": "Apple Newsroom (2014-09-09)"
+          },
+          {
+            "text": "Apple Watch includes wrist communication features such as messages, iPhone calls, and Digital Touch including heartbeat.",
+            "source": "Apple Newsroom (2014-09-09)"
+          },
+          {
+            "text": "Apple Watch includes health and fitness apps.",
+            "source": "Apple Newsroom (2014-09-09)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verification: successful early-2015 commercial launch of Apple Watch as announced; confirmed availability of the three collections and the stated starting price; confirmed compatibility with the listed iPhone models on iOS 8; availability and use of WatchKit-based wrist apps; and observable consumer-electronics market evidence that spending, usage, or developer activity shifted toward Apple’s smartwatch ecosystem rather than remaining phone-only. Falsification: failure to launch on the announced timeline, material deviation from the announced product/price/compatibility, lack of meaningful WatchKit app support, or lack of observable consumer-electronics spending/adoption shift toward Apple Watch and related wrist-based experiences.",
+        "marketBlindSpot": "The likely market blind spot within consumer electronics is underestimating demand for a wrist-based companion device category that complements, rather than replaces, the smartphone. The announcement suggests the market may have been too focused on phone-centric usage and may have overlooked consumer value in faster on-body access to communication, notifications, and health/fitness functions, as well as the importance of a developer ecosystem built specifically for wrist experiences. Broader blind spots beyond this are Unknown."
+      }
+    }
+  },
+  {
+    "id": "IRB-019",
+    "result": {
+      "facts": [
+        {
+          "text": "A Snowflake Computing press release dated 2014-10-21 announced that Snowflake was emerging from stealth.",
+          "source": "Snowflake Computing press release (2014-10-21)"
+        },
+        {
+          "text": "The press release announced the Snowflake Elastic Data Warehouse.",
+          "source": "Snowflake Computing press release (2014-10-21)"
+        },
+        {
+          "text": "The Snowflake Elastic Data Warehouse was described as a data warehouse built from the ground up as a cloud service.",
+          "source": "Snowflake Computing press release (2014-10-21)"
+        },
+        {
+          "text": "Snowflake stated that its architecture delivers SQL data warehousing, big-data flexibility, and cloud elasticity.",
+          "source": "Snowflake Computing press release (2014-10-21)"
+        },
+        {
+          "text": "Snowflake claimed its architecture provides a 90 percent lower cost than on-premises data warehouses.",
+          "source": "Snowflake Computing press release (2014-10-21)"
+        },
+        {
+          "text": "Snowflake stated that the service was available in beta for qualified organizations.",
+          "source": "Snowflake Computing press release (2014-10-21)"
+        },
+        {
+          "text": "Snowflake announced $26 million in funding.",
+          "source": "Snowflake Computing press release (2014-10-21)"
+        },
+        {
+          "text": "The funding announced by Snowflake was from Redpoint, Sutter Hill, and Wing Ventures.",
+          "source": "Snowflake Computing press release (2014-10-21)"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The end-customer problem appears to be the need for a data warehousing system that can handle SQL analytics and large-scale data workloads in the cloud with elastic scaling and materially lower cost than traditional on-premises data warehouses.",
+        "leadingSignal": "Snowflake announced the Snowflake Elastic Data Warehouse, described as a data warehouse built from the ground up as a cloud service, and stated the service was available in beta for qualified organizations.",
+        "change": "Snowflake is emerging from stealth and introducing the Snowflake Elastic Data Warehouse, a cloud-native data warehouse service, with the concrete near-term change being that the service is becoming available in beta for qualified organizations.",
+        "reasoning": "(1) Observable change: A cloud-native data warehouse service, the Snowflake Elastic Data Warehouse, was introduced and made available in beta for qualified organizations.\n\n(2) What technical/system requirement changes: Within cloud infrastructure, the stated requirement shifts toward a data warehousing approach built as a cloud service that provides SQL data warehousing, big-data flexibility, and cloud elasticity.\n\n(3) Why the old/lower-spec solution becomes insufficient: On-premises data warehouses become less sufficient where those cloud-service characteristics and the claimed lower-cost model are required, because the new offering is positioned against on-premises data warehouses with cloud-native operation and a claimed 90 percent lower cost. Beyond that, Unknown.\n\n(4) What capability becomes more valuable: Capability to deliver data warehousing as a cloud-native service with SQL support, big-data flexibility, cloud elasticity, and lower-cost operation becomes more valuable.\n\n(5) Why value reallocates: Value reallocates toward providers and solutions that meet those cloud-service requirements because they are presented as delivering the desired functionality and economics relative to on-premises data warehouses. The source does not support a more specific reallocation path, so Unknown beyond that.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation from on-premises data warehouse vendors toward cloud-based data warehouse services within cloud infrastructure, supported only by Snowflake's launch of a cloud-native data warehouse in beta and its claim of materially lower cost. Requires later market verification.\n\nReasonable hypothesis requiring later verification: If Snowflake's claimed lower-cost, elastic cloud architecture is validated in customer adoption, value could shift from traditional on-premises data warehouse infrastructure and related deployment models toward managed cloud data warehouse platforms. Potential value reallocation. Requires later market verification.",
+        "winner": "Within cloud infrastructure, the press release supports only a potential reallocation of value toward managed cloud data warehouse service providers such as Snowflake, and away from traditional on-premises data warehouse vendors and related deployment models. This is evidence-supported only as a possibility based on Snowflake's launch of a cloud-native data warehouse in beta and its claimed lower cost and elasticity; actual value capture is not verified in the provided evidence.",
+        "evidence": [
+          {
+            "text": "Snowflake Computing press release dated 2014-10-21 announced that Snowflake was emerging from stealth and announced the Snowflake Elastic Data Warehouse; Snowflake also stated that the service was available in beta for qualified organizations.",
+            "source": "Snowflake Computing press release (2014-10-21)"
+          },
+          {
+            "text": "The Snowflake Elastic Data Warehouse was described as a data warehouse built from the ground up as a cloud service.",
+            "source": "Snowflake Computing press release (2014-10-21)"
+          },
+          {
+            "text": "Snowflake stated that its architecture delivers SQL data warehousing, big-data flexibility, and cloud elasticity.",
+            "source": "Snowflake Computing press release (2014-10-21)"
+          },
+          {
+            "text": "Snowflake claimed its architecture provides a 90 percent lower cost than on-premises data warehouses.",
+            "source": "Snowflake Computing press release (2014-10-21)"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Within cloud infrastructure, this conclusion would be verified by later evidence that qualified beta users adopted the service in production, achieved materially lower total cost versus on-premises data warehouses, and realized the claimed cloud-service benefits of elastic scaling, SQL analytics, and big-data flexibility; additionally, evidence of spending or workload migration away from on-premises data warehouse deployments toward managed cloud data warehouse services would support the value-reallocation conclusion. It would be falsified by evidence that the beta failed to convert into meaningful production adoption, the claimed cost advantage did not hold in real customer deployments, the service did not deliver the promised elasticity or workload flexibility, or on-premises data warehouse spending and workload share did not materially shift toward cloud-based data warehouse services. More specific verification beyond these points is Unknown from the provided evidence.",
+        "marketBlindSpot": "The likely market blind spot within cloud infrastructure is underestimating demand for a cloud-native data warehouse that combines traditional SQL analytics with elastic cloud operation and big-data flexibility, rather than treating data warehousing as something that must remain tied to on-premises architectures. A related blind spot is potential underappreciation of how strongly lower-cost and managed-service economics could challenge incumbent on-premises data warehouse deployment models. Because the evidence is a company press release and beta announcement, this reveals a potential blind spot, not a verified market outcome."
+      }
+    }
+  },
+  {
+    "id": "IRB-020",
+    "result": {
+      "facts": [
+        {
+          "text": "A Moderna Therapeutics press release dated 2012-12-06 announced more than $40 million in financing.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "The financing was stated to be intended to advance messenger RNA Therapeutics™.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "The press release described messenger RNA Therapeutics™ as a novel biotherapeutic modality that stimulates the body’s natural ability to produce therapeutic proteins in vivo.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "Moderna stated that if successful in human clinical trials, this would be the first entirely new way of making therapeutic proteins since recombinant technology more than 30 years prior.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "Moderna stated it had conducted proof-of-concept studies in preclinical models, including non-human primates.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "Moderna stated these studies induced in vivo production of dozens of intracellular and secreted therapeutic proteins.",
+          "source": "originalInput.text"
+        },
+        {
+          "text": "Moderna stated it had preclinical programs in oncology supportive care, inherited genetic disorders, hemophilia, and diabetes.",
+          "source": "originalInput.text"
+        }
+      ],
+      "goldCase": {
+        "customerProblem": "The underlying customer/system problem is the need for new ways to generate therapeutic proteins inside the body to treat disease. The press release says messenger RNA Therapeutics is intended to stimulate the body’s natural ability to produce therapeutic proteins in vivo and positions it as a new way of making therapeutic proteins across multiple disease areas, including oncology supportive care, inherited genetic disorders, hemophilia, and diabetes.",
+        "leadingSignal": "Moderna Therapeutics announced more than $40 million in financing on 2012-12-06 to advance messenger RNA Therapeutics™.",
+        "change": "Moderna is raising more than $40 million to advance its messenger RNA Therapeutics platform from preclinical proof-of-concept toward further development, with preclinical programs underway in oncology supportive care, inherited genetic disorders, hemophilia, and diabetes.",
+        "reasoning": "(1) Observable change: Moderna announced more than $40 million in financing to advance its messenger RNA Therapeutics platform beyond preclinical proof-of-concept, with preclinical programs in oncology supportive care, inherited genetic disorders, hemophilia, and diabetes.\n\n(2) What technical/system requirement changes: The stated development approach shifts the therapeutic production model toward stimulating the body’s natural ability to produce therapeutic proteins in vivo, rather than relying only on prior methods of making therapeutic proteins. Because Moderna describes this as a novel biotherapeutic modality and potentially the first entirely new way of making therapeutic proteins since recombinant technology, the implied requirement is for platforms and development capabilities that can enable in vivo production of therapeutic proteins across multiple protein types. \n\n(3) Why the old/lower-spec solution becomes insufficient: If the target is in vivo production of dozens of intracellular and secreted therapeutic proteins through messenger RNA therapeutics, then prior therapeutic-protein-making approaches are presented by the source as not fully addressing that new modality. However, the source does not provide direct evidence about specific technical shortcomings of older approaches, so the precise insufficiency is Unknown.\n\n(4) What capability becomes more valuable: Within biotechnology, capabilities tied to messenger RNA therapeutics become more valuable—specifically the ability to design, develop, and advance a platform that induces in vivo production of therapeutic proteins, supported by preclinical proof-of-concept across multiple protein classes and disease programs.\n\n(5) Why value reallocates: Value reallocates because the financing is being directed toward the new modality described as novel and potentially a new way of making therapeutic proteins. As development emphasis and capital move toward messenger RNA therapeutics, platform, program, and technical capabilities aligned with that modality gain relative importance versus incumbent approaches. The source supports capital moving to the new modality, but does not quantify the extent of displacement from older approaches.",
+        "valueReallocation": "Evidence-supported value reallocation: Potential value reallocation within biotechnology toward mRNA-based therapeutic platform development and away from incumbent therapeutic protein production approaches, supported only to the extent that Moderna raised more than $40 million to advance its preclinical messenger RNA Therapeutics platform. Potential value reallocation. Requires later market verification.\n\nReasonable hypothesis requiring later verification: If Moderna’s platform succeeds in human clinical trials, value could shift within biotechnology toward companies, programs, and suppliers aligned with in vivo mRNA-enabled protein production across areas such as oncology supportive care, inherited genetic disorders, hemophilia, and diabetes, and relatively away from older protein-therapy modalities. Potential value reallocation. Requires later market verification.",
+        "winner": "Potential value capture within biotechnology would accrue to mRNA-based therapeutic platform developers such as Moderna and, if clinical success occurs, to aligned biotechnology programs and suppliers enabling in vivo mRNA-directed protein production. Relative value could be reallocated away from incumbent therapeutic protein production approaches and older protein-therapy modalities. Because the cited evidence is preclinical and financing-based, this remains a potential reallocation requiring later market verification.",
+        "evidence": [
+          {
+            "text": "A Moderna Therapeutics press release dated 2012-12-06 announced more than $40 million in financing.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "The financing was stated to be intended to advance messenger RNA Therapeutics™.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "Moderna stated it had conducted proof-of-concept studies in preclinical models, including non-human primates.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "Moderna stated these studies induced in vivo production of dozens of intracellular and secreted therapeutic proteins.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "Moderna stated it had preclinical programs in oncology supportive care, inherited genetic disorders, hemophilia, and diabetes.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "The press release described messenger RNA Therapeutics™ as a novel biotherapeutic modality that stimulates the body’s natural ability to produce therapeutic proteins in vivo.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "Moderna stated that if successful in human clinical trials, this would be the first entirely new way of making therapeutic proteins since recombinant technology more than 30 years prior.",
+            "source": "originalInput.text"
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          },
+          {
+            "text": "Unknown: source does not provide evidence for this causal step."
+          }
+        ],
+        "verification": "Verify: human clinical trial results showing that mRNA therapeutics can safely and effectively drive in vivo production of therapeutic proteins in patients; advancement of Moderna’s preclinical programs into clinical development; additional financing, partnerships, or program expansion directed specifically toward this modality; evidence that biotechnology programs and resources shift toward mRNA-based therapeutic protein production across the cited disease areas. Falsify: failed or non-reproducible translation from preclinical models to humans; inability to achieve safe, clinically meaningful in vivo protein expression; discontinuation or material slowdown of the cited programs; lack of follow-on capital or industry adoption; evidence that incumbent therapeutic protein approaches remain preferred because mRNA-based approaches do not demonstrate sufficient advantage. The stronger conclusion about value reallocation away from older modalities remains unverified unless later market and clinical evidence shows actual displacement.",
+        "marketBlindSpot": "Within biotechnology, the blind spot is early underappreciation of mRNA as a platform for making therapeutic proteins inside the body rather than manufacturing them externally. The financing, preclinical proof-of-concept, and multi-indication scope suggest the market may have been focused too narrowly on incumbent protein-therapy approaches and not fully recognizing that an in vivo mRNA modality could become a broad therapeutic platform across multiple disease areas. However, because the evidence is limited to a 2012 financing announcement and preclinical claims, the extent of any true market mispricing or neglect is unverified."
+      }
+    }
+  }
+]
