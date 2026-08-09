@@ -1,9 +1,30 @@
+import { getNeighbors } from "./briefs.js";
 import { t } from "./i18n.js";
-import { buildBriefPath, DEFAULT_SLUG, SUPPORTED_LOCALES } from "./router.js";
+import {
+  buildBriefPath,
+  buildHomePath,
+  DEFAULT_SLUG,
+  SUPPORTED_LOCALES,
+} from "./router.js";
 
-export function renderApp({ locale, type, slug, brief, productId }) {
+export function renderApp({ locale, type, slug, brief, productId, cards }) {
   const ui = t(locale);
   const htmlLang = locale === "zh" ? "zh-Hans" : "en";
+
+  if (type === "home") {
+    return {
+      htmlLang,
+      title: `${ui.brand} — ${ui.collectionTitle}`,
+      description: ui.collectionLede,
+      body: `
+        ${renderChrome({ locale, ui, productId: null, pathnameSlug: null, page: "home" })}
+        <main id="main" class="collection">
+          ${renderCollection(cards ?? [], locale, ui)}
+        </main>
+        <footer class="site-footer"><p>${escapeHtml(ui.footer)}</p></footer>
+      `,
+    };
+  }
 
   if (type === "notfound" || !brief) {
     return {
@@ -11,9 +32,12 @@ export function renderApp({ locale, type, slug, brief, productId }) {
       title: ui.notFound,
       description: ui.notFound,
       body: `
-        ${renderChrome({ locale, ui, productId: null, pathnameSlug: slug })}
+        ${renderChrome({ locale, ui, productId: null, pathnameSlug: slug, page: "brief" })}
         <main id="main" class="page-main">
           <p class="not-found">${escapeHtml(ui.notFound)}</p>
+          <p class="brief-nav__back-wrap">
+            <a class="brief-nav__link" href="${escapeAttr(buildHomePath(locale))}">${escapeHtml(ui.backToCollection)}</a>
+          </p>
         </main>
         <footer class="site-footer"><p>${escapeHtml(ui.footer)}</p></footer>
       `,
@@ -30,9 +54,10 @@ export function renderApp({ locale, type, slug, brief, productId }) {
     title,
     description,
     body: `
-      ${renderChrome({ locale, ui, productId: id, pathnameSlug: slug })}
+      ${renderChrome({ locale, ui, productId: id, pathnameSlug: slug, page: "brief" })}
       <main id="main">
         <article class="brief" itemscope itemtype="https://schema.org/Article">
+          ${renderBriefNav(locale, slug, ui)}
           ${renderHero(data, ui, locale)}
           ${renderExecutive(data, ui)}
           ${renderValue(data, ui)}
@@ -42,6 +67,7 @@ export function renderApp({ locale, type, slug, brief, productId }) {
           ${renderReality(data, ui)}
           ${renderBottom(data, ui)}
           ${renderSources(data, ui)}
+          ${renderBriefNav(locale, slug, ui)}
         </article>
       </main>
       <footer class="site-footer"><p>${escapeHtml(ui.footer)}</p></footer>
@@ -49,24 +75,25 @@ export function renderApp({ locale, type, slug, brief, productId }) {
   };
 }
 
-function renderChrome({ locale, ui, productId, pathnameSlug }) {
-  const slug = pathnameSlug || DEFAULT_SLUG;
-  const meta = productId ? `${ui.readerMeta} · ${productId}` : ui.readerMeta;
+function renderChrome({ locale, ui, productId, pathnameSlug, page }) {
+  const meta = productId ? `${ui.readerMeta} · ${productId}` : ui.collectionTitle;
   return `
     <a class="skip-link" href="#main">${escapeHtml(ui.skipLink)}</a>
     <header class="site-bar" aria-label="Product">
       <div class="site-bar__identity">
-        <p class="site-bar__brand">${escapeHtml(ui.brand)}</p>
+        <a class="site-bar__brand" href="${escapeAttr(buildHomePath(locale))}">${escapeHtml(ui.brand)}</a>
         <p class="site-bar__meta">${escapeHtml(meta)}</p>
       </div>
-      ${renderLangSwitch(locale, slug, ui)}
+      ${renderLangSwitch(locale, pathnameSlug, ui, page)}
     </header>
   `;
 }
 
-function renderLangSwitch(locale, slug, ui) {
+function renderLangSwitch(locale, slug, ui, page) {
   const links = SUPPORTED_LOCALES.map((code) => {
-    const href = buildBriefPath(code, slug || DEFAULT_SLUG);
+    const href = page === "brief" && slug
+      ? buildBriefPath(code, slug)
+      : buildHomePath(code);
     const label = code === "zh" ? ui.langZh : ui.langEn;
     const active = code === locale ? " is-active" : "";
     const ariaCurrent = code === locale ? ' aria-current="true"' : "";
@@ -80,8 +107,80 @@ function renderLangSwitch(locale, slug, ui) {
   `;
 }
 
+function renderCollection(cards, locale, ui) {
+  const items = cards
+    .map((card) => {
+      const href = buildBriefPath(locale, card.slug);
+      const category = ui.categories[card.category] ?? card.category;
+      const languages = formatLanguages(card.languages, ui);
+      return `
+        <li>
+          <a class="brief-card" href="${escapeAttr(href)}">
+            <p class="brief-card__id">${escapeHtml(card.productId)}</p>
+            <h2 class="brief-card__title">${escapeHtml(card.title)}</h2>
+            <dl class="brief-card__meta">
+              <div>
+                <dt>${escapeHtml(ui.cardCategory)}</dt>
+                <dd>${escapeHtml(category)}</dd>
+              </div>
+              <div>
+                <dt>${escapeHtml(ui.cardPublished)}</dt>
+                <dd><time datetime="${escapeAttr(card.publishedDate)}">${escapeHtml(formatPublishedDate(card.publishedDate, locale))}</time></dd>
+              </div>
+              <div>
+                <dt>${escapeHtml(ui.cardReadTime)}</dt>
+                <dd>${escapeHtml(card.readingTime)}</dd>
+              </div>
+              <div>
+                <dt>${escapeHtml(ui.cardConfidence)}</dt>
+                <dd>${confidenceBadge(card.confidence)}</dd>
+              </div>
+              <div>
+                <dt>${escapeHtml(ui.cardLanguage)}</dt>
+                <dd>${escapeHtml(languages)}</dd>
+              </div>
+            </dl>
+          </a>
+        </li>`;
+    })
+    .join("");
+
+  return `
+    <header class="collection__header">
+      <p class="collection__eyebrow">${escapeHtml(ui.brand)}</p>
+      <h1 class="collection__title">${escapeHtml(ui.collectionTitle)}</h1>
+      <p class="collection__lede">${escapeHtml(ui.collectionLede)}</p>
+    </header>
+    <ol class="collection__grid">
+      ${items}
+    </ol>
+  `;
+}
+
+function renderBriefNav(locale, slug, ui) {
+  const { prev, next } = getNeighbors(slug || DEFAULT_SLUG);
+  const home = buildHomePath(locale);
+  const prevLink = prev
+    ? `<a class="brief-nav__link" href="${escapeAttr(buildBriefPath(locale, prev))}" rel="prev">${escapeHtml(ui.previousBrief)}</a>`
+    : `<span class="brief-nav__link is-disabled">${escapeHtml(ui.previousBrief)}</span>`;
+  const nextLink = next
+    ? `<a class="brief-nav__link" href="${escapeAttr(buildBriefPath(locale, next))}" rel="next">${escapeHtml(ui.nextBrief)}</a>`
+    : `<span class="brief-nav__link is-disabled">${escapeHtml(ui.nextBrief)}</span>`;
+
+  return `
+    <nav class="brief-nav" aria-label="Brief navigation">
+      <div class="brief-nav__row">
+        ${prevLink}
+        <a class="brief-nav__link brief-nav__link--back" href="${escapeAttr(home)}">${escapeHtml(ui.backToCollection)}</a>
+        ${nextLink}
+      </div>
+    </nav>
+  `;
+}
+
 function renderHero(data, ui, locale) {
   const dateLabel = formatPublishedDate(data.meta.t0, locale);
+  const source = data.meta.source || "—";
   return `
     <header class="hero">
       <p class="hero__eyebrow" itemprop="articleSection">${escapeHtml(ui.productLabel)}</p>
@@ -116,7 +215,7 @@ function renderHero(data, ui, locale) {
         </div>
         <div>
           <dt>${escapeHtml(ui.source)}</dt>
-          <dd>${escapeHtml(data.meta.source)}</dd>
+          <dd>${escapeHtml(source)}</dd>
         </div>
       </dl>
       <p class="hero__disclaimer">${escapeHtml(data.meta.disclaimer)}</p>
@@ -267,13 +366,9 @@ function renderBottom(data, ui) {
 }
 
 function renderSources(data, ui) {
-  const labelMap = {
-    "Parent research": ui.parentResearch,
-    "Underlying official source (P0 only, via SRE-101)": ui.underlyingSource,
-  };
   const items = data.sources.items
     .map((item) => {
-      const label = labelMap[item.label] ?? `${item.label}:`;
+      const label = localizeSourceLabel(item.label, ui);
       return `
         <li>
           <strong>${escapeHtml(label)}</strong> ${escapeHtml(item.text)}
@@ -291,12 +386,25 @@ function renderSources(data, ui) {
   `;
 }
 
+function localizeSourceLabel(label, ui) {
+  if (/^Parent( Decision Brief)? research/i.test(label)) return ui.parentResearch;
+  if (/Underlying official source/i.test(label)) return ui.underlyingSource;
+  return `${label}:`;
+}
+
+function formatLanguages(locales, ui) {
+  return locales
+    .map((code) => (code === "zh" ? ui.langZh : ui.langEn))
+    .join(" · ");
+}
+
 function confidenceBadge(value) {
-  const normalized = value.trim().toLowerCase();
+  const normalized = String(value ?? "").trim().toLowerCase();
   let mod = "unknown";
   if (normalized === "medium") mod = "medium";
   else if (normalized === "low") mod = "low";
-  const display = value.trim() || "—";
+  else if (normalized === "high") mod = "medium";
+  const display = String(value ?? "").trim() || "—";
   return `<span class="badge badge--${mod}">${escapeHtml(display)}</span>`;
 }
 

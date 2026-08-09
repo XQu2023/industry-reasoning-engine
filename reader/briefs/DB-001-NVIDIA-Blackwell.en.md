@@ -6,7 +6,6 @@
 | Parent research | `reports/SRE-101-NVIDIA-Blackwell.md` |
 | T0 | 2024-03-18 |
 | Reading time | ~5 minutes |
-| Source | NVIDIA press release |
 | Disclaimer | For long-term research context only. Not investment advice. Not a recommendation to buy, sell, or hold any security. |
 
 ---
@@ -21,6 +20,8 @@ NVIDIA’s Blackwell launch reframes AI computing as a rack-scale platform, not 
 
 Why should I care? On 18 March 2024, NVIDIA announced Blackwell as a full platform: a liquid-cooled rack of linked GPUs that it says can act as one, plus the networking and software to run it. If very large AI models need many chips to work as one system, the scarce thing is that coherent whole — not any single chip. NVIDIA sits at the center of that design. What we do **not** know from the announcement is price, or how any cost savings split between NVIDIA and its customers. That split remains Unknown.
 
+*(Derived from SRE-101 §§1, 6–7. Reasoned Inference, Medium; surplus split Unknown.)*
+
 ---
 
 # What Changed?
@@ -33,6 +34,8 @@ On 18 March 2024, NVIDIA said the Blackwell platform had arrived.
 - The same day, NVIDIA announced matching high-speed networking and said its software stack supports the platform.
 - NVIDIA claims up to 30× higher LLM inference performance versus the same number of H100 GPUs, and up to 25× lower cost and energy versus the prior generation (vendor claims).
 - Partners were to offer products “starting later this year.” Early clouds: AWS, Google Cloud, Microsoft Azure, Oracle Cloud. Expected adopters include Amazon, Dell, Google, Meta, Microsoft, OpenAI, Oracle, Tesla, and xAI.
+
+*(Facts only — SRE-101 §2.)*
 
 ---
 
@@ -47,6 +50,8 @@ Blackwell answers that with a **rack** that NVIDIA says works as one GPU, not ju
 3. **More of the stack is sold together** — links between chips, networking, data-processing units, and software arrive as one platform.
 
 That is a structural change: buyers who want the largest coherent domain must accept a proprietary link fabric and a denser facility design. Whether most buyers choose the full rack or a simpler eight-GPU board path is still Unknown.
+
+*(SRE-101 §§3–4, 6.)*
 
 ---
 
@@ -68,6 +73,8 @@ Simple value flow (five nodes):
 
 **Reading.** Value pressure moves **away from** buying chips and boards as separate pieces, and **toward** whoever owns the rack-scale link fabric and the software that treats the rack as one machine. NVIDIA is named as that platform owner. How much of any savings stays with NVIDIA versus cloud buyers is Unknown.
 
+*(SRE-101 §§5–7. Potential reallocation; Medium confidence. Requires later verification.)*
+
 ---
 
 # Potential Beneficiaries
@@ -82,6 +89,8 @@ Companies below are named for further research only. **Not a recommendation. Not
 | **Microsoft, Amazon, Alphabet, Oracle** | Among first clouds expected to offer Blackwell instances; Tier 4 (potential) | Low | Whether they keep premium pricing or pass cost cuts to customers |
 | **Synopsys, Cadence, Ansys** | Named as using Blackwell to speed engineering simulation software; Tier 3 | Low | Whether software gains are kept or competed away |
 | **— (no company named)** | Advanced packaging, memory chips for the rack’s fast memory, and liquid-cooling gear are required by the design | — | Who supplies them, and whether any of these layers is the true bottleneck |
+
+*(SRE-101 §§7–8. Private or thin-thesis names omitted.)*
 
 ---
 
@@ -98,17 +107,21 @@ Companies below are named for further research only. **Not a recommendation. Not
 
 **Next validation point.** By end of calendar 2024 (per “later this year”): whether partners are shipping Blackwell products, and whether clouds disclose rack-scale (NVL72) deployments versus board-level (HGX B200) builds. Filings that show platform pricing or margins would also begin to close the surplus-split Unknown.
 
+*(SRE-101 §§9–10.)*
+
 ---
 
 # Bottom Line
 
 Blackwell is less “a bigger chip” than “AI compute sold as a linked rack.” That moves competition toward who controls coherence across many GPUs. NVIDIA is the clearest structural beneficiary in the source report; TSMC is next as the named wafer maker. Prices and who keeps the claimed cost savings are still Unknown — so the direction of the story is clearer than the size of anyone’s gain.
 
+*(80 words. SRE-101 key conclusion.)*
+
 ---
 
 # Sources
 
-- **Parent research:** SRE-101 — NVIDIA Blackwell (`reports/SRE-101-NVIDIA-Blackwell.md`)
+- **Parent Decision Brief research:** [SRE-101 — NVIDIA Blackwell](../reports/SRE-101-NVIDIA-Blackwell.md) (`reports/SRE-101-NVIDIA-Blackwell.md`)
 - **Underlying official source (P0 only, via SRE-101):** NVIDIA press release, 18 March 2024 — “NVIDIA Blackwell Platform Arrives to Power a New Era of Computing” (`nvidianews.nvidia.com`)
 
-No other sources used. No new research performed. Every statement is traceable to SRE-101. Content mirrors Decision Brief DB-001.
+No other sources used. No new research performed. Every statement above is traceable to SRE-101.

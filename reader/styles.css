@@ -109,6 +109,179 @@ a {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
+  text-decoration: none;
+}
+
+a.site-bar__brand:hover {
+  color: var(--ink);
+}
+
+/* Founding Collection */
+.collection {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-5) var(--space-8);
+}
+
+.collection__header {
+  max-width: var(--max);
+  margin-bottom: var(--space-7);
+}
+
+.collection__eyebrow {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.collection__title {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.collection__lede {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.collection__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.brief-card {
+  display: block;
+  height: 100%;
+  padding: var(--space-5);
+  background: var(--bg-paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.brief-card:hover,
+.brief-card:focus-visible {
+  border-color: var(--line-strong);
+  box-shadow: 0 10px 28px rgba(20, 24, 28, 0.06);
+  outline: none;
+}
+
+.brief-card__id {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.brief-card__title {
+  margin: 0 0 var(--space-5);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.brief-card__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3) var(--space-4);
+  margin: 0;
+}
+
+.brief-card__meta div {
+  margin: 0;
+}
+
+.brief-card__meta dt {
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.brief-card__meta dd {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.brief-nav {
+  max-width: var(--max);
+  margin: 0 0 var(--space-5);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-ui);
+}
+
+.brief article .brief-nav:last-of-type,
+.brief > .brief-nav:last-child {
+  margin-top: var(--space-7);
+  margin-bottom: 0;
+  border-bottom: none;
+  border-top: 1px solid var(--line);
+}
+
+.brief-nav__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.brief-nav__link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.brief-nav__link:hover {
+  color: var(--ink);
+}
+
+.brief-nav__link.is-disabled {
+  color: var(--ink-faint);
+  pointer-events: none;
+}
+
+.brief-nav__link--back {
+  font-weight: 600;
+}
+
+.brief-nav__back-wrap {
+  max-width: var(--max);
+  margin: var(--space-5) auto 0;
+  padding: 0 var(--space-5);
+  font-family: var(--font-ui);
 }
 
 .site-bar__meta {
@@ -714,6 +887,12 @@ html[lang="zh-Hans"] .hero__deck {
   border-top: 1px solid var(--line);
 }
 
+@media (max-width: 900px) {
+  .collection__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 720px) {
   body {
     font-size: 1.0625rem;
@@ -721,9 +900,19 @@ html[lang="zh-Hans"] .hero__deck {
 
   .site-bar,
   .brief,
+  .collection,
   .site-footer {
     padding-left: var(--space-4);
     padding-right: var(--space-4);
+  }
+
+  .brief-card__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .brief-nav__row {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero {

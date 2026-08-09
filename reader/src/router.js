@@ -20,7 +20,7 @@ export function parseRoute(pathname = "/") {
   }
 
   if (rest.length === 0) {
-    return { locale, type: "home", slug: DEFAULT_SLUG };
+    return { locale, type: "home", slug: null };
   }
 
   if (rest[0] === "briefs" && rest[1]) {

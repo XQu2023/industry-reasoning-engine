@@ -1,8 +1,7 @@
 import "../styles.css";
-import { loadParsedBrief } from "./briefs.js";
+import { listCollectionCards, loadParsedBrief } from "./briefs.js";
 import { renderApp } from "./render.js";
 import {
-  DEFAULT_SLUG,
   parseRoute,
   rememberLocale,
   resolveInitialPath,
@@ -30,26 +29,53 @@ function mount() {
 
   const route = parseRoute(window.location.pathname);
   const locale = SUPPORTED_LOCALES.includes(route.locale) ? route.locale : "en";
-  const slug = route.slug || DEFAULT_SLUG;
 
-  let parsed = null;
-  if (route.type === "home" || route.type === "brief") {
-    parsed = loadParsedBrief(slug, locale);
+  if (route.type === "home") {
+    const cards = listCollectionCards(locale);
+    const view = renderApp({
+      locale,
+      type: "home",
+      slug: null,
+      brief: null,
+      productId: null,
+      cards,
+    });
+    applyView(view);
+    return;
+  }
+
+  if (route.type === "brief" && route.slug) {
+    const parsed = loadParsedBrief(route.slug, locale);
+    const view = renderApp({
+      locale,
+      type: parsed ? "brief" : "notfound",
+      slug: route.slug,
+      brief: parsed?.brief ?? null,
+      productId: parsed ? extractProductId(parsed.brief.meta.product) : null,
+      cards: null,
+    });
+    applyView(view);
+    return;
   }
 
   const view = renderApp({
     locale,
-    type: parsed ? route.type : "notfound",
-    slug,
-    brief: parsed?.brief ?? null,
-    productId: parsed ? extractProductId(parsed.brief.meta.product) : null,
+    type: "notfound",
+    slug: route.slug,
+    brief: null,
+    productId: null,
+    cards: null,
   });
+  applyView(view);
+}
 
+function applyView(view) {
   document.documentElement.lang = view.htmlLang;
   document.title = view.title;
   setMetaDescription(view.description);
   root.innerHTML = view.body;
   bindNavigation();
+  window.scrollTo(0, 0);
 }
 
 function bindNavigation() {
