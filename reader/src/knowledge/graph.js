@@ -25,6 +25,7 @@ export const BRIEF_NODES = {
     productId: "DB-002",
     title: {
       en: "NVIDIA Turns the GPU Into a Programmable Compute Platform",
+      zh: "CUDA：稀缺点在编程模型，不在显卡速度",
     },
     company: ["NVIDIA"],
     technology: ["CUDA", "GPU compute", "compute driver"],
@@ -37,6 +38,7 @@ export const BRIEF_NODES = {
     productId: "DB-003",
     title: {
       en: "ASML Places EUV Tools While Immersion Extension Still Carries the Capture Story",
+      zh: "ASML：T0 抓取在浸没延寿，不在 EUV 已落地",
     },
     company: ["ASML", "TSMC"],
     technology: ["EUV", "immersion lithography", "FlexRay", "SMO"],
@@ -49,6 +51,7 @@ export const BRIEF_NODES = {
     productId: "DB-004",
     title: {
       en: "Stripe Makes Card Acceptance a Developer API With One Published Fee",
+      zh: "Stripe：收卡变成开发者 API，费率一条写死",
     },
     company: ["Stripe"],
     technology: ["Payments API", "stripe.js", "developer platform"],
@@ -61,6 +64,7 @@ export const BRIEF_NODES = {
     productId: "DB-005",
     title: {
       en: "Google Opens Container Fleet Control — and Leaves Tier 1 Vacant",
+      zh: "Kubernetes：打开集群控制面，Tier 1 空着",
     },
     company: ["Google", "Docker"],
     technology: ["Kubernetes", "containers", "orchestration"],
@@ -73,6 +77,7 @@ export const BRIEF_NODES = {
     productId: "DB-006",
     title: {
       en: "ChatGPT Makes Dialogue the Public Interface to Large Language Models",
+      zh: "ChatGPT：对话成大模型公共入口，Tier 1 空着",
     },
     company: ["OpenAI"],
     technology: ["ChatGPT", "large language models", "dialogue interface"],
@@ -85,6 +90,7 @@ export const BRIEF_NODES = {
     productId: "DB-007",
     title: {
       en: "GitHub Copilot Moves Coding Help Into the Editor — Without a Tier 1 Capturer Yet",
+      zh: "Copilot：编码辅助进编辑器，Tier 1 空着",
     },
     company: ["GitHub", "OpenAI"],
     technology: ["GitHub Copilot", "Codex", "in-editor AI"],
@@ -97,6 +103,7 @@ export const BRIEF_NODES = {
     productId: "DB-008",
     title: {
       en: "AMD Positions MI300 as High-Memory Instinct Compute for LLMs and HPC",
+      zh: "MI300：竞争看 HBM3 与 ROCm，不看峰值 FLOPs",
     },
     company: ["AMD"],
     technology: ["MI300", "HBM3", "ROCm", "Instinct"],
@@ -109,6 +116,7 @@ export const BRIEF_NODES = {
     productId: "DB-009",
     title: {
       en: "Anthropic Opens Claude as a Commercial Chat-and-API Surface",
+      zh: "Claude：商业聊天与 API 面打开，双 SKU 上架",
     },
     company: ["Anthropic"],
     technology: ["Claude", "Constitutional AI", "foundation-model API"],
@@ -121,6 +129,7 @@ export const BRIEF_NODES = {
     productId: "DB-010",
     title: {
       en: "Databricks Names the Lakehouse — an Open Pattern, Not a Locked Tier 1",
+      zh: "Lakehouse：开放架构被命名，Tier 1 锁不住",
     },
     company: ["Databricks", "Microsoft"],
     technology: ["Lakehouse", "open formats", "data platform"],

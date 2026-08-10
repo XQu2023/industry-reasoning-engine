@@ -1,14 +1,23 @@
 import db001en from "../briefs/DB-001-NVIDIA-Blackwell.en.md?raw";
 import db001zh from "../briefs/DB-001-NVIDIA-Blackwell.zh.md?raw";
 import db002en from "../briefs/DB-002-NVIDIA-CUDA.en.md?raw";
+import db002zh from "../briefs/DB-002-NVIDIA-CUDA.zh.md?raw";
 import db003en from "../briefs/DB-003-ASML-EUV.en.md?raw";
+import db003zh from "../briefs/DB-003-ASML-EUV.zh.md?raw";
 import db004en from "../briefs/DB-004-Stripe.en.md?raw";
+import db004zh from "../briefs/DB-004-Stripe.zh.md?raw";
 import db005en from "../briefs/DB-005-Kubernetes.en.md?raw";
+import db005zh from "../briefs/DB-005-Kubernetes.zh.md?raw";
 import db006en from "../briefs/DB-006-ChatGPT.en.md?raw";
+import db006zh from "../briefs/DB-006-ChatGPT.zh.md?raw";
 import db007en from "../briefs/DB-007-GitHub-Copilot.en.md?raw";
+import db007zh from "../briefs/DB-007-GitHub-Copilot.zh.md?raw";
 import db008en from "../briefs/DB-008-AMD-MI300.en.md?raw";
+import db008zh from "../briefs/DB-008-AMD-MI300.zh.md?raw";
 import db009en from "../briefs/DB-009-Anthropic-Claude-API.en.md?raw";
+import db009zh from "../briefs/DB-009-Anthropic-Claude-API.zh.md?raw";
 import db010en from "../briefs/DB-010-Databricks-Lakehouse.en.md?raw";
+import db010zh from "../briefs/DB-010-Databricks-Lakehouse.zh.md?raw";
 import { localizeReadingTime, t } from "./i18n.js";
 import { parseBriefMarkdown } from "./parseBrief.js";
 
@@ -33,30 +42,39 @@ const BRIEF_FILES = {
   },
   "db-002": {
     en: { file: "DB-002-NVIDIA-CUDA.en.md", markdown: db002en },
+    zh: { file: "DB-002-NVIDIA-CUDA.zh.md", markdown: db002zh },
   },
   "db-003": {
     en: { file: "DB-003-ASML-EUV.en.md", markdown: db003en },
+    zh: { file: "DB-003-ASML-EUV.zh.md", markdown: db003zh },
   },
   "db-004": {
     en: { file: "DB-004-Stripe.en.md", markdown: db004en },
+    zh: { file: "DB-004-Stripe.zh.md", markdown: db004zh },
   },
   "db-005": {
     en: { file: "DB-005-Kubernetes.en.md", markdown: db005en },
+    zh: { file: "DB-005-Kubernetes.zh.md", markdown: db005zh },
   },
   "db-006": {
     en: { file: "DB-006-ChatGPT.en.md", markdown: db006en },
+    zh: { file: "DB-006-ChatGPT.zh.md", markdown: db006zh },
   },
   "db-007": {
     en: { file: "DB-007-GitHub-Copilot.en.md", markdown: db007en },
+    zh: { file: "DB-007-GitHub-Copilot.zh.md", markdown: db007zh },
   },
   "db-008": {
     en: { file: "DB-008-AMD-MI300.en.md", markdown: db008en },
+    zh: { file: "DB-008-AMD-MI300.zh.md", markdown: db008zh },
   },
   "db-009": {
     en: { file: "DB-009-Anthropic-Claude-API.en.md", markdown: db009en },
+    zh: { file: "DB-009-Anthropic-Claude-API.zh.md", markdown: db009zh },
   },
   "db-010": {
     en: { file: "DB-010-Databricks-Lakehouse.en.md", markdown: db010en },
+    zh: { file: "DB-010-Databricks-Lakehouse.zh.md", markdown: db010zh },
   },
 };
 
