@@ -13,7 +13,7 @@ import {
 describe("reader validation layer", () => {
   it("ships a validation record for every founding brief", () => {
     const slugs = Object.keys(VALIDATION_CATALOG).sort();
-    assert.equal(slugs.length, 10);
+    assert.equal(slugs.length, 11);
     for (const slug of slugs) {
       const layer = buildValidationLayer(slug, { asOf: BRIEF_SURFACE_DATE });
       assert.equal(layer?.productId, VALIDATION_CATALOG[slug].productId);

@@ -246,6 +246,25 @@ export const VALIDATION_CATALOG = {
     pvfRuns: [],
     knowledgeUnits: [],
   },
+  "db-011": {
+    productId: "DB-011",
+    sreId: "SRE-121",
+    srePath: "reports/SRE-121-Micron-HBM3E.md",
+    sreTitle: "Micron HBM3E",
+    t0: "2024-02-26",
+    researchConfidence: "Medium",
+    primarySource: "Micron HBM3E volume-production investor release at T0 (via SRE-121)",
+    nextValidation:
+      "H200 shipment evidence from Q2 2024; Micron HBM revenue/capacity disclosures; share or ASP clarity versus other HBM suppliers.",
+    unknowns: [
+      u("U1", "Prices, ASP, margins, and shipment volumes", "open"),
+      u("U2", "Share of HBM3E / H200 memory supply versus other vendors", "open"),
+      u("U3", "Surplus split among Micron, NVIDIA, and cloud buyers", "open"),
+      u("U4", "Whether power/bandwidth claims hold in independent production use", "open"),
+    ],
+    pvfRuns: [],
+    knowledgeUnits: [],
+  },
 };
 
 function u(id, text, status, note = "", closedBy = null) {

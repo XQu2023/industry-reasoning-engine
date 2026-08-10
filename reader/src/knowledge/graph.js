@@ -137,6 +137,19 @@ export const BRIEF_NODES = {
     concepts: ["Lakehouse", "open formats", "vacant Tier 1", "data platform"],
     related: ["db-005", "db-004", "db-007", "db-009"],
   },
+  "db-011": {
+    slug: "db-011",
+    productId: "DB-011",
+    title: {
+      en: "Micron HBM3E: AI Scarcity Moves to High-Bandwidth Memory",
+      zh: "美光 HBM3E：AI 稀缺上移到高带宽内存",
+    },
+    company: ["Micron", "NVIDIA"],
+    technology: ["HBM3E", "H200", "HBM"],
+    industry: ["Semiconductors", "AI Computing"],
+    concepts: ["HBM3E", "H200", "HBM", "AI memory"],
+    related: ["db-001", "db-008", "db-002", "db-003"],
+  },
 };
 
 /** Concept → brief slugs (built once from BRIEF_NODES). */

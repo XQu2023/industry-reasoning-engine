@@ -55,7 +55,9 @@ export function renderApp({
 
   if (type === "locale-unavailable") {
     const id = productId ?? (slug ? slug.toUpperCase() : "");
-    const englishHref = buildBriefPath(fallbackLocale || "en", slug);
+    const targetLocale = fallbackLocale || "en";
+    const targetHref = buildBriefPath(targetLocale, slug);
+    const switchLabel = targetLocale === "zh" ? ui.langZh : ui.switchToEnglish;
     const body =
       locale === "zh" ? ui.localeUnavailableBody : ui.localeUnavailableBodyGeneric;
     return {
@@ -71,7 +73,7 @@ export function renderApp({
             <h1 id="locale-notice-title" class="locale-notice__title">${escapeHtml(ui.localeUnavailableTitle)}</h1>
             <p class="locale-notice__body">${escapeHtml(body)}</p>
             <p class="locale-notice__id">${escapeHtml(id)}</p>
-            <a class="btn btn--primary" href="${escapeAttr(englishHref)}" data-locale="en">${escapeHtml(ui.switchToEnglish)}</a>
+            <a class="btn btn--primary" href="${escapeAttr(targetHref)}" data-locale="${escapeAttr(targetLocale)}">${escapeHtml(switchLabel)}</a>
           </section>
           ${renderBriefNav(locale, slug, ui)}
         </main>

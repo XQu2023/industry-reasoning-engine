@@ -18,6 +18,7 @@ import db009en from "../briefs/DB-009-Anthropic-Claude-API.en.md?raw";
 import db009zh from "../briefs/DB-009-Anthropic-Claude-API.zh.md?raw";
 import db010en from "../briefs/DB-010-Databricks-Lakehouse.en.md?raw";
 import db010zh from "../briefs/DB-010-Databricks-Lakehouse.zh.md?raw";
+import db011zh from "../briefs/DB-011-Micron-HBM3E.zh.md?raw";
 import { localizeReadingTime, t } from "./i18n.js";
 import { parseBriefMarkdown } from "./parseBrief.js";
 
@@ -33,6 +34,7 @@ const CATALOG = [
   { slug: "db-008", category: "aiComputing", confidence: "Medium", fileStem: "DB-008-AMD-MI300" },
   { slug: "db-009", category: "aiComputing", confidence: "Medium", fileStem: "DB-009-Anthropic-Claude-API" },
   { slug: "db-010", category: "dataPlatforms", confidence: "Medium", fileStem: "DB-010-Databricks-Lakehouse" },
+  { slug: "db-011", category: "semiconductors", confidence: "Medium", fileStem: "DB-011-Micron-HBM3E" },
 ];
 
 const BRIEF_FILES = {
@@ -75,6 +77,9 @@ const BRIEF_FILES = {
   "db-010": {
     en: { file: "DB-010-Databricks-Lakehouse.en.md", markdown: db010en },
     zh: { file: "DB-010-Databricks-Lakehouse.zh.md", markdown: db010zh },
+  },
+  "db-011": {
+    zh: { file: "DB-011-Micron-HBM3E.zh.md", markdown: db011zh },
   },
 };
 
@@ -156,8 +161,10 @@ export function loadParsedBrief(slug, locale) {
 
 function entryEnglishMeta(slug) {
   const entry = BRIEF_FILES[slug];
-  if (!entry?.en) return null;
-  const brief = parseBriefMarkdown(entry.en.markdown);
+  if (!entry) return null;
+  const locale = entry.en ? "en" : entry.zh ? "zh" : Object.keys(entry)[0];
+  if (!locale) return null;
+  const brief = parseBriefMarkdown(entry[locale].markdown);
   return {
     product: brief.meta.product,
     t0: brief.meta.t0,
@@ -172,7 +179,11 @@ export function listCollectionCards(locale) {
   return CATALOG.map((entry) => {
     const locales = availableLocales(entry.slug);
     const hasRequested = hasLocale(entry.slug, locale);
-    const sourceLocale = hasRequested ? locale : "en";
+    const sourceLocale = hasRequested
+      ? locale
+      : hasLocale(entry.slug, "en")
+        ? "en"
+        : locales[0];
     const parsed = loadParsedBrief(entry.slug, sourceLocale);
     const brief = parsed?.brief;
     const productId = extractProductId(brief?.meta?.product) ?? entry.slug.toUpperCase();
