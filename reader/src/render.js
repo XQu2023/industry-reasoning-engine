@@ -1,5 +1,15 @@
 import { getNeighbors } from "./briefs.js";
-import { getHomeContent } from "./homeContent.js";
+import {
+  getBrandMark,
+  getBrandSubtitle,
+  getBrandTagline,
+} from "./brand.js";
+import {
+  getBriefConclusion,
+  getBriefTakeaways,
+  getBriefWhy,
+  getHomeContent,
+} from "./homeContent.js";
 import { localizeConfidence, t } from "./i18n.js";
 import { renderKnowledgeNetwork } from "./knowledge/index.js";
 import {
@@ -33,12 +43,12 @@ export function renderApp({
       body: `
         ${renderChrome({ locale, ui, productId: null, pathnameSlug: null, page: "home" })}
         <main id="main" class="home">
-          ${renderHomeStory(home)}
-          <section class="collection" aria-labelledby="collection-title">
+          ${renderHomeStory(home, locale)}
+          <section id="collection" class="collection" aria-labelledby="collection-title">
             ${renderCollection(cards ?? [], locale, ui)}
           </section>
         </main>
-        <footer class="site-footer"><p>${escapeHtml(ui.footer)}</p></footer>
+        ${renderSiteFooter(locale, ui)}
       `,
     };
   }
@@ -65,7 +75,7 @@ export function renderApp({
           </section>
           ${renderBriefNav(locale, slug, ui)}
         </main>
-        <footer class="site-footer"><p>${escapeHtml(ui.footer)}</p></footer>
+        ${renderSiteFooter(locale, ui)}
       `,
     };
   }
@@ -83,7 +93,7 @@ export function renderApp({
             <a class="brief-nav__link" href="${escapeAttr(buildHomePath(locale))}">${escapeHtml(ui.backToCollection)}</a>
           </p>
         </main>
-        <footer class="site-footer"><p>${escapeHtml(ui.footer)}</p></footer>
+        ${renderSiteFooter(locale, ui)}
       `,
     };
   }
@@ -102,7 +112,7 @@ export function renderApp({
       <main id="main">
         <article class="brief" itemscope itemtype="https://schema.org/Article">
           ${renderBriefNav(locale, slug, ui)}
-          ${renderHero(data, ui, locale)}
+          ${renderHero(data, ui, locale, slug)}
           ${renderExecutive(data, ui)}
           ${renderValue(data, ui)}
           ${renderChanged(data, ui)}
@@ -116,18 +126,34 @@ export function renderApp({
           ${renderBriefNav(locale, slug, ui)}
         </article>
       </main>
-      <footer class="site-footer"><p>${escapeHtml(ui.footer)}</p></footer>
+      ${renderSiteFooter(locale, ui)}
     `,
   };
 }
 
+function renderSiteFooter(locale, ui) {
+  return `
+    <footer class="site-footer">
+      <p class="site-footer__brand">
+        <span class="site-footer__mark">${escapeHtml(getBrandMark(locale))}</span>
+        <span class="site-footer__subtitle">${escapeHtml(getBrandSubtitle(locale))}</span>
+      </p>
+      <p class="site-footer__tagline">${escapeHtml(getBrandTagline(locale))}</p>
+      <p class="site-footer__meta">${escapeHtml(ui.footerRest)}</p>
+    </footer>
+  `;
+}
+
 function renderChrome({ locale, ui, productId, pathnameSlug, page }) {
-  const meta = productId ? `${ui.readerMeta} · ${productId}` : ui.collectionTitle;
+  const meta = productId ? `${ui.readerMeta} · ${productId}` : ui.navMeta;
   return `
     <a class="skip-link" href="#main">${escapeHtml(ui.skipLink)}</a>
     <header class="site-bar" aria-label="${escapeAttr(ui.siteBarLabel)}">
       <div class="site-bar__identity">
-        <a class="site-bar__brand" href="${escapeAttr(buildHomePath(locale))}">${escapeHtml(ui.brand)}</a>
+        <a class="site-bar__brand site-bar__brand-mark" href="${escapeAttr(buildHomePath(locale))}">
+          <span class="site-bar__mark">${escapeHtml(getBrandMark(locale))}</span>
+          <span class="site-bar__subtitle">${escapeHtml(getBrandSubtitle(locale))}</span>
+        </a>
         <p class="site-bar__meta">${escapeHtml(meta)}</p>
       </div>
       ${renderLangSwitch(locale, pathnameSlug, ui, page)}
@@ -153,8 +179,8 @@ function renderLangSwitch(locale, slug, ui, page) {
   `;
 }
 
-function renderHomeStory(home) {
-  const principles = home.principles
+function renderHomeStory(home, locale) {
+  const benefits = home.benefits
     .map(
       (item, index) => `
       <li class="home-principles__item">
@@ -165,46 +191,92 @@ function renderHomeStory(home) {
     )
     .join("");
 
-  const steps = home.methodSteps
+  const differences = home.differences
     .map(
-      (step) => `
-      <li class="home-method__item">
-        <h3 class="home-method__title">${escapeHtml(step.title)}</h3>
-        <p class="home-method__text">${escapeHtml(step.text)}</p>
+      (item, index) => `
+      <li class="home-principles__item">
+        <p class="home-principles__index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</p>
+        <h3 class="home-principles__title">${escapeHtml(item.title)}</h3>
+        <p class="home-principles__text">${escapeHtml(item.text)}</p>
       </li>`,
     )
     .join("");
 
+  const processSteps = home.processSteps
+    .map((step, index) => {
+      const arrow =
+        index < home.processSteps.length - 1
+          ? `<li class="home-process__arrow" aria-hidden="true">↓</li>`
+          : "";
+      return `
+      <li class="home-process__card">
+        <h3 class="home-process__step">${escapeHtml(step.title)}</h3>
+        <p class="home-process__text">${escapeHtml(step.text)}</p>
+      </li>
+      ${arrow}`;
+    })
+    .join("");
+
+  const support = home.supportLines
+    .map((line) => `<span class="home-hero__support-line">${escapeHtml(line)}</span>`)
+    .join("");
+
+  const titleHtml = home.titleLines
+    .map((line) => `<span class="home-hero__title-line">${escapeHtml(line)}</span>`)
+    .join("");
+
+  const readingTitleHtml = home.readingTitleLines
+    .map((line) => `<span class="home-section__title-line">${escapeHtml(line)}</span>`)
+    .join("");
+
+  const trustBar = home.trustBar
+    .map((item) => `<li class="home-trust__item">${escapeHtml(item)}</li>`)
+    .join("");
+
+  const startHref = buildBriefPath(locale, home.startSlug || DEFAULT_SLUG);
+
   return `
     <header class="home-hero">
-      <p class="home-hero__eyebrow">${escapeHtml(home.eyebrow)}</p>
-      <h1 class="home-hero__brand">${escapeHtml(home.brand)}</h1>
-      <p class="home-hero__lede">${escapeHtml(home.lede)}</p>
-      <p class="home-hero__trust">${escapeHtml(home.trust)}</p>
+      <p class="home-hero__eyebrow">
+        <span class="home-hero__mark">${escapeHtml(home.brandMark)}</span>
+        <span class="home-hero__subtitle">${escapeHtml(home.brandSubtitle)}</span>
+      </p>
+      <h1 class="home-hero__brand">${titleHtml}</h1>
+      <p class="home-hero__value home-hero__support">${support}</p>
+      <p class="home-hero__actions">
+        <a class="btn btn--primary" href="${escapeAttr(startHref)}">${escapeHtml(home.primaryCta)}</a>
+        <a class="btn btn--secondary" href="#collection">${escapeHtml(home.secondaryCta)}</a>
+      </p>
+      <ul class="home-trust" aria-label="Trust">
+        ${trustBar}
+      </ul>
     </header>
 
-    <section class="home-section home-section--why" aria-labelledby="home-why-title">
-      <h2 id="home-why-title" class="home-section__title">${escapeHtml(home.whyTitle)}</h2>
-      <div class="home-section__body">
-        <p>${escapeHtml(home.whyBody)}</p>
-        <p>${escapeHtml(home.whyClose)}</p>
-      </div>
+    <section class="home-section home-section--benefits" aria-labelledby="home-benefit-title">
+      <h2 id="home-benefit-title" class="home-section__title">${escapeHtml(home.benefitTitle)}</h2>
+      <ol class="home-principles__list">${benefits}</ol>
     </section>
 
-    <section class="home-section home-section--principles" aria-labelledby="home-principles-title">
-      <div class="home-section__intro">
-        <h2 id="home-principles-title" class="home-section__title">${escapeHtml(home.principlesTitle)}</h2>
-        <p class="home-section__lede">${escapeHtml(home.principlesLede)}</p>
-      </div>
-      <ol class="home-principles__list">${principles}</ol>
+    <section class="home-section home-section--difference" aria-labelledby="home-difference-title">
+      <h2 id="home-difference-title" class="home-section__title">${escapeHtml(home.differenceTitle)}</h2>
+      <ol class="home-principles__list">${differences}</ol>
     </section>
 
-    <section class="home-section home-section--method" aria-labelledby="home-method-title">
-      <div class="home-section__intro">
-        <h2 id="home-method-title" class="home-section__title">${escapeHtml(home.methodTitle)}</h2>
-        <p class="home-section__lede">${escapeHtml(home.methodLede)}</p>
-      </div>
-      <ol class="home-method__list">${steps}</ol>
+    <section class="home-section home-section--reading" aria-labelledby="home-reading-title">
+      <h2 id="home-reading-title" class="home-section__title">${readingTitleHtml}</h2>
+      <p class="home-reading__id">${escapeHtml(home.readingId)}</p>
+      <p class="home-reading__why">
+        <span class="home-reading__why-label">${escapeHtml(home.readingGainLabel)}</span>
+        ${escapeHtml(home.readingGain)}
+      </p>
+      <p class="home-start__action">
+        <a class="btn btn--primary" href="${escapeAttr(startHref)}">${escapeHtml(home.primaryCta)}</a>
+      </p>
+    </section>
+
+    <section class="home-section home-section--process" aria-labelledby="home-process-title">
+      <h2 id="home-process-title" class="home-section__title">${escapeHtml(home.processTitle)}</h2>
+      <ol class="home-process">${processSteps}</ol>
     </section>
   `;
 }
@@ -218,6 +290,7 @@ function renderCollection(cards, locale, ui) {
         ? formatLanguages(card.languages, ui)
         : ui.translationPending;
       const pendingClass = card.translationReady ? "" : " brief-card--pending";
+      const why = getBriefWhy(card.slug, locale);
       return `
         <li>
           <a class="brief-card${pendingClass}" href="${escapeAttr(href)}">
@@ -226,6 +299,11 @@ function renderCollection(cards, locale, ui) {
               ${card.translationReady ? "" : `<p class="brief-card__status">${escapeHtml(ui.translationPending)}</p>`}
             </div>
             <h2 class="brief-card__title" id="collection-title-${escapeAttr(card.slug)}">${escapeHtml(card.title)}</h2>
+            ${
+              why
+                ? `<p class="brief-card__takeaway"><span class="brief-card__takeaway-label">${escapeHtml(ui.cardTakeaway)}</span> ${escapeHtml(why)}</p>`
+                : ""
+            }
             <dl class="brief-card__meta">
               <div>
                 <dt>${escapeHtml(ui.cardCategory)}</dt>
@@ -286,13 +364,34 @@ function renderBriefNav(locale, slug, ui) {
   `;
 }
 
-function renderHero(data, ui, locale) {
+function renderHero(data, ui, locale, slug) {
   const dateLabel = formatPublishedDate(data.meta.t0, locale);
   const source = data.meta.source || "—";
+  const conclusion = slug ? getBriefConclusion(slug, locale) : "";
+  const takeaways = slug ? getBriefTakeaways(slug, locale) : [];
+  const takeawayList = takeaways
+    .map((item) => `<li>${escapeHtml(item)}</li>`)
+    .join("");
   return `
     <header class="hero">
       <p class="hero__eyebrow" itemprop="articleSection">${escapeHtml(ui.productLabel)}</p>
       <h1 class="hero__headline" itemprop="headline">${escapeHtml(data.title)}</h1>
+      ${
+        conclusion
+          ? `<aside class="one-line-conclusion" aria-label="${escapeAttr(ui.oneLineConclusion)}">
+        <p class="one-line-conclusion__label">${escapeHtml(ui.oneLineConclusion)}</p>
+        <p class="one-line-conclusion__text">${escapeHtml(conclusion)}</p>
+      </aside>`
+          : ""
+      }
+      ${
+        takeawayList
+          ? `<aside class="after-read" aria-label="${escapeAttr(ui.afterReadTitle)}">
+        <p class="after-read__label">${escapeHtml(ui.afterReadTitle)}</p>
+        <ul class="after-read__list">${takeawayList}</ul>
+      </aside>`
+          : ""
+      }
       <p class="hero__deck">${escapeHtml(data.thesis)}</p>
 
       <aside class="reader-promise" aria-label="${escapeAttr(ui.readerPromiseTitle)}">

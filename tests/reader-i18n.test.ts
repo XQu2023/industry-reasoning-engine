@@ -82,8 +82,11 @@ describe("reader routing", () => {
 
 describe("reader UI i18n", () => {
   it("ships homepage and collection chrome for Public Beta", () => {
-    assert.equal(t("en").collectionTitle, "Founding Collection");
-    assert.equal(t("zh").collectionTitle, "创始合集");
+    assert.equal(t("en").collectionTitle, "All Decision Briefs");
+    assert.equal(t("zh").collectionTitle, "全部决策简报");
+    assert.equal(t("zh").navMeta, "决策简报");
+    assert.equal(t("en").brand, "FORESIGHT");
+    assert.equal(t("zh").brand, "FORESIGHT");
     assert.ok(t("en").homeHeadline.length > 0);
     assert.ok(t("zh").homeHeadline.length > 0);
     assert.equal(t("en").homePillars.length, 3);

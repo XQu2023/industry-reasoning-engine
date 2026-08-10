@@ -1,16 +1,18 @@
 /** UI chrome strings only. Brief body comes from authored locale .md files. */
 
-export const UI = {
+import { getBrandMark, withBrandFooter } from "./brand.js";
+
+const UI_BASE = {
   en: {
     skipLink: "Skip to content",
-    brand: "Research OS",
     readerMeta: "Reader",
     productLabel: "Decision Brief",
-    collectionTitle: "Founding Collection",
+    collectionTitle: "All Decision Briefs",
+    navMeta: "Decision Briefs",
     homeEyebrow: "Public Beta",
     homeHeadline: "Strategic research you can verify.",
     homeLede:
-      "Research OS turns first-party evidence into Decision Briefs—clear on what changed, where value is moving, and what remains Unknown.",
+      "FORESIGHT turns first-party evidence into Decision Briefs—clear on what changed, where value is moving, and what remains Unknown.",
     homePillarsTitle: "Why it is different",
     homePillars: [
       {
@@ -26,14 +28,17 @@ export const UI = {
         text: "No investment advice. No price targets. Validation over time is part of the system.",
       },
     ],
-    collectionEyebrow: "Founding Collection",
+    collectionEyebrow: "Decision Briefs",
     collectionLede:
       "Ten Decision Briefs from completed Strategic Research Reports. Read-only. Not financial advice.",
     cardCategory: "Category",
     cardPublished: "Published",
     cardReadTime: "Read time",
     cardConfidence: "Confidence",
+    cardTakeaway: "You will gain",
     cardLanguage: "Language",
+    oneLineConclusion: "One-line conclusion",
+    afterReadTitle: "After this brief, you will understand:",
     cardPendingTitle: "Chinese edition in preparation",
     translationPending: "Translation in preparation",
     previousBrief: "Previous Brief",
@@ -87,7 +92,7 @@ export const UI = {
     beneficiariesLabel: "Potential beneficiaries",
     parentResearch: "Parent research:",
     underlyingSource: "Underlying official source (P0 only, via parent SRE):",
-    footer: "Research OS · Founding Collection · Read-only · Not financial advice",
+    footerRest: "Decision Briefs · Read-only · Not financial advice",
     notFound: "Brief not found.",
     localeUnavailableTitle: "This language edition is not ready yet",
     localeUnavailableBody:
@@ -138,10 +143,10 @@ export const UI = {
   },
   zh: {
     skipLink: "跳到正文",
-    brand: "Research OS",
     readerMeta: "阅读",
     productLabel: "决策简报",
-    collectionTitle: "创始合集",
+    collectionTitle: "全部决策简报",
+    navMeta: "决策简报",
     homeEyebrow: "公开测试",
     homeHeadline: "可核对的战略研究。",
     homeLede:
@@ -161,13 +166,16 @@ export const UI = {
         text: "不做投资建议，不给目标价。经得起时间检验，才算做完。",
       },
     ],
-    collectionEyebrow: "创始合集",
+    collectionEyebrow: "决策简报",
     collectionLede: "十份决策简报，均来自已完成的战略研究。只读。不构成投资建议。",
     cardCategory: "类别",
     cardPublished: "发布日期",
     cardReadTime: "阅读时长",
     cardConfidence: "把握",
+    cardTakeaway: "你将获得",
     cardLanguage: "语言",
+    oneLineConclusion: "一句话结论",
+    afterReadTitle: "读完本文，你将理解：",
     cardPendingTitle: "中文版准备中",
     translationPending: "准备中",
     previousBrief: "上一篇",
@@ -221,7 +229,7 @@ export const UI = {
     beneficiariesLabel: "谁可能受益",
     parentResearch: "研究来源：",
     underlyingSource: "原始官方来源（仅第一方，经由上级研究报告）：",
-    footer: "Research OS · 创始合集 · 只读 · 不构成投资建议",
+    footerRest: "决策简报 · 只读 · 不构成投资建议",
     notFound: "没有找到这篇简报。",
     localeUnavailableTitle: "中文版还在准备",
     localeUnavailableBody: "中文版还在准备。请先用英文阅读全文。",
@@ -271,8 +279,25 @@ export const UI = {
 };
 
 export function t(locale) {
-  return UI[locale] ?? UI.en;
+  const code = locale === "zh" ? "zh" : "en";
+  const base = UI_BASE[code] ?? UI_BASE.en;
+  return {
+    ...base,
+    brand: getBrandMark(code),
+    footer: withBrandFooter(code, base.footerRest),
+  };
 }
+
+/** @deprecated Prefer t(locale); kept for any direct UI_BASE access in tests. */
+export const UI = new Proxy(
+  {},
+  {
+    get(_target, prop) {
+      if (prop === "en" || prop === "zh") return t(prop);
+      return undefined;
+    },
+  },
+);
 
 export function localizeConfidence(value, locale) {
   const ui = t(locale);
