@@ -258,7 +258,14 @@ function renderHomeStory(home, locale) {
     </section>
 
     <section class="home-section home-section--difference" aria-labelledby="home-difference-title">
-      <h2 id="home-difference-title" class="home-section__title">${escapeHtml(home.differenceTitle)}</h2>
+      <div class="home-section__intro">
+        <h2 id="home-difference-title" class="home-section__title">${escapeHtml(home.differenceTitle)}</h2>
+        ${
+          home.differenceSubtitle
+            ? `<p class="home-section__lede">${escapeHtml(home.differenceSubtitle)}</p>`
+            : ""
+        }
+      </div>
       <ol class="home-principles__list">${differences}</ol>
     </section>
 
@@ -267,7 +274,13 @@ function renderHomeStory(home, locale) {
       <p class="home-reading__id">${escapeHtml(home.readingId)}</p>
       <p class="home-reading__why">
         <span class="home-reading__why-label">${escapeHtml(home.readingGainLabel)}</span>
-        ${escapeHtml(home.readingGain)}
+        ${
+          Array.isArray(home.readingGainLines)
+            ? home.readingGainLines
+                .map((line) => `<span class="home-hero__support-line">${escapeHtml(line)}</span>`)
+                .join("")
+            : escapeHtml(home.readingGain || "")
+        }
       </p>
       <p class="home-start__action">
         <a class="btn btn--primary" href="${escapeAttr(startHref)}">${escapeHtml(home.primaryCta)}</a>
@@ -275,7 +288,14 @@ function renderHomeStory(home, locale) {
     </section>
 
     <section class="home-section home-section--process" aria-labelledby="home-process-title">
-      <h2 id="home-process-title" class="home-section__title">${escapeHtml(home.processTitle)}</h2>
+      <div class="home-section__intro">
+        <h2 id="home-process-title" class="home-section__title">${escapeHtml(home.processTitle)}</h2>
+        ${
+          home.processSubtitle
+            ? `<p class="home-section__lede">${escapeHtml(home.processSubtitle)}</p>`
+            : ""
+        }
+      </div>
       <ol class="home-process">${processSteps}</ol>
     </section>
   `;
@@ -335,7 +355,11 @@ function renderCollection(cards, locale, ui) {
     <header class="collection__header">
       <p class="collection__eyebrow">${escapeHtml(ui.collectionEyebrow)}</p>
       <h2 id="collection-title" class="collection__title">${escapeHtml(ui.collectionTitle)}</h2>
-      <p class="collection__lede">${escapeHtml(ui.collectionLede)}</p>
+      <p class="collection__lede">${
+        Array.isArray(ui.collectionLede)
+          ? ui.collectionLede.map((line) => escapeHtml(line)).join("<br>")
+          : escapeHtml(ui.collectionLede)
+      }</p>
     </header>
     <ol class="collection__grid">
       ${items}

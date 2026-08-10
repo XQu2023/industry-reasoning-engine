@@ -5,8 +5,8 @@ export const BRAND = {
   mark: "FORESIGHT",
   subtitle: "预见",
   tagline: {
-    en: "Primary sources. See where value moves.",
-    zh: "第一手来源，预见价值流向。",
+    en: "Primary evidence. See where value flows.",
+    zh: "第一手证据，预见价值流向。",
   },
 };
 

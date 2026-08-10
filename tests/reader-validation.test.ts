@@ -47,16 +47,16 @@ describe("reader validation layer", () => {
   it("renders all five Validation Layer surfaces", () => {
     const layer = buildValidationLayer("db-002", { asOf: BRIEF_SURFACE_DATE });
     const html = renderValidationLayer(layer, t("en"));
-    assert.match(html, /Validation Layer/);
-    assert.match(html, /Validation Timeline/);
-    assert.match(html, /Research Lineage/);
-    assert.match(html, /Unknown Tracker/);
-    assert.match(html, /Version History/);
-    assert.match(html, /Evidence Score/);
-    assert.match(html, /Prediction Accuracy/);
+    assert.match(html, /Ongoing validation/);
+    assert.match(html, /Validation timeline/);
+    assert.match(html, /How this brief was built/);
+    assert.match(html, /To be confirmed/);
+    assert.match(html, /Version history/);
+    assert.match(html, /Evidence score/);
+    assert.match(html, /Prediction accuracy/);
     assert.match(html, />79</);
     assert.match(html, /SRE-104/);
     assert.match(html, /T0-frozen/);
-    assert.equal(t("zh").validation.title, "验证层");
+    assert.equal(t("zh").validation.title, "持续验证");
   });
 });

@@ -82,8 +82,8 @@ describe("reader routing", () => {
 
 describe("reader UI i18n", () => {
   it("ships homepage and collection chrome for Public Beta", () => {
-    assert.equal(t("en").collectionTitle, "All Decision Briefs");
-    assert.equal(t("zh").collectionTitle, "全部决策简报");
+    assert.equal(t("en").collectionTitle, "What should you read next?");
+    assert.equal(t("zh").collectionTitle, "下一篇应该读什么？");
     assert.equal(t("zh").navMeta, "决策简报");
     assert.equal(t("en").brand, "FORESIGHT");
     assert.equal(t("zh").brand, "FORESIGHT");

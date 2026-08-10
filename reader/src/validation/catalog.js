@@ -50,7 +50,7 @@ export const VALIDATION_CATALOG = {
         "U1",
         "Price/licence for toolchain; share of surplus retained",
         "open",
-        "PVF-104: filings show adoption without a clean CUDA software P&L — magnitude still Unknown.",
+        "PVF-104: filings show adoption without a clean CUDA software P&L — magnitude still to be confirmed.",
       ),
       u(
         "U2",
