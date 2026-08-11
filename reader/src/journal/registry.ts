@@ -1,7 +1,20 @@
+import { db001JournalEn, db001JournalZh } from "./content/db-001.ts";
+import { db002JournalEn, db002JournalZh } from "./content/db-002.ts";
+import { db008JournalEn, db008JournalZh } from "./content/db-008.ts";
+import { db011JournalZh } from "./content/db-011.ts";
 import { db012JournalZh } from "./content/db-012.ts";
 import type { JournalBrief, JournalLocale } from "./types.ts";
 
-const JOURNAL_BRIEFS: JournalBrief[] = [db012JournalZh];
+const JOURNAL_BRIEFS: JournalBrief[] = [
+  db001JournalEn,
+  db001JournalZh,
+  db002JournalEn,
+  db002JournalZh,
+  db008JournalEn,
+  db008JournalZh,
+  db011JournalZh,
+  db012JournalZh,
+];
 
 const JOURNAL_INDEX = new Map(
   JOURNAL_BRIEFS.map((brief) => [`${brief.slug}:${brief.locale}`, brief] as const),

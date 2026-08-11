@@ -1,4 +1,5 @@
 import type { JournalBrief } from "../types.ts";
+import { CONTINUE_READING, JOURNAL_FOOTER } from "./shared.ts";
 
 /** DB-012 journal content — layout migration only; wording preserved from the Brief. */
 export const db012JournalZh: JournalBrief = {
@@ -92,7 +93,7 @@ export const db012JournalZh: JournalBrief = {
     ],
   },
   continueThinking: {
-    title: "Continue Reading",
+    title: CONTINUE_READING,
     items: [
       {
         id: "DB-011",
@@ -114,8 +115,5 @@ export const db012JournalZh: JournalBrief = {
       },
     ],
   },
-  footer: {
-    brand: "FORESIGHT",
-    lines: ["Understand how value moves.", "Think independently."],
-  },
+  footer: JOURNAL_FOOTER,
 };
