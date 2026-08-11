@@ -332,42 +332,81 @@ function renderLangSwitch(locale, slug, ui, page) {
   `;
 }
 
+function renderStartFlow(steps) {
+  const nodes = steps
+    .map((label, index) => {
+      const arrow =
+        index < steps.length - 1
+          ? `<li class="start-flow__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 28" width="24" height="28" focusable="false">
+                <path d="M12 2v18M6 14l6 8 6-8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </li>`
+          : "";
+      return `
+        <li class="start-flow__node">
+          <span class="start-flow__circle" aria-hidden="true"></span>
+          <span class="start-flow__label">${escapeHtml(label)}</span>
+        </li>
+        ${arrow}`;
+    })
+    .join("");
+
+  return `
+    <ol class="start-flow" aria-label="${escapeAttr(steps.join(" → "))}">
+      ${nodes}
+    </ol>
+  `;
+}
+
 function renderStartPage(start, locale) {
-  const briefBody = start.briefParagraphs
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
+  const heroSupport = start.heroLines
+    .map((line) => `<span class="start-hero__line">${escapeHtml(line)}</span>`)
     .join("");
 
   const howSteps = start.howSteps
     .map(
       (item, index) => `
-      <li class="start-list__item">
-        <p class="start-list__index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</p>
-        <h3 class="start-list__title">${escapeHtml(item.title)}</h3>
-        <p class="start-list__text">${escapeHtml(item.text)}</p>
+      <li class="start-card">
+        <p class="start-card__index" aria-hidden="true">
+          <span class="start-circle">${String(index + 1)}</span>
+        </p>
+        <h3 class="start-card__title">${escapeHtml(item.title)}</h3>
+        <p class="start-card__text">${escapeHtml(item.text)}</p>
       </li>`,
     )
     .join("");
 
   const pathItems = start.path
-    .map(
-      (item) => `
+    .map((item, index) => {
+      const href = buildBriefPath(item.hrefLocale || locale, item.slug);
+      const arrow =
+        index < start.path.length - 1
+          ? `<li class="start-path__arrow" aria-hidden="true">↓</li>`
+          : "";
+      return `
       <li class="start-path__item">
-        <p class="start-path__index" aria-hidden="true">${escapeHtml(item.index)}</p>
-        <a class="start-path__link" href="${escapeAttr(buildBriefPath(locale, item.slug))}">
+        <a class="start-path__link" href="${escapeAttr(href)}"${
+          item.hrefLocale && item.hrefLocale !== locale
+            ? ` data-locale="${escapeAttr(item.hrefLocale)}"`
+            : ""
+        }>
           <span class="start-path__id">${escapeHtml(item.id)}</span>
           <span class="start-path__why">${escapeHtml(item.why)}</span>
         </a>
-      </li>`,
-    )
+      </li>
+      ${arrow}`;
+    })
     .join("");
 
   const learnItems = start.learnItems
     .map(
       (item, index) => `
-      <li class="start-list__item">
-        <p class="start-list__index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</p>
-        <h3 class="start-list__title">${escapeHtml(item.title)}</h3>
-        <p class="start-list__text">${escapeHtml(item.text)}</p>
+      <li class="start-card start-card--learn">
+        <p class="start-card__index" aria-hidden="true">
+          <span class="start-circle">${String(index + 1)}</span>
+        </p>
+        <h3 class="start-card__title">${escapeHtml(item.title)}</h3>
       </li>`,
     )
     .join("");
@@ -378,17 +417,21 @@ function renderStartPage(start, locale) {
   return `
     <header class="start-hero">
       <h1 class="start-hero__title">${escapeHtml(start.heroTitle)}</h1>
-      <p class="start-hero__summary">${escapeHtml(start.heroSummary)}</p>
+      <p class="start-hero__summary">${heroSupport}</p>
+      <p class="start-hero__actions">
+        <a class="btn btn--primary" href="${escapeAttr(beginHref)}">${escapeHtml(start.heroCta)}</a>
+      </p>
     </header>
 
     <section class="start-section" aria-labelledby="start-brief-title">
       <h2 id="start-brief-title" class="start-section__title">${escapeHtml(start.briefTitle)}</h2>
-      <div class="start-section__body">${briefBody}</div>
+      <p class="start-section__sentence">${escapeHtml(start.briefSentence)}</p>
+      ${renderStartFlow(start.flowSteps)}
     </section>
 
     <section class="start-section" aria-labelledby="start-how-title">
       <h2 id="start-how-title" class="start-section__title">${escapeHtml(start.howTitle)}</h2>
-      <ol class="start-list">${howSteps}</ol>
+      <ol class="start-cards start-cards--three">${howSteps}</ol>
     </section>
 
     <section class="start-section" aria-labelledby="start-path-title">
@@ -399,14 +442,13 @@ function renderStartPage(start, locale) {
 
     <section class="start-section" aria-labelledby="start-learn-title">
       <h2 id="start-learn-title" class="start-section__title">${escapeHtml(start.learnTitle)}</h2>
-      <ol class="start-list">${learnItems}</ol>
+      <ol class="start-cards start-cards--five">${learnItems}</ol>
     </section>
 
     <section class="start-section start-section--begin" aria-labelledby="start-begin-title">
       <h2 id="start-begin-title" class="start-section__title">${escapeHtml(start.beginTitle)}</h2>
-      <p class="start-section__lede">${escapeHtml(start.beginText)}</p>
       <p class="start-begin__actions">
-        <a class="btn btn--primary" href="${escapeAttr(beginHref)}">${escapeHtml(start.beginCta)}</a>
+        <a class="btn btn--primary btn--large" href="${escapeAttr(beginHref)}">${escapeHtml(start.beginCta)}</a>
         <a class="btn btn--secondary" href="${escapeAttr(homeHref)}">${escapeHtml(start.collectionCta)}</a>
       </p>
     </section>

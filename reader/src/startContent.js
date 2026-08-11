@@ -1,123 +1,138 @@
-/** Start Here — first-time reader onboarding. Editorial copy only. */
+/** Start Here — first-time reader onboarding (PB-002). Editorial copy only. */
 
 import { withBrandPrefix } from "./brand.js";
-import { getBriefWhy } from "./homeContent.js";
 
 const START = {
   en: {
     documentTitleSuffix: "Start here",
     documentDescription:
-      "Three minutes to understand what a Decision Brief is, how to read one, and where to begin.",
-    heroTitle: "Start here",
-    heroSummary: "Three minutes to understand FORESIGHT—then begin reading.",
-    briefTitle: "What is a Decision Brief?",
-    briefParagraphs: [
-      "A Decision Brief is a short structural judgment built from primary evidence.",
-      "It shows what changed, where value is moving, and what remains to be confirmed.",
-      "It is not news. It is not financial advice.",
+      "Understand how value moves. Learn what a Decision Brief is, how to read one, and where to begin.",
+    heroTitle: "Understand how value moves.",
+    heroLines: [
+      "The best investment opportunities rarely begin with obvious winners.",
+      "They begin with changing bottlenecks.",
     ],
+    heroCta: "Start Reading",
+    briefTitle: "What is a Decision Brief?",
+    briefSentence:
+      "A Decision Brief explains why value moved—not what the stock price did.",
+    flowSteps: ["Evidence", "Reasoning", "World Model", "Decision Brief"],
     howTitle: "How to Read",
     howSteps: [
       {
-        title: "Begin with the question",
-        text: "One structural problem. Hold it while you read.",
+        title: "Read the Hero",
+        text: "Understand today's question.",
       },
       {
-        title: "Story before analysis",
-        text: "See the scene first. Density comes later.",
+        title: "Study the Diagram",
+        text: "See where value moves.",
       },
       {
-        title: "Pause at the Key Insight",
-        text: "One sentence names where value moves.",
-      },
-      {
-        title: "Keep the World Model",
-        text: "A principle you can reuse on the next brief.",
-      },
-      {
-        title: "Note what would change your mind",
-        text: "Certainty is not the goal. Conditions are.",
+        title: "Take away one World Model",
+        text: "You do not need to remember every fact. Remember one reusable model.",
       },
     ],
     pathTitle: "Recommended Reading Path",
-    pathLede: "Three briefs. Read in order if you are new.",
-    pathSlugs: ["db-001", "db-002", "db-006"],
-    learnTitle: "What You'll Learn",
-    learnItems: [
+    pathLede: "A guided path. Not the full shelf.",
+    path: [
       {
-        title: "Where value flows",
-        text: "Not where attention is loudest.",
+        slug: "db-001",
+        why: "Begin with the shift from chip to system.",
       },
       {
-        title: "Who may structurally benefit",
-        text: "From constraints, not from headlines.",
+        slug: "db-002",
+        why: "Next, see how software turns hardware into a locked platform.",
       },
       {
-        title: "What remains Unknown",
-        text: "Marked clearly. Not guessed away.",
+        slug: "db-008",
+        why: "Then watch memory and open software become the contested bottleneck.",
+      },
+      {
+        slug: "db-011",
+        why: "Then follow scarcity upward into high-bandwidth memory supply.",
+        hrefLocale: "zh",
+      },
+      {
+        slug: "db-012",
+        why: "Then look one layer deeper—at a materials bottleneck few discuss.",
+        hrefLocale: "zh",
       },
     ],
+    learnTitle: "What You'll Learn",
+    learnItems: [
+      { title: "Bottleneck Migration" },
+      { title: "Supply Constraint" },
+      { title: "Customer Qualification" },
+      { title: "Value Reallocation" },
+      { title: "Market Blind Spots" },
+    ],
     beginTitle: "Begin Reading",
-    beginText: "Start with DB-001. Five minutes.",
     beginCta: "Begin with DB-001",
     beginSlug: "db-001",
-    collectionCta: "Browse all briefs",
+    collectionCta: "Browse All Briefs",
   },
   zh: {
     documentTitleSuffix: "从这里开始",
-    documentDescription: "三分钟理解什么是决策简报、如何阅读，以及从哪一篇开始。",
-    heroTitle: "从这里开始",
-    heroSummary: "三分钟理解 FORESIGHT——然后开始阅读。",
-    briefTitle: "什么是决策简报？",
-    briefParagraphs: [
-      "决策简报是一份基于第一手证据的短篇结构判断。",
-      "它说明发生了什么变化、价值迁向何处，以及哪些仍属待确认。",
-      "它不是新闻。它不是投资建议。",
+    documentDescription:
+      "理解价值如何流动。弄清什么是决策简报、如何阅读，以及从哪一篇开始。",
+    heroTitle: "理解价值如何流动。",
+    heroLines: [
+      "最好的投资机会，很少从显而易见的赢家开始。",
+      "它们从正在变化的瓶颈开始。",
     ],
+    heroCta: "开始阅读",
+    briefTitle: "什么是决策简报？",
+    briefSentence: "决策简报解释价值为什么迁移——而不是股价做了什么。",
+    flowSteps: ["证据", "推理", "World Model", "决策简报"],
     howTitle: "如何阅读",
     howSteps: [
       {
-        title: "先抓住问题",
-        text: "一个结构问题。读的时候把它放在心里。",
+        title: "先读 Hero",
+        text: "先弄清今天的问题。",
       },
       {
-        title: "先故事，后分析",
-        text: "先看见场景。密度稍后到来。",
+        title: "看懂 Diagram",
+        text: "看见价值迁向何处。",
       },
       {
-        title: "在关键洞察处停一下",
-        text: "一句话点明价值迁向何处。",
-      },
-      {
-        title: "带走 World Model",
-        text: "一条可复用的原则，带到下一篇。",
-      },
-      {
-        title: "记下什么会改变结论",
-        text: "目标不是假装确定。目标是看清条件。",
+        title: "带走一个 World Model",
+        text: "不必记住每一个事实。记住一条可复用的模型。",
       },
     ],
     pathTitle: "推荐阅读路径",
-    pathLede: "三篇简报。如果是第一次，按顺序读。",
-    pathSlugs: ["db-001", "db-002", "db-006"],
-    learnTitle: "你将学到什么",
-    learnItems: [
+    pathLede: "一条引导路径。不是全部目录。",
+    path: [
       {
-        title: "价值流向何处",
-        text: "不是注意力最响的地方。",
+        slug: "db-001",
+        why: "从芯片到系统的价值迁移开始。",
       },
       {
-        title: "谁可能结构性地受益",
-        text: "来自约束，不是来自标题。",
+        slug: "db-002",
+        why: "接着看软件如何把硬件锁成平台。",
       },
       {
-        title: "哪些仍属待确认",
-        text: "清楚标注。不靠猜测抹平。",
+        slug: "db-008",
+        why: "然后看内存与开放软件成为争夺的瓶颈。",
+      },
+      {
+        slug: "db-011",
+        why: "再往上追稀缺——高带宽内存供给。",
+      },
+      {
+        slug: "db-012",
+        why: "再往下一层——很少被讨论的材料瓶颈。",
       },
     ],
+    learnTitle: "你将学到什么",
+    learnItems: [
+      { title: "瓶颈迁移" },
+      { title: "供给约束" },
+      { title: "客户资格" },
+      { title: "价值再分配" },
+      { title: "市场盲点" },
+    ],
     beginTitle: "开始阅读",
-    beginText: "从 DB-001 开始。约五分钟。",
-    beginCta: "开始阅读 DB-001",
+    beginCta: "从 DB-001 开始",
     beginSlug: "db-001",
     collectionCta: "浏览全部简报",
   },
@@ -126,11 +141,11 @@ const START = {
 export function getStartContent(locale) {
   const code = locale === "zh" ? "zh" : "en";
   const base = START[code] ?? START.en;
-  const path = base.pathSlugs.map((slug, index) => ({
-    slug,
-    id: slug.toUpperCase(),
-    why: getBriefWhy(slug, code),
+  const path = base.path.map((item, index) => ({
+    ...item,
+    id: item.slug.toUpperCase(),
     index: String(index + 1).padStart(2, "0"),
+    hrefLocale: item.hrefLocale || code,
   }));
 
   return {
