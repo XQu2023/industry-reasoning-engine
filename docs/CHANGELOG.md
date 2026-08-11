@@ -9,11 +9,30 @@ Documentation Delivery 001 establishes this file as the ongoing log.
 
 ## Table of Contents
 
-1. [2026-08-11 — Brief Standard](#2026-08-11--brief-standard)
-2. [2026-08-11 — Case Factory pipeline](#2026-08-11--case-factory-pipeline)
-3. [2026-08-11 — Documentation System V1](#2026-08-11--documentation-system-v1)
-4. [Prior shipped context](#prior-shipped-context)
-5. [How to record changes](#how-to-record-changes)
+1. [2026-08-11 — Delivery 002 Case Factory + Case Standard](#2026-08-11--delivery-002-case-factory--case-standard)
+2. [2026-08-11 — Brief Standard](#2026-08-11--brief-standard)
+3. [2026-08-11 — Case Factory pipeline](#2026-08-11--case-factory-pipeline)
+4. [2026-08-11 — Documentation System V1](#2026-08-11--documentation-system-v1)
+5. [Prior shipped context](#prior-shipped-context)
+6. [How to record changes](#how-to-record-changes)
+
+---
+
+## 2026-08-11 — Delivery 002 Case Factory + Case Standard
+
+### Added
+
+- [CASE_STANDARD.md](./CASE_STANDARD.md) — canonical publish standard for every Brief  
+- [CASE_FACTORY.md](./CASE_FACTORY.md) — production workflow restated to the exact ten-step factory spec  
+
+### Changed
+
+- [BRIEF_STANDARD.md](./BRIEF_STANDARD.md) — redirect to `CASE_STANDARD.md`  
+- Index links in README, Constitution, Writer Guide, Journal Guide  
+
+### Notes
+
+- Documentation only. Engine, Writer, Journal, Homepage unmodified.
 
 ---
 
@@ -21,7 +40,7 @@ Documentation Delivery 001 establishes this file as the ongoing log.
 
 ### Added
 
-- [BRIEF_STANDARD.md](./BRIEF_STANDARD.md) — publish contract for every Brief  
+- [BRIEF_STANDARD.md](./BRIEF_STANDARD.md) — publish contract for every Brief (superseded by [CASE_STANDARD.md](./CASE_STANDARD.md) in Delivery 002)  
   - Required ten sections (Hero → Footer)  
   - Max reading time 5 minutes; max length 2200 Chinese characters  
   - Minimum 1 diagram; minimum 1 World Model  

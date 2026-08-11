@@ -62,7 +62,7 @@ Parent research artifacts are **SRE** reports.
 Later reality tests are **PVF** validations.
 
 Every Brief is produced through the same factory pipeline — see [CASE_FACTORY.md](./CASE_FACTORY.md).  
-Every Brief must pass the publish contract — see [BRIEF_STANDARD.md](./BRIEF_STANDARD.md).
+Every Brief must pass the publish contract — see [CASE_STANDARD.md](./CASE_STANDARD.md).
 
 ---
 
@@ -91,7 +91,7 @@ Every Brief must pass the publish contract — see [BRIEF_STANDARD.md](./BRIEF_S
 Guides:
 
 - [CASE_FACTORY.md](./CASE_FACTORY.md)
-- [BRIEF_STANDARD.md](./BRIEF_STANDARD.md)
+- [CASE_STANDARD.md](./CASE_STANDARD.md)
 - [ENGINE_GUIDE.md](./ENGINE_GUIDE.md)
 - [WRITER_GUIDE.md](./WRITER_GUIDE.md)
 - [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md)
@@ -121,7 +121,7 @@ industry-reasoning-engine/
 │   ├── README.md
 │   ├── FORESIGHT_CONSTITUTION.md
 │   ├── CASE_FACTORY.md
-│   ├── BRIEF_STANDARD.md
+│   ├── CASE_STANDARD.md
 │   ├── ENGINE_GUIDE.md
 │   ├── WRITER_GUIDE.md
 │   ├── JOURNAL_GUIDE.md
@@ -153,7 +153,7 @@ industry-reasoning-engine/
 | --- | --- |
 | [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md) | Mission, North Star, systems, principles, metrics |
 | [CASE_FACTORY.md](./CASE_FACTORY.md) | Ten-step production pipeline for every Brief |
-| [BRIEF_STANDARD.md](./BRIEF_STANDARD.md) | Required sections, length/time limits, score gates |
+| [CASE_STANDARD.md](./CASE_STANDARD.md) | Required sections, length/time limits, score gates |
 | [ENGINE_GUIDE.md](./ENGINE_GUIDE.md) | Modules, rules, patterns, bugs, validation, Engine QA |
 | [WRITER_GUIDE.md](./WRITER_GUIDE.md) | Voice, Journal writing structure, Writer QA & score |
 | [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md) | Layout, rhythm, type, spacing, diagram/quote rules, Journal QA |

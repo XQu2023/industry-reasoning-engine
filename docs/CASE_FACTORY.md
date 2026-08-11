@@ -1,9 +1,25 @@
 # FORESIGHT Case Factory
 
-Every Decision Brief follows **exactly the same** production pipeline.
+Every Brief follows **exactly the same** production pipeline.
 
-The Case Factory is the operating system for producing Briefs at scale.  
-It does not redesign Journal, Engine, Writer, or Homepage — it sequences them.
+```text
+Evidence
+  ↓
+Engine
+  ↓
+Writer
+  ↓
+Journal
+  ↓
+Deploy
+  ↓
+Knowledge Library
+```
+
+This document is the production workflow contract.  
+It does not redesign Engine, Writer, Journal, or Homepage — it sequences them.
+
+Publish gates after this pipeline: [CASE_STANDARD.md](./CASE_STANDARD.md).
 
 ---
 
@@ -20,42 +36,26 @@ It does not redesign Journal, Engine, Writer, or Homepage — it sequences them.
 9. [Step 8 — Journal QA](#step-8--journal-qa)
 10. [Step 9 — Deploy](#step-9--deploy)
 11. [Step 10 — Post Review](#step-10--post-review)
-12. [Hard Rules](#hard-rules)
-13. [Related Documents](#related-documents)
+12. [Related Documents](#related-documents)
 
 ---
 
 ## Pipeline Overview
 
-```text
-Evidence
-  ↓
-Engine
-  ↓
-Writer
-  ↓
-Journal
-  ↓
-Deploy
-  ↓
-Knowledge Library
-```
-
-| Step | Name | Primary output |
+| Step | Name | Output |
 | ---: | --- | --- |
 | 1 | Evidence Collection | Evidence Package |
 | 2 | Evidence QA | Accepted Facts |
 | 3 | Engine | Engine Report |
 | 4 | Engine QA | QA-passed Engine Report |
 | 5 | Writer | Journal Draft |
-| 6 | Writer QA | QA-passed Draft |
+| 6 | Writer QA | QA-passed Journal Draft |
 | 7 | Journal | Magazine Experience |
 | 8 | Journal QA | Ship-ready Brief |
-| 9 | Deploy | Production + Knowledge Graph |
-| 10 | Post Review | Rules · Patterns · Improvements |
+| 9 | Deploy | Production + Knowledge Library |
+| 10 | Post Review | Feedback · Rules · Patterns · Improvements |
 
-No Brief skips a step.  
-No step invents work that belongs upstream.
+No Brief skips a step.
 
 ---
 
@@ -63,33 +63,29 @@ No step invents work that belongs upstream.
 
 ### Input
 
-| Source type | Examples |
-| --- | --- |
-| Industry report | Sector / supply-chain studies |
-| Company filing | 10-K, 20-F, annual report, prospectus |
-| Conference transcript | Earnings call, analyst day, keynote |
-| News | Dated primary announcements (use carefully) |
-| Academic paper | Peer-reviewed technical constraints |
+- Industry report  
+- Company filing  
+- Conference transcript  
+- News  
+- Academic paper  
 
 ### Output
 
-**Evidence Package** — collected sources with attribution, dates, and scope notes.
+**Evidence Package**
 
-### QA (collection gate)
+### QA
 
-| Check | Question |
+| Check | Meaning |
 | --- | --- |
-| **Source reliability** | Is the source attributable and appropriate for founding claims? |
-| **Time** | Is the observation dated? Is T0 clear? |
-| **Completeness** | Are the material sides of the constraint / demand story present? |
+| **Source reliability** | Source is attributable and fit to found claims |
+| **Time** | Observation is dated; T0 is clear |
+| **Completeness** | Material sides of the case are present |
 
-Fail collection QA → do not advance. Gather more evidence or decline the case.
+Fail → gather more evidence or decline the case.
 
 ---
 
 ## Step 2 — Evidence QA
-
-Strip the package down to what the Engine may use.
 
 ### Remove
 
@@ -100,21 +96,17 @@ Strip the package down to what the Engine may use.
 
 ### Output
 
-**Accepted Facts** — observable, attributable, non-duplicative facts suitable for Engine input.
+**Accepted Facts**
 
-Rules:
-
-- Secondary commentary may later help validation; it must not invent the founding claim.
-- If a statement cannot be grounded, it does not become an Accepted Fact.
-- `Unknown` is preferred over forced completeness.
+Only Accepted Facts may enter the Engine.
 
 ---
 
 ## Step 3 — Engine
 
-Run the Case Factory Engine modules on Accepted Facts.
+Run **12 modules**.
 
-### Module flow
+Case Factory reasoning flow:
 
 ```text
 Facts
@@ -136,51 +128,47 @@ World Model
 
 | Module | Role |
 | --- | --- |
-| **Facts** | Lock the Accepted Facts set |
+| **Facts** | Lock Accepted Facts |
 | **Change** | What structurally changed |
-| **Signal** | Leading / earliest structural signal |
+| **Signal** | Leading structural signal |
 | **Value Driver** | What forces value to move |
-| **Constraint** | The hard bottleneck (supply, qualification, physics, capital, time) |
-| **Value Migration** | Where value is moving along the chain |
+| **Constraint** | Hard bottleneck |
+| **Value Migration** | Where value is moving |
 | **Market Pricing** | What may already be priced vs still opaque (no tips) |
-| **World Model** | Reusable principle for later Briefs |
+| **World Model** | Reusable principle |
+
+Full twelve-module inventory and frozen implementation mapping: [ENGINE_GUIDE.md](./ENGINE_GUIDE.md).
 
 ### Output
 
-**Engine Report** — structured reasoning artifact for Writer derivation.
-
-Implementation detail and frozen stage mapping: [ENGINE_GUIDE.md](./ENGINE_GUIDE.md).
+**Engine Report**
 
 ---
 
 ## Step 4 — Engine QA
 
-Gate the Engine Report before any writing begins.
-
 ### Check
 
-| Check | Fail if… |
-| --- | --- |
-| **Missing reasoning** | A required module is empty or hand-waved |
-| **Unsupported conclusion** | Claim exceeds Accepted Facts |
-| **Logical jumps** | Causal chain skips a necessary link |
-| **Candidate Rule** | Repeated defect suggests a new rule should be opened |
-| **Bug** | Hallucination, bleed, or known failure mode reappears |
-| **Pattern** | A reusable pattern is implied but not named / falsifiable |
+- Missing reasoning  
+- Unsupported conclusion  
+- Logical jumps  
+- Candidate Rule  
+- Bug  
+- Pattern  
 
 ### Output
 
 QA-passed Engine Report — or return to Step 3 / Step 2.
 
-Open Candidate Rules, Bugs, and Patterns per [ENGINE_GUIDE.md](./ENGINE_GUIDE.md).
+See [ENGINE_GUIDE.md](./ENGINE_GUIDE.md) for Rule Library, Candidate Rule, Pattern Library, and Bug Database.
 
 ---
 
 ## Step 5 — Writer
 
-Generate the FORESIGHT Brief from the QA-passed Engine Report.
+Generate the **FORESIGHT Brief**.
 
-### Structure (frozen)
+### Structure
 
 ```text
 Hero
@@ -196,9 +184,9 @@ Continue Thinking
 
 ### Output
 
-**Journal Draft** — content ready for Journal components (no new research).
+**Journal Draft**
 
-Full editorial rules: [WRITER_GUIDE.md](./WRITER_GUIDE.md).
+Editorial rules: [WRITER_GUIDE.md](./WRITER_GUIDE.md).
 
 ---
 
@@ -206,36 +194,33 @@ Full editorial rules: [WRITER_GUIDE.md](./WRITER_GUIDE.md).
 
 ### Check
 
-| Check | Standard |
-| --- | --- |
-| **Voice** | FORESIGHT calm / precise / independent |
-| **Length** | Tight; no research-report dump |
-| **Story** | Short paragraphs; magazine rhythm |
-| **Diagram** | Present; simple nodes and arrows |
-| **Key Insight** | One memorable structural sentence |
-| **World Model** | One reusable principle + apply-to domains |
-| **Readability** | One screen, one idea; Analysis only where density belongs |
+- Voice  
+- Length  
+- Story  
+- Diagram  
+- Key Insight  
+- World Model  
+- Readability  
 
 ### Output
 
 QA-passed Journal Draft — or return to Step 5.
 
-Writer Score rubric: [WRITER_GUIDE.md](./WRITER_GUIDE.md#writer-score).
+Writer Score: [WRITER_GUIDE.md](./WRITER_GUIDE.md#writer-score).  
+Publish thresholds: [CASE_STANDARD.md](./CASE_STANDARD.md).
 
 ---
 
 ## Step 7 — Journal
 
-Render the draft through shared Journal components.
+Render **Journal Components**.
 
 ### Output
 
-**Magazine Experience** — premium digital investment journal reading surface.
+**Magazine Experience**
 
-Layout order and components: [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md).  
-Brand constraints: [BRAND_SYSTEM.md](./BRAND_SYSTEM.md).
-
-Do not invent a one-off layout for a single Brief.
+Layout: [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md).  
+Brand: [BRAND_SYSTEM.md](./BRAND_SYSTEM.md).
 
 ---
 
@@ -243,79 +228,58 @@ Do not invent a one-off layout for a single Brief.
 
 ### Check
 
-| Check | Standard |
-| --- | --- |
-| **Hero** | Logo, quote, title, summary, metadata |
-| **Diagram** | Mandatory; ≥ 2 nodes |
-| **Spacing** | One screen, one idea; large whitespace |
-| **Typography** | Only the five Journal sizes |
-| **Reading Rhythm** | Question/Story before Analysis; Key Insight isolated |
-| **Shareability** | Quote + Key Insight + World Model travel cleanly |
+- Hero  
+- Diagram  
+- Spacing  
+- Typography  
+- Reading Rhythm  
+- Shareability  
 
 ### Output
 
 Ship-ready Brief — or return to Step 7 / Step 5.
 
-Build gate: Journal QA fails the build if required surfaces are missing  
-([JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md#journal-qa)).
+Technical build gate: [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md#journal-qa).  
+Publish thresholds: [CASE_STANDARD.md](./CASE_STANDARD.md).
 
 ---
 
 ## Step 9 — Deploy
 
-Publish into the FORESIGHT knowledge surface.
+### Deploy
 
-### Deploy checklist
-
-| Item | Purpose |
-| --- | --- |
-| **Knowledge Graph** | Link concepts, companies, technologies, related Briefs |
-| **Validation** | Register theses / horizons for later PVF |
-| **Related Cases** | Wire Continue Thinking / graph neighbors |
-| **Index** | Collection card + locale routing |
-| **Production** | Ship to the public reader |
+- Knowledge Graph  
+- Validation  
+- Related Cases  
+- Index  
+- Production  
 
 ### Output
 
-Live Brief in Production + updated Knowledge Library entry points.
+Live Brief in Production and Knowledge Library entry points.
+
+Deploy only if [CASE_STANDARD.md](./CASE_STANDARD.md) passes.
 
 ---
 
 ## Step 10 — Post Review
 
-After publish, compound the system.
-
 ### Collect
 
-| Input | Becomes |
-| --- | --- |
-| **Feedback** | Clarity / trust signals for next Briefs |
-| **New Rule** | Candidate → Accepted Rule (Engine) |
-| **New Pattern** | Pattern Library entry |
-| **New World Model** | Reusable principle for later cases |
-| **Engine Improvement** | Prompt / module / QA fix under governance |
+- Feedback  
+- New Rule  
+- New Pattern  
+- New World Model  
+- Engine Improvement  
 
-Post Review feeds the Knowledge Library.  
-It must not silently rewrite the published Brief’s evidence.
-
----
-
-## Hard Rules
-
-1. **Same pipeline for every Brief** — no VIP shortcuts.  
-2. **Evidence before Engine** — no reasoning on marketing copy.  
-3. **Engine before Writer** — no narrative-first Briefs.  
-4. **Writer before Journal chrome polish** — content QA precedes visual QA.  
-5. **Journal QA before Deploy** — missing Diagram / Hero / World Model is a ship blocker.  
-6. **Post Review compounds assets** — rules, patterns, world models, not vanity edits.  
-7. **Unknown remains Unknown** across all ten steps.  
-8. **No investment advice** at any step.
+Post Review compounds the Knowledge Library.  
+It must not silently rewrite published evidence.
 
 ---
 
 ## Related Documents
 
-- [BRIEF_STANDARD.md](./BRIEF_STANDARD.md) — publish gates (structure, length, scores)
+- [CASE_STANDARD.md](./CASE_STANDARD.md) — publish standard (structure, limits, scores)
 - [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md)
 - [ENGINE_GUIDE.md](./ENGINE_GUIDE.md)
 - [WRITER_GUIDE.md](./WRITER_GUIDE.md)
@@ -327,4 +291,4 @@ It must not silently rewrite the published Brief’s evidence.
 
 ---
 
-*Case Factory — Production pipeline contract.*
+*Case Factory — Delivery 002.*

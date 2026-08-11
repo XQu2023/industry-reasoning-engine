@@ -292,7 +292,7 @@ Score each Brief out of **100** after Writer QA.
 | 70–79 | Revise Story / Insight / World Model |
 | < 70 | Do not publish |
 
-Publish also requires Brief Standard gates (structure, ≤5 min, ≤2200 Chinese characters, Engine ≥ 95, Journal ≥ 90, Overall ≥ 90): [BRIEF_STANDARD.md](./BRIEF_STANDARD.md).
+Publish also requires Case Standard gates (structure, ≤5 min, ≤2200 Chinese characters, Engine ≥ 95, Journal ≥ 90, Overall ≥ 90): [CASE_STANDARD.md](./CASE_STANDARD.md).
 
 Writer Score is editorial. Engine IRA remains the reasoning fidelity metric ([ENGINE_GUIDE.md](./ENGINE_GUIDE.md)).
 
