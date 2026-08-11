@@ -287,10 +287,12 @@ Score each Brief out of **100** after Writer QA.
 
 | Score | Interpretation |
 | ---: | --- |
-| 90–100 | Ship as reference Brief |
-| 80–89 | Ship after minor edits |
+| 90–100 | Meets publish gate (Writer Score ≥ 90) |
+| 80–89 | Revise before publish |
 | 70–79 | Revise Story / Insight / World Model |
 | < 70 | Do not publish |
+
+Publish also requires Brief Standard gates (structure, ≤5 min, ≤2200 Chinese characters, Engine ≥ 95, Journal ≥ 90, Overall ≥ 90): [BRIEF_STANDARD.md](./BRIEF_STANDARD.md).
 
 Writer Score is editorial. Engine IRA remains the reasoning fidelity metric ([ENGINE_GUIDE.md](./ENGINE_GUIDE.md)).
 

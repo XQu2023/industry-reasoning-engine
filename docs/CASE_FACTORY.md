@@ -315,6 +315,7 @@ It must not silently rewrite the published Brief’s evidence.
 
 ## Related Documents
 
+- [BRIEF_STANDARD.md](./BRIEF_STANDARD.md) — publish gates (structure, length, scores)
 - [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md)
 - [ENGINE_GUIDE.md](./ENGINE_GUIDE.md)
 - [WRITER_GUIDE.md](./WRITER_GUIDE.md)

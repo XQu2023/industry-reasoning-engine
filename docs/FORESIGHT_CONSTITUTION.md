@@ -85,7 +85,8 @@ Supporting assets (not separate product surfaces):
 - **SKB knowledge units** — reusable lessons  
 - **Brand system** — circle mark, color, voice  
 
-Production pipeline (identical for every Brief): [CASE_FACTORY.md](./CASE_FACTORY.md).
+Production pipeline (identical for every Brief): [CASE_FACTORY.md](./CASE_FACTORY.md).  
+Publish contract (structure, length, scores): [BRIEF_STANDARD.md](./BRIEF_STANDARD.md).
 
 Guides: [ENGINE_GUIDE.md](./ENGINE_GUIDE.md) · [WRITER_GUIDE.md](./WRITER_GUIDE.md) · [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md) · [BRAND_SYSTEM.md](./BRAND_SYSTEM.md)
 
@@ -155,6 +156,7 @@ Invalidated claims are marked superseded, not erased.
 
 - [README.md](./README.md) — Documentation index and architecture  
 - [CASE_FACTORY.md](./CASE_FACTORY.md) — Evidence → Engine → Writer → Journal → Deploy  
+- [BRIEF_STANDARD.md](./BRIEF_STANDARD.md) — required sections, 5 min / 2200 chars, score gates  
 - [ENGINE_GUIDE.md](./ENGINE_GUIDE.md)  
 - [WRITER_GUIDE.md](./WRITER_GUIDE.md)  
 - [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md)  

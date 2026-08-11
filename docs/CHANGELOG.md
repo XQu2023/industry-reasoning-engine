@@ -9,10 +9,31 @@ Documentation Delivery 001 establishes this file as the ongoing log.
 
 ## Table of Contents
 
-1. [2026-08-11 — Case Factory pipeline](#2026-08-11--case-factory-pipeline)
-2. [2026-08-11 — Documentation System V1](#2026-08-11--documentation-system-v1)
-3. [Prior shipped context](#prior-shipped-context)
-4. [How to record changes](#how-to-record-changes)
+1. [2026-08-11 — Brief Standard](#2026-08-11--brief-standard)
+2. [2026-08-11 — Case Factory pipeline](#2026-08-11--case-factory-pipeline)
+3. [2026-08-11 — Documentation System V1](#2026-08-11--documentation-system-v1)
+4. [Prior shipped context](#prior-shipped-context)
+5. [How to record changes](#how-to-record-changes)
+
+---
+
+## 2026-08-11 — Brief Standard
+
+### Added
+
+- [BRIEF_STANDARD.md](./BRIEF_STANDARD.md) — publish contract for every Brief  
+  - Required ten sections (Hero → Footer)  
+  - Max reading time 5 minutes; max length 2200 Chinese characters  
+  - Minimum 1 diagram; minimum 1 World Model  
+  - Score gates: Engine ≥ 95, Writer ≥ 90, Journal ≥ 90, Overall ≥ 90 — else Do Not Publish  
+
+### Changed
+
+- [README.md](./README.md), [CASE_FACTORY.md](./CASE_FACTORY.md), [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md) — link Brief Standard  
+
+### Notes
+
+- Documentation only. No product code modified.
 
 ---
 

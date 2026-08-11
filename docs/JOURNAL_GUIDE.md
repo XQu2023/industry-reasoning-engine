@@ -227,10 +227,14 @@ Every Brief must include:
 
 If any required component is missing: **fail build**.
 
+Publish also requires Journal Score ≥ 90 and the full Brief Standard  
+([BRIEF_STANDARD.md](./BRIEF_STANDARD.md)): ≤5 minute read, ≤2200 Chinese characters, ≥1 diagram, ≥1 World Model, Overall ≥ 90.
+
 ---
 
 ## Related Documents
 
+- [BRIEF_STANDARD.md](./BRIEF_STANDARD.md) — publish contract and score gates
 - [WRITER_GUIDE.md](./WRITER_GUIDE.md) — how content is authored into this layout
 - [BRAND_SYSTEM.md](./BRAND_SYSTEM.md) — color, mark, voice
 - [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md)
