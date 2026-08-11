@@ -1,5 +1,6 @@
 import "../styles.css";
 import { listCollectionCards, loadParsedBrief } from "./briefs.js";
+import { getJournalBrief, mountJournalApp, unmountJournalApp } from "./journal/index.ts";
 import { renderApp } from "./render.js";
 import {
   parseRoute,
@@ -46,6 +47,13 @@ function mount() {
   }
 
   if (route.type === "brief" && route.slug) {
+    const journal = getJournalBrief(route.slug, locale);
+    if (journal) {
+      unmountJournalApp();
+      mountJournalApp(root, journal, navigate);
+      return;
+    }
+
     const parsed = loadParsedBrief(route.slug, locale);
     if (!parsed) {
       applyView(
@@ -104,6 +112,7 @@ function mount() {
 }
 
 function applyView(view) {
+  unmountJournalApp();
   document.documentElement.lang = view.htmlLang;
   document.title = view.title;
   setMetaDescription(view.description);
