@@ -16,9 +16,11 @@ import { renderKnowledgeNetwork } from "./knowledge/index.js";
 import {
   buildBriefPath,
   buildHomePath,
+  buildStartPath,
   DEFAULT_SLUG,
   SUPPORTED_LOCALES,
 } from "./router.js";
+import { getStartContent } from "./startContent.js";
 import { renderValidationLayer } from "./validation/renderLayer.js";
 
 export function renderApp({
@@ -48,6 +50,22 @@ export function renderApp({
           <section id="collection" class="collection" aria-labelledby="collection-title">
             ${renderCollection(cards ?? [], locale, ui)}
           </section>
+        </main>
+        ${renderSiteFooter(locale, ui)}
+      `,
+    };
+  }
+
+  if (type === "start") {
+    const start = getStartContent(locale);
+    return {
+      htmlLang,
+      title: start.documentTitle,
+      description: start.documentDescription,
+      body: `
+        ${renderChrome({ locale, ui, productId: null, pathnameSlug: null, page: "start" })}
+        <main id="main" class="start">
+          ${renderStartPage(start, locale)}
         </main>
         ${renderSiteFooter(locale, ui)}
       `,
@@ -272,6 +290,7 @@ function renderSiteFooter(locale, ui) {
 
 function renderChrome({ locale, ui, productId, pathnameSlug, page }) {
   const meta = productId ? `${ui.readerMeta} · ${productId}` : ui.navMeta;
+  const startActive = page === "start" ? " is-active" : "";
   return `
     <a class="skip-link" href="#main">${escapeHtml(ui.skipLink)}</a>
     <header class="site-bar" aria-label="${escapeAttr(ui.siteBarLabel)}">
@@ -285,16 +304,21 @@ function renderChrome({ locale, ui, productId, pathnameSlug, page }) {
         </a>
         <p class="site-bar__meta">${escapeHtml(meta)}</p>
       </div>
-      ${renderLangSwitch(locale, pathnameSlug, ui, page)}
+      <div class="site-bar__nav">
+        <a class="site-bar__start${startActive}" href="${escapeAttr(buildStartPath(locale))}"${
+          page === "start" ? ' aria-current="page"' : ""
+        }>${escapeHtml(ui.startHereNav)}</a>
+        ${renderLangSwitch(locale, pathnameSlug, ui, page)}
+      </div>
     </header>
   `;
 }
 
 function renderLangSwitch(locale, slug, ui, page) {
   const links = SUPPORTED_LOCALES.map((code) => {
-    const href = page === "brief" && slug
-      ? buildBriefPath(code, slug)
-      : buildHomePath(code);
+    let href = buildHomePath(code);
+    if (page === "brief" && slug) href = buildBriefPath(code, slug);
+    else if (page === "start") href = buildStartPath(code);
     const label = code === "zh" ? ui.langZh : ui.langEn;
     const active = code === locale ? " is-active" : "";
     const ariaCurrent = code === locale ? ' aria-current="true"' : "";
@@ -305,6 +329,87 @@ function renderLangSwitch(locale, slug, ui, page) {
     <nav class="lang-switch" aria-label="${escapeAttr(ui.langSwitcher)}">
       ${links}
     </nav>
+  `;
+}
+
+function renderStartPage(start, locale) {
+  const briefBody = start.briefParagraphs
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join("");
+
+  const howSteps = start.howSteps
+    .map(
+      (item, index) => `
+      <li class="start-list__item">
+        <p class="start-list__index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</p>
+        <h3 class="start-list__title">${escapeHtml(item.title)}</h3>
+        <p class="start-list__text">${escapeHtml(item.text)}</p>
+      </li>`,
+    )
+    .join("");
+
+  const pathItems = start.path
+    .map(
+      (item) => `
+      <li class="start-path__item">
+        <p class="start-path__index" aria-hidden="true">${escapeHtml(item.index)}</p>
+        <a class="start-path__link" href="${escapeAttr(buildBriefPath(locale, item.slug))}">
+          <span class="start-path__id">${escapeHtml(item.id)}</span>
+          <span class="start-path__why">${escapeHtml(item.why)}</span>
+        </a>
+      </li>`,
+    )
+    .join("");
+
+  const learnItems = start.learnItems
+    .map(
+      (item, index) => `
+      <li class="start-list__item">
+        <p class="start-list__index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</p>
+        <h3 class="start-list__title">${escapeHtml(item.title)}</h3>
+        <p class="start-list__text">${escapeHtml(item.text)}</p>
+      </li>`,
+    )
+    .join("");
+
+  const beginHref = buildBriefPath(locale, start.beginSlug || DEFAULT_SLUG);
+  const homeHref = buildHomePath(locale);
+
+  return `
+    <header class="start-hero">
+      <h1 class="start-hero__title">${escapeHtml(start.heroTitle)}</h1>
+      <p class="start-hero__summary">${escapeHtml(start.heroSummary)}</p>
+    </header>
+
+    <section class="start-section" aria-labelledby="start-brief-title">
+      <h2 id="start-brief-title" class="start-section__title">${escapeHtml(start.briefTitle)}</h2>
+      <div class="start-section__body">${briefBody}</div>
+    </section>
+
+    <section class="start-section" aria-labelledby="start-how-title">
+      <h2 id="start-how-title" class="start-section__title">${escapeHtml(start.howTitle)}</h2>
+      <ol class="start-list">${howSteps}</ol>
+    </section>
+
+    <section class="start-section" aria-labelledby="start-path-title">
+      <h2 id="start-path-title" class="start-section__title">${escapeHtml(start.pathTitle)}</h2>
+      <p class="start-section__lede">${escapeHtml(start.pathLede)}</p>
+      <ol class="start-path">${pathItems}</ol>
+    </section>
+
+    <section class="start-section" aria-labelledby="start-learn-title">
+      <h2 id="start-learn-title" class="start-section__title">${escapeHtml(start.learnTitle)}</h2>
+      <ol class="start-list">${learnItems}</ol>
+    </section>
+
+    <section class="start-section start-section--begin" aria-labelledby="start-begin-title">
+      <h2 id="start-begin-title" class="start-section__title">${escapeHtml(start.beginTitle)}</h2>
+      <p class="start-section__lede">${escapeHtml(start.beginText)}</p>
+      <p class="start-begin__actions">
+        <a class="btn btn--primary" href="${escapeAttr(beginHref)}">${escapeHtml(start.beginCta)}</a>
+        <a class="btn btn--secondary" href="${escapeAttr(homeHref)}">${escapeHtml(start.collectionCta)}</a>
+      </p>
+    </section>
   `;
 }
 

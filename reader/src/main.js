@@ -46,6 +46,19 @@ function mount() {
     return;
   }
 
+  if (route.type === "start") {
+    const view = renderApp({
+      locale,
+      type: "start",
+      slug: null,
+      brief: null,
+      productId: null,
+      cards: null,
+    });
+    applyView(view);
+    return;
+  }
+
   if (route.type === "brief" && route.slug) {
     const journal = getJournalBrief(route.slug, locale);
     if (journal) {

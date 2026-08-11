@@ -108,6 +108,7 @@ const UI_BASE = {
     langSwitcher: "Language",
     siteBarLabel: "Site",
     briefNavLabel: "Brief navigation",
+    startHereNav: "Start Here",
     readingTimeFallback: "~5 minutes",
     validation: {
       title: "Ongoing validation",
@@ -246,6 +247,7 @@ const UI_BASE = {
     langSwitcher: "语言",
     siteBarLabel: "站点",
     briefNavLabel: "简报导航",
+    startHereNav: "从这里开始",
     readingTimeFallback: "约 5 分钟",
     validation: {
       title: "持续验证",
