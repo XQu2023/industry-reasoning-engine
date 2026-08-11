@@ -265,6 +265,25 @@ export const VALIDATION_CATALOG = {
     pvfRuns: [],
     knowledgeUnits: [],
   },
+  "db-012": {
+    productId: "DB-012",
+    sreId: "SRE-122",
+    srePath: "reports/SRE-122-InP.md",
+    sreTitle: "InP optical supply",
+    t0: "2026-08-11",
+    researchConfidence: "Medium",
+    primarySource: "FORESIGHT observation brief DB-012 (InP / optical supply constraint)",
+    nextValidation:
+      "AI optical-module upgrade path; InP price level; new capacity release; high-end customer qualification pace.",
+    unknowns: [
+      u("U1", "Whether AI optical modules continue upgrading (800G → 1.6T and beyond)", "open"),
+      u("U2", "Whether InP prices remain elevated", "open"),
+      u("U3", "When new capacity actually releases", "open"),
+      u("U4", "Whether customer qualification is slower than the market expects", "open"),
+    ],
+    pvfRuns: [],
+    knowledgeUnits: [],
+  },
 };
 
 function u(id, text, status, note = "", closedBy = null) {

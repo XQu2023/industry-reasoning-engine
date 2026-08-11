@@ -103,16 +103,18 @@ export function renderApp({
   const data = brief;
   const id = productId ?? extractProductId(data.meta.product) ?? "DB-001";
   const title = `${data.title} — ${ui.productLabel} ${id}`;
-  const description = data.thesis;
-
-  return {
-    htmlLang,
-    title,
-    description,
-    body: `
-      ${renderChrome({ locale, ui, productId: id, pathnameSlug: slug, page: "brief" })}
-      <main id="main">
-        <article class="brief" itemscope itemtype="https://schema.org/Article">
+  const description = data.thesis || data.title;
+  const articleBody =
+    data.format === "v4"
+      ? `
+          ${renderBriefNav(locale, slug, ui)}
+          ${renderV4Hero(data, ui, locale)}
+          ${renderV4Sections(data)}
+          ${renderValidationLayer(validationLayer, ui)}
+          ${renderKnowledgeNetwork(slug, locale)}
+          ${renderBriefNav(locale, slug, ui)}
+        `
+      : `
           ${renderBriefNav(locale, slug, ui)}
           ${renderHero(data, ui, locale, slug)}
           ${renderExecutive(data, ui)}
@@ -126,11 +128,127 @@ export function renderApp({
           ${renderBottom(data, ui)}
           ${renderSources(data, ui)}
           ${renderBriefNav(locale, slug, ui)}
+        `;
+
+  return {
+    htmlLang,
+    title,
+    description,
+    body: `
+      ${renderChrome({ locale, ui, productId: id, pathnameSlug: slug, page: "brief" })}
+      <main id="main">
+        <article class="brief" itemscope itemtype="https://schema.org/Article">
+          ${articleBody}
         </article>
       </main>
       ${renderSiteFooter(locale, ui)}
     `,
   };
+}
+
+function renderV4Hero(data, ui, locale) {
+  const dateLabel = formatPublishedDate(data.meta.t0, locale);
+  const source = data.meta.source || "—";
+  return `
+    <header class="hero">
+      <p class="hero__eyebrow" itemprop="articleSection">${escapeHtml(ui.productLabel)}</p>
+      <h1 class="hero__headline" itemprop="headline">${escapeHtml(data.title)}</h1>
+      <aside class="reader-promise" aria-label="${escapeAttr(ui.readerPromiseTitle)}">
+        <p class="reader-promise__title">${escapeHtml(ui.readerPromiseTitle)}</p>
+        <ul class="reader-promise__list">
+          ${ui.readerPromise
+            .map(
+              (item) => `
+            <li>
+              <span class="reader-promise__check" aria-hidden="true">✓</span>
+              ${escapeHtml(item)}
+            </li>`,
+            )
+            .join("")}
+        </ul>
+      </aside>
+      <dl class="hero__facts">
+        <div>
+          <dt>${escapeHtml(ui.readTime)}</dt>
+          <dd>${escapeHtml(localizeReadingTimeDisplay(data.meta.readingTime, locale, ui))}</dd>
+        </div>
+        ${
+          data.meta.t0
+            ? `<div>
+          <dt>${escapeHtml(ui.publishedDate)}</dt>
+          <dd>
+            <time datetime="${escapeAttr(data.meta.t0)}" itemprop="datePublished">${escapeHtml(dateLabel)}</time>
+          </dd>
+        </div>`
+            : ""
+        }
+        <div>
+          <dt>${escapeHtml(ui.source)}</dt>
+          <dd>${escapeHtml(source)}</dd>
+        </div>
+      </dl>
+      ${data.meta.disclaimer ? `<p class="hero__disclaimer">${escapeHtml(data.meta.disclaimer)}</p>` : ""}
+    </header>
+  `;
+}
+
+function renderV4Sections(data) {
+  return (data.sections || [])
+    .map((section, index) => {
+      // Hook content lives under the title H1 already shown in the hero.
+      if (section.kind === "hook") {
+        return `
+          <section class="section v4-section" aria-label="${escapeAttr(section.heading)}">
+            <div class="v4-prose">${renderV4Markdown(section.body)}</div>
+          </section>`;
+      }
+      if (section.kind === "world-model") {
+        return `
+          <section class="section v4-section v4-section--world-model" aria-labelledby="world-model-title">
+            <aside class="world-model-card">
+              <h2 id="world-model-title" class="world-model-card__title">${escapeHtml(section.heading)}</h2>
+              <div class="v4-prose">${renderV4Markdown(section.body)}</div>
+            </aside>
+          </section>`;
+      }
+      const headingId = `v4-section-${index}`;
+      return `
+        <section class="section v4-section" aria-labelledby="${headingId}">
+          <h2 id="${headingId}">${escapeHtml(section.heading)}</h2>
+          <div class="v4-prose">${renderV4Markdown(section.body)}</div>
+        </section>`;
+    })
+    .join("");
+}
+
+/** Preserve authored wording; only apply light markdown → HTML. */
+function renderV4Markdown(text) {
+  const blocks = String(text || "")
+    .split(/\n{2,}/)
+    .map((block) => block.trim())
+    .filter(Boolean);
+  return blocks
+    .map((block) => {
+      const lines = block.split("\n").map((line) => line.trimEnd());
+      if (lines.every((line) => /^>\s?/.test(line))) {
+        const quote = lines.map((line) => line.replace(/^>\s?/, "")).join("\n");
+        return `<blockquote>${renderV4Inline(quote)}</blockquote>`;
+      }
+      if (lines.every((line) => /^-\s+/.test(line))) {
+        const items = lines
+          .map((line) => `<li>${renderV4Inline(line.replace(/^-\s+/, ""))}</li>`)
+          .join("");
+        return `<ul>${items}</ul>`;
+      }
+      return `<p>${renderV4Inline(lines.join("\n"))}</p>`;
+    })
+    .join("");
+}
+
+function renderV4Inline(text) {
+  return escapeHtml(String(text || ""))
+    .replace(/\n/g, "<br>")
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 }
 
 function renderSiteFooter(locale, ui) {

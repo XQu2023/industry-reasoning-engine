@@ -1,6 +1,11 @@
 /** Parse Decision Brief markdown into structured fields (no runtime translation). */
 
 export function parseBriefMarkdown(markdown) {
+  const frontmatter = extractFrontmatter(markdown);
+  if (frontmatter) {
+    return parseV4Brief(frontmatter.meta, frontmatter.body);
+  }
+
   const sections = splitSections(markdown);
   const title = firstHeadingTitle(markdown);
   const meta = parseMetaTable(sections.get(title) ?? sections.get("") ?? "");
@@ -15,6 +20,7 @@ export function parseBriefMarkdown(markdown) {
   const sources = parseSources(sectionBody(sections, "Sources"));
 
   return {
+    format: "classic",
     title,
     thesis,
     meta,
@@ -26,6 +32,94 @@ export function parseBriefMarkdown(markdown) {
     realityCheck: reality,
     bottomLine,
     sources,
+    sections: [],
+  };
+}
+
+function extractFrontmatter(markdown) {
+  const match = String(markdown).match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  if (!match) return null;
+  return { meta: parseYamlLite(match[1]), body: match[2] };
+}
+
+/** Minimal YAML subset used by V4 briefs (scalars + string lists). */
+function parseYamlLite(text) {
+  const meta = {};
+  let listKey = null;
+  for (const rawLine of text.split("\n")) {
+    const line = rawLine.replace(/\t/g, "  ");
+    const listItem = line.match(/^\s*-\s+(.+)\s*$/);
+    if (listItem && listKey) {
+      if (!Array.isArray(meta[listKey])) meta[listKey] = [];
+      meta[listKey].push(stripQuotes(listItem[1].trim()));
+      continue;
+    }
+    const kv = line.match(/^([A-Za-z][\w]*)\s*:\s*(.*)$/);
+    if (!kv) continue;
+    const key = kv[1];
+    const value = kv[2].trim();
+    if (!value) {
+      listKey = key;
+      meta[key] = [];
+      continue;
+    }
+    listKey = null;
+    meta[key] = stripQuotes(value);
+  }
+  return meta;
+}
+
+function stripQuotes(value) {
+  return value.replace(/^['"]|['"]$/g, "");
+}
+
+function parseV4Brief(fm, body) {
+  const title = String(fm.title || firstHeadingTitle(body) || "").trim();
+  const id = String(fm.id || "DB-012").trim();
+  const readingTime = String(fm.readingTime || fm["reading time"] || "5 min").trim();
+  const sections = [];
+  const parts = body.split(/\n(?=# )/g);
+  for (const part of parts) {
+    const match = part.match(/^# (.+)\n?([\s\S]*)$/);
+    if (!match) continue;
+    const heading = match[1].trim();
+    const sectionBodyText = match[2].replace(/^\s*---\s*$/gm, "").trim();
+    if (heading === title && sections.length === 0) {
+      sections.push({ heading, body: sectionBodyText, kind: "hook" });
+      continue;
+    }
+    const kind =
+      heading === "World Model"
+        ? "world-model"
+        : heading === "Validation"
+          ? "validation"
+          : "section";
+    sections.push({ heading, body: sectionBodyText, kind });
+  }
+
+  return {
+    format: "v4",
+    title,
+    thesis: "",
+    meta: {
+      product: `Decision Brief ${id}`,
+      parentResearch: "",
+      t0: String(fm.t0 || fm.T0 || ""),
+      readingTime,
+      source: String(fm.source || fm.Source || ""),
+      disclaimer: String(fm.disclaimer || ""),
+      industry: String(fm.industry || ""),
+      tags: Array.isArray(fm.tags) ? fm.tags : [],
+    },
+    executiveSummary: { label: "", body: "" },
+    whatChanged: { intro: "", items: [] },
+    whyItMatters: { before: [], shifts: [], after: [] },
+    valueMigration: { nodes: [], lede: "", caption: "" },
+    beneficiaries: { note: "", rows: [] },
+    realityCheck: { thesis: "", wrong: [], next: "" },
+    bottomLine: "",
+    sources: { items: [], note: "" },
+    sections,
   };
 }
 

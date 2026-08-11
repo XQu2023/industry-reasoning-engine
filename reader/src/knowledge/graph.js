@@ -148,7 +148,20 @@ export const BRIEF_NODES = {
     technology: ["HBM3E", "H200", "HBM"],
     industry: ["Semiconductors", "AI Computing"],
     concepts: ["HBM3E", "H200", "HBM", "AI memory"],
-    related: ["db-001", "db-008", "db-002", "db-003"],
+    related: ["db-001", "db-008", "db-002", "db-003", "db-012"],
+  },
+  "db-012": {
+    slug: "db-012",
+    productId: "DB-012",
+    title: {
+      en: "Why I Started Watching a Material Few People Discuss",
+      zh: "为什么我开始关注一种很少有人讨论的材料",
+    },
+    company: [],
+    technology: ["InP", "Optical Communication", "800G", "1.6T"],
+    industry: ["AI Infrastructure", "Optical Communication"],
+    concepts: ["InP", "Optical Communication", "Value Migration", "HBM", "supply constraint"],
+    related: ["db-011", "db-001", "db-008", "db-002"],
   },
 };
 

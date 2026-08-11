@@ -19,6 +19,7 @@ import db009zh from "../briefs/DB-009-Anthropic-Claude-API.zh.md?raw";
 import db010en from "../briefs/DB-010-Databricks-Lakehouse.en.md?raw";
 import db010zh from "../briefs/DB-010-Databricks-Lakehouse.zh.md?raw";
 import db011zh from "../briefs/DB-011-Micron-HBM3E.zh.md?raw";
+import db012zh from "../briefs/DB-012-InP.zh.md?raw";
 import { localizeReadingTime, t } from "./i18n.js";
 import { parseBriefMarkdown } from "./parseBrief.js";
 
@@ -35,6 +36,7 @@ const CATALOG = [
   { slug: "db-009", category: "aiComputing", confidence: "Medium", fileStem: "DB-009-Anthropic-Claude-API" },
   { slug: "db-010", category: "dataPlatforms", confidence: "Medium", fileStem: "DB-010-Databricks-Lakehouse" },
   { slug: "db-011", category: "semiconductors", confidence: "Medium", fileStem: "DB-011-Micron-HBM3E" },
+  { slug: "db-012", category: "aiInfrastructure", confidence: "Medium", fileStem: "DB-012-InP" },
 ];
 
 const BRIEF_FILES = {
@@ -80,6 +82,9 @@ const BRIEF_FILES = {
   },
   "db-011": {
     zh: { file: "DB-011-Micron-HBM3E.zh.md", markdown: db011zh },
+  },
+  "db-012": {
+    zh: { file: "DB-012-InP.zh.md", markdown: db012zh },
   },
 };
 

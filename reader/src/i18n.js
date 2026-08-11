@@ -78,6 +78,7 @@ const UI_BASE = {
     },
     categories: {
       aiComputing: "AI Computing",
+      aiInfrastructure: "AI Infrastructure",
       semiconductors: "Semiconductors",
       payments: "Payments",
       cloudInfrastructure: "Cloud Infrastructure",
@@ -217,6 +218,7 @@ const UI_BASE = {
     },
     categories: {
       aiComputing: "AI 算力",
+      aiInfrastructure: "AI 基础设施",
       semiconductors: "半导体",
       payments: "支付",
       cloudInfrastructure: "云基础设施",
