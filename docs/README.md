@@ -12,9 +12,10 @@ It does **not** authorize product redesign. Product code lives outside these gui
 1. [Mission](#mission)
 2. [Product Overview](#product-overview)
 3. [Project Architecture](#project-architecture)
-4. [Repository Structure](#repository-structure)
-5. [Documentation Index](#documentation-index)
-6. [Related Specs](#related-specs)
+4. [Case Factory](#case-factory)
+5. [Repository Structure](#repository-structure)
+6. [Documentation Index](#documentation-index)
+7. [Related Specs](#related-specs)
 
 ---
 
@@ -60,6 +61,8 @@ Public product units are **Decision Briefs** (`DB-xxx`).
 Parent research artifacts are **SRE** reports.  
 Later reality tests are **PVF** validations.
 
+Every Brief is produced through the same factory pipeline — see [CASE_FACTORY.md](./CASE_FACTORY.md).
+
 ---
 
 ## Project Architecture
@@ -86,12 +89,25 @@ Later reality tests are **PVF** validations.
 
 Guides:
 
+- [CASE_FACTORY.md](./CASE_FACTORY.md)
 - [ENGINE_GUIDE.md](./ENGINE_GUIDE.md)
 - [WRITER_GUIDE.md](./WRITER_GUIDE.md)
 - [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md)
 - [BRAND_SYSTEM.md](./BRAND_SYSTEM.md)
 - [ROADMAP.md](./ROADMAP.md)
 - [CHANGELOG.md](./CHANGELOG.md)
+
+---
+
+## Case Factory
+
+Production pipeline for every Brief (identical sequence):
+
+```text
+Evidence → Engine → Writer → Journal → Deploy → Knowledge Library
+```
+
+Full ten-step contract: [CASE_FACTORY.md](./CASE_FACTORY.md).
 
 ---
 
@@ -102,6 +118,7 @@ industry-reasoning-engine/
 ├── docs/                 # FORESIGHT documentation (this system)
 │   ├── README.md
 │   ├── FORESIGHT_CONSTITUTION.md
+│   ├── CASE_FACTORY.md
 │   ├── ENGINE_GUIDE.md
 │   ├── WRITER_GUIDE.md
 │   ├── JOURNAL_GUIDE.md
@@ -132,6 +149,7 @@ industry-reasoning-engine/
 | Document | Purpose |
 | --- | --- |
 | [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md) | Mission, North Star, systems, principles, metrics |
+| [CASE_FACTORY.md](./CASE_FACTORY.md) | Ten-step production pipeline for every Brief |
 | [ENGINE_GUIDE.md](./ENGINE_GUIDE.md) | Modules, rules, patterns, bugs, validation, Engine QA |
 | [WRITER_GUIDE.md](./WRITER_GUIDE.md) | Voice, Journal writing structure, Writer QA & score |
 | [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md) | Layout, rhythm, type, spacing, diagram/quote rules, Journal QA |

@@ -9,9 +9,28 @@ Documentation Delivery 001 establishes this file as the ongoing log.
 
 ## Table of Contents
 
-1. [2026-08-11 — Documentation System V1](#2026-08-11--documentation-system-v1)
-2. [Prior shipped context](#prior-shipped-context)
-3. [How to record changes](#how-to-record-changes)
+1. [2026-08-11 — Case Factory pipeline](#2026-08-11--case-factory-pipeline)
+2. [2026-08-11 — Documentation System V1](#2026-08-11--documentation-system-v1)
+3. [Prior shipped context](#prior-shipped-context)
+4. [How to record changes](#how-to-record-changes)
+
+---
+
+## 2026-08-11 — Case Factory pipeline
+
+### Added
+
+- [CASE_FACTORY.md](./CASE_FACTORY.md) — permanent ten-step production pipeline for every Brief  
+  Evidence Collection → Evidence QA → Engine → Engine QA → Writer → Writer QA → Journal → Journal QA → Deploy → Post Review
+
+### Changed
+
+- [README.md](./README.md) — index + architecture link to Case Factory  
+- [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md) — links Case Factory as production pipeline  
+
+### Notes
+
+- Documentation only. No Engine, Writer, Journal, or Homepage code modified.
 
 ---
 
