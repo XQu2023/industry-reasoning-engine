@@ -109,6 +109,7 @@ const UI_BASE = {
     siteBarLabel: "Site",
     briefNavLabel: "Brief navigation",
     startHereNav: "Start Here",
+    howWeThinkNav: "How We Think",
     readingTimeFallback: "~5 minutes",
     validation: {
       title: "Ongoing validation",
@@ -248,6 +249,7 @@ const UI_BASE = {
     siteBarLabel: "站点",
     briefNavLabel: "简报导航",
     startHereNav: "从这里开始",
+    howWeThinkNav: "我们如何思考",
     readingTimeFallback: "约 5 分钟",
     validation: {
       title: "持续验证",

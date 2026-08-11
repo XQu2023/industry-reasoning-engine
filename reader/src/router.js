@@ -27,6 +27,10 @@ export function parseRoute(pathname = "/") {
     return { locale, type: "start", slug: null };
   }
 
+  if (rest[0] === "think" && rest.length === 1) {
+    return { locale, type: "think", slug: null };
+  }
+
   if (rest[0] === "briefs" && rest[1]) {
     return { locale, type: "brief", slug: rest[1].toLowerCase() };
   }
@@ -48,6 +52,11 @@ export function buildStartPath(locale) {
   return `${prefix}/start`;
 }
 
+export function buildThinkPath(locale) {
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  return `${prefix}/think`;
+}
+
 export function switchLocalePath(pathname, nextLocale) {
   const current = parseRoute(pathname);
   if (current.type === "brief" && current.slug) {
@@ -55,6 +64,9 @@ export function switchLocalePath(pathname, nextLocale) {
   }
   if (current.type === "start") {
     return buildStartPath(nextLocale);
+  }
+  if (current.type === "think") {
+    return buildThinkPath(nextLocale);
   }
   if (current.type === "home") {
     return buildHomePath(nextLocale);

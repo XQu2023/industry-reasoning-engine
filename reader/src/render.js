@@ -17,10 +17,12 @@ import {
   buildBriefPath,
   buildHomePath,
   buildStartPath,
+  buildThinkPath,
   DEFAULT_SLUG,
   SUPPORTED_LOCALES,
 } from "./router.js";
 import { getStartContent } from "./startContent.js";
+import { getThinkContent } from "./thinkContent.js";
 import { renderValidationLayer } from "./validation/renderLayer.js";
 
 export function renderApp({
@@ -66,6 +68,22 @@ export function renderApp({
         ${renderChrome({ locale, ui, productId: null, pathnameSlug: null, page: "start" })}
         <main id="main" class="start">
           ${renderStartPage(start, locale)}
+        </main>
+        ${renderSiteFooter(locale, ui)}
+      `,
+    };
+  }
+
+  if (type === "think") {
+    const think = getThinkContent(locale);
+    return {
+      htmlLang,
+      title: think.documentTitle,
+      description: think.documentDescription,
+      body: `
+        ${renderChrome({ locale, ui, productId: null, pathnameSlug: null, page: "think" })}
+        <main id="main" class="start think">
+          ${renderThinkPage(think, locale)}
         </main>
         ${renderSiteFooter(locale, ui)}
       `,
@@ -291,6 +309,7 @@ function renderSiteFooter(locale, ui) {
 function renderChrome({ locale, ui, productId, pathnameSlug, page }) {
   const meta = productId ? `${ui.readerMeta} · ${productId}` : ui.navMeta;
   const startActive = page === "start" ? " is-active" : "";
+  const thinkActive = page === "think" ? " is-active" : "";
   return `
     <a class="skip-link" href="#main">${escapeHtml(ui.skipLink)}</a>
     <header class="site-bar" aria-label="${escapeAttr(ui.siteBarLabel)}">
@@ -308,6 +327,9 @@ function renderChrome({ locale, ui, productId, pathnameSlug, page }) {
         <a class="site-bar__start${startActive}" href="${escapeAttr(buildStartPath(locale))}"${
           page === "start" ? ' aria-current="page"' : ""
         }>${escapeHtml(ui.startHereNav)}</a>
+        <a class="site-bar__start${thinkActive}" href="${escapeAttr(buildThinkPath(locale))}"${
+          page === "think" ? ' aria-current="page"' : ""
+        }>${escapeHtml(ui.howWeThinkNav)}</a>
         ${renderLangSwitch(locale, pathnameSlug, ui, page)}
       </div>
     </header>
@@ -319,6 +341,7 @@ function renderLangSwitch(locale, slug, ui, page) {
     let href = buildHomePath(code);
     if (page === "brief" && slug) href = buildBriefPath(code, slug);
     else if (page === "start") href = buildStartPath(code);
+    else if (page === "think") href = buildThinkPath(code);
     const label = code === "zh" ? ui.langZh : ui.langEn;
     const active = code === locale ? " is-active" : "";
     const ariaCurrent = code === locale ? ' aria-current="true"' : "";
@@ -329,6 +352,91 @@ function renderLangSwitch(locale, slug, ui, page) {
     <nav class="lang-switch" aria-label="${escapeAttr(ui.langSwitcher)}">
       ${links}
     </nav>
+  `;
+}
+
+function renderThinkPage(think, locale) {
+  const heroSupport = think.heroLines
+    .map((line) => `<span class="start-hero__line">${escapeHtml(line)}</span>`)
+    .join("");
+
+  const studyItems = think.studyItems
+    .map(
+      (item) => `
+      <li class="think-list__item">
+        <span class="start-flow__circle" aria-hidden="true"></span>
+        <span class="think-list__text">${escapeHtml(item)}</span>
+      </li>`,
+    )
+    .join("");
+
+  const dontItems = think.dontItems
+    .map(
+      (item) => `
+      <li class="think-list__item think-list__item--muted">
+        <span class="start-flow__circle" aria-hidden="true"></span>
+        <span class="think-list__text">${escapeHtml(item)}</span>
+      </li>`,
+    )
+    .join("");
+
+  const methodItems = think.methodItems
+    .map(
+      (item, index) => `
+      <li class="start-card">
+        <p class="start-card__index" aria-hidden="true">
+          <span class="start-circle">${String(index + 1)}</span>
+        </p>
+        <h3 class="start-card__title">${escapeHtml(item.title)}</h3>
+        <p class="start-card__text">${escapeHtml(item.text)}</p>
+      </li>`,
+    )
+    .join("");
+
+  const historyBody = think.historyParagraphs
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join("");
+
+  const startHref = buildStartPath(locale);
+  const beginHref = buildBriefPath(locale, think.beginSlug || DEFAULT_SLUG);
+  const homeHref = buildHomePath(locale);
+
+  return `
+    <header class="start-hero">
+      <h1 class="start-hero__title">${escapeHtml(think.heroTitle)}</h1>
+      <p class="start-hero__summary">${heroSupport}</p>
+    </header>
+
+    <section class="start-section" aria-labelledby="think-study-title">
+      <h2 id="think-study-title" class="start-section__title">${escapeHtml(think.studyTitle)}</h2>
+      <p class="start-section__sentence">${escapeHtml(think.studyLead)}</p>
+      <ul class="think-list">${studyItems}</ul>
+      <p class="start-section__lede think-close">${escapeHtml(think.studyClose)}</p>
+    </section>
+
+    <section class="start-section" aria-labelledby="think-dont-title">
+      <h2 id="think-dont-title" class="start-section__title">${escapeHtml(think.dontTitle)}</h2>
+      <ul class="think-list">${dontItems}</ul>
+    </section>
+
+    <section class="start-section" aria-labelledby="think-method-title">
+      <h2 id="think-method-title" class="start-section__title">${escapeHtml(think.methodTitle)}</h2>
+      <ol class="start-cards start-cards--three think-method">${methodItems}</ol>
+    </section>
+
+    <section class="start-section" aria-labelledby="think-history-title">
+      <h2 id="think-history-title" class="start-section__title">${escapeHtml(think.historyTitle)}</h2>
+      <div class="start-section__body think-history">${historyBody}</div>
+    </section>
+
+    <section class="start-section start-section--begin" aria-labelledby="think-continue-title">
+      <h2 id="think-continue-title" class="start-section__title">${escapeHtml(think.continueTitle)}</h2>
+      <p class="start-begin__actions">
+        <a class="btn btn--primary btn--large" href="${escapeAttr(startHref)}">${escapeHtml(think.startCta)}</a>
+        <a class="btn btn--secondary" href="${escapeAttr(beginHref)}">${escapeHtml(think.beginCta)}</a>
+        <a class="btn btn--secondary" href="${escapeAttr(homeHref)}">${escapeHtml(think.collectionCta)}</a>
+      </p>
+    </section>
   `;
 }
 
