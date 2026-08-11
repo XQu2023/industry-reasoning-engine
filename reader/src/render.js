@@ -1,8 +1,9 @@
 import { getNeighbors } from "./briefs.js";
 import {
+  getBrandFooterLines,
   getBrandMark,
   getBrandSubtitle,
-  getBrandTagline,
+  renderBrandCircleHtml,
 } from "./brand.js";
 import {
   getBriefConclusion,
@@ -252,14 +253,19 @@ function renderV4Inline(text) {
 }
 
 function renderSiteFooter(locale, ui) {
+  const lines = getBrandFooterLines()
+    .map((line) => `<p>${escapeHtml(line)}</p>`)
+    .join("");
   return `
     <footer class="site-footer">
-      <p class="site-footer__brand">
-        <span class="site-footer__mark">${escapeHtml(getBrandMark(locale))}</span>
-        <span class="site-footer__subtitle">${escapeHtml(getBrandSubtitle(locale))}</span>
-      </p>
-      <p class="site-footer__tagline">${escapeHtml(getBrandTagline(locale))}</p>
-      <p class="site-footer__meta">${escapeHtml(ui.footerRest)}</p>
+      <div class="site-footer__inner">
+        <p class="site-footer__brand">
+          ${renderBrandCircleHtml("brand-circle")}
+          <span class="site-footer__mark">${escapeHtml(getBrandMark(locale))}</span>
+        </p>
+        <div class="site-footer__lines">${lines}</div>
+        <p class="site-footer__meta">${escapeHtml(ui.footerRest)}</p>
+      </div>
     </footer>
   `;
 }
@@ -270,9 +276,12 @@ function renderChrome({ locale, ui, productId, pathnameSlug, page }) {
     <a class="skip-link" href="#main">${escapeHtml(ui.skipLink)}</a>
     <header class="site-bar" aria-label="${escapeAttr(ui.siteBarLabel)}">
       <div class="site-bar__identity">
-        <a class="site-bar__brand site-bar__brand-mark" href="${escapeAttr(buildHomePath(locale))}">
-          <span class="site-bar__mark">${escapeHtml(getBrandMark(locale))}</span>
-          <span class="site-bar__subtitle">${escapeHtml(getBrandSubtitle(locale))}</span>
+        <a class="site-bar__brand" href="${escapeAttr(buildHomePath(locale))}">
+          ${renderBrandCircleHtml("brand-circle")}
+          <span class="site-bar__lockup">
+            <span class="site-bar__mark">${escapeHtml(getBrandMark(locale))}</span>
+            <span class="site-bar__subtitle">${escapeHtml(getBrandSubtitle(locale))}</span>
+          </span>
         </a>
         <p class="site-bar__meta">${escapeHtml(meta)}</p>
       </div>
@@ -357,10 +366,6 @@ function renderHomeStory(home, locale) {
 
   return `
     <header class="home-hero">
-      <p class="home-hero__eyebrow">
-        <span class="home-hero__mark">${escapeHtml(home.brandMark)}</span>
-        <span class="home-hero__subtitle">${escapeHtml(home.brandSubtitle)}</span>
-      </p>
       <h1 class="home-hero__brand">${titleHtml}</h1>
       <p class="home-hero__value home-hero__support">${support}</p>
       <p class="home-hero__actions">
