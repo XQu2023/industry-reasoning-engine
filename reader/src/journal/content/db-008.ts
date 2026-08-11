@@ -1,7 +1,7 @@
 import type { JournalBrief } from "../types.ts";
 import { CONTINUE_READING, JOURNAL_FOOTER } from "./shared.ts";
 
-/** DB-008 — layout migration only; facts and reasoning preserved. */
+/** DB-008 — Public Beta Sprint 2 editorial rewrite; facts and reasoning unchanged. */
 export const db008JournalZh: JournalBrief = {
   slug: "db-008",
   locale: "zh",
@@ -9,12 +9,12 @@ export const db008JournalZh: JournalBrief = {
   homeHref: "/zh",
   hero: {
     quoteLines: [
-      "稀缺点在高 HBM3 Instinct 栈，不在算术单元竞赛。",
-      "卖点不只是峰值芯片 FLOPs。",
+      "稀缺的不是又一次峰值 FLOPs 竞赛。",
+      "而是高 HBM3 容量，加上可用的开放软件路径。",
     ],
     title: "MI300：竞争看 HBM3 与 ROCm，不看峰值 FLOPs",
     summary:
-      "2023 年 12 月 6 日，AMD 宣布 Instinct MI300X 与 MI300A 可供货：MI300X 配 192 GB HBM3、5.3 TB/s 带宽，MI300A 将 CDNA 3 与 Zen 4 合一，外加 ROCm 6。若 LLM 与 HPC 受制于内存容量与开放软件路径，价值迁向该高 HBM3 Instinct 栈。价格、出货量与留存份额仍属 Unknown。",
+      "2023 年 12 月 6 日，AMD 宣布 Instinct MI300X 与 MI300A 可供货——192 GB HBM3、ROCm 6，内存与软件入主标题。",
     meta: { id: "DB-008", readingTime: "5 min", industry: "AI Computing" },
   },
   question: {
@@ -22,38 +22,47 @@ export const db008JournalZh: JournalBrief = {
   },
   story: {
     paragraphs: [
-      "变的是产品叙事：内存与软件入主标题。",
-      "大模型与 HPC 卡在内存，不卡在算完 FLOPs——需要巨大内存与带宽，不只更多算术单元。",
-      "买方还要软件路径（ROCm）与真实设计导入。",
-      "MI300X 上 192 GB HBM3 级容量成头条稀缺资源；MI300A 覆盖 HPC/AI 的 CPU–GPU 一致性。",
-      "ROCm 6 作为与硬件配对的开放栈，是标配而非附赠。",
+      "过去几年，如果有人问：加速器竞争看什么？",
+      "答案往往是更快的芯片、更多的 FLOPs。",
+      "这些都没有错。",
+      "但大模型与 HPC，往往卡在内存，不卡在算完 FLOPs。",
+      "需要巨大内存与带宽。",
+      "买方还要软件路径，以及真实设计导入。",
+      "产品叙事变了。",
+      "内存与软件入主标题。",
+      "MI300X：192 GB HBM3 成头条稀缺资源。",
+      "MI300A：CDNA 3 与 Zen 4 合一，覆盖 HPC/AI 的 CPU–GPU 一致性。",
+      "ROCm 6 是标配，不是附赠。",
+      "设计导入能否变成持续放量，仍属 Unknown。",
     ],
   },
   diagram: {
-    nodes: [
-      "LLM / HPC 内存容量压力",
-      "CDNA 3 MI300X 高 HBM3 加速器",
-      "MI300A APU + ROCm 6 软件路径",
-      "云、OEM 与 HPC 买方",
-    ],
-    caption: "价值迁向高 HBM3 Instinct 系统加 ROCm（若设计导入变成持续部署）",
+    nodes: ["LLM / HPC 内存压力", "高 HBM3 Instinct 加速器", "ROCm 6 开放软件路径"],
+    caption: "价值迁向：内存瓶颈 → 高 HBM3 硬件 → 配对软件栈",
   },
   keyInsight: {
-    sentence:
-      "LLM 与 HPC 需求若受制于 HBM3 级内存与可用开放软件路径，价值迁向 AMD 的 MI300 Instinct 组合。",
+    sentence: "若瓶颈在 HBM3 级内存与开放软件路径，价值就迁向 AMD 的 MI300 Instinct 组合。",
   },
   analysis: {
     paragraphs: [
-      "2023 年 12 月 6 日：MI300X — 192 GB HBM3、5.3 TB/s；AMD 宣称相对 H100 级在 LLM 相关内存指标上领先。MI300A — CDNA 3 GPU + Zen 4 CPU 的 APU。ROCm 6；AMD 宣称相对前代 AMD，Llama 2 文本生成约 8×（厂商宣称）。",
-      "具名路径：Microsoft Azure、Oracle Cloud Infrastructure、Dell、HPE、Lenovo、Supermicro；提及 El Capitan / LLNL。工艺节点提及（5nm/6nm 级）；HBM 供应商身份在所用抓取中未立为公司名。",
-      "设计导入能否变成持续放量，以及相对 HBM/晶圆厂谁留盈余，仍属 Unknown。来源点名 AMD 为 Tier 1。",
-      "方向清楚：加速器竞争框在高 HBM3、APU 封装与 ROCm，不是“又一个 GPU SKU”。价格、体量与份额仍属 Unknown；宣称属 AMD，他处验证前不作独立事实。",
+      "2023 年 12 月 6 日。",
+      "MI300X：192 GB HBM3、5.3 TB/s。",
+      "AMD 宣称相对 H100 级在 LLM 相关内存指标上领先。",
+      "MI300A：CDNA 3 GPU + Zen 4 CPU 的 APU。",
+      "ROCm 6；AMD 宣称相对前代 AMD，Llama 2 文本生成约 8×（厂商宣称）。",
+      "具名路径：Microsoft Azure、Oracle Cloud Infrastructure、Dell、HPE、Lenovo、Supermicro。",
+      "提及 El Capitan / LLNL。",
+      "工艺节点提及 5nm/6nm 级；HBM 供应商身份在所用抓取中未立为公司名。",
+      "来源点名 AMD 为 Tier 1。",
+      "设计导入能否变成持续放量，以及相对 HBM/晶圆厂谁留盈余，仍属 Unknown。",
+      "价格、体量与份额仍属 Unknown。",
+      "宣称属 AMD；他处验证前不作独立事实。",
+      "方向清楚：框在高 HBM3、APU 封装与 ROCm，不是“又一个 GPU SKU”。",
     ],
   },
   worldModel: {
     title: "World Model",
-    principle:
-      "当工作负载卡在内存容量/带宽与可用软件路径，而不卡在峰值 FLOPs 时，价值迁向把高容量内存与软件栈一起交付的加速器组合所有者。",
+    principle: "不要只看谁峰值 FLOPs 更高。先问自己：谁把高容量内存与可用软件路径一起交付？",
     applyLabel: "Where else can this apply?",
     applyTo: ["生成式 AI 训练/推理", "HPC", "HBM 供应层", "云加速实例", "开放加速软件栈"],
   },
@@ -84,12 +93,12 @@ export const db008JournalEn: JournalBrief = {
   homeHref: "/",
   hero: {
     quoteLines: [
-      "Competition around very large HBM3 memory and ROCm 6 — not only peak chip FLOPs.",
-      "Memory becomes the headline scarce resource.",
+      "The scarce thing is not another peak-FLOPs race.",
+      "It is high HBM3 capacity — plus a usable open software path.",
     ],
     title: "AMD Positions MI300 as High-Memory Instinct Compute for LLMs and HPC",
     summary:
-      "On 6 December 2023, AMD announced availability of Instinct MI300X and MI300A: MI300X with 192 GB HBM3 and 5.3 TB/s bandwidth, MI300A combining CDNA 3 with Zen 4, plus ROCm 6. If LLM and HPC workloads are limited by memory capacity and an open software path, value migrates toward that high-HBM3 Instinct stack. Price, shipments, and retained share remain Unknown.",
+      "On 6 December 2023, AMD announced Instinct MI300X and MI300A availability — 192 GB HBM3, ROCm 6; memory and software take the headline.",
     meta: { id: "DB-008", readingTime: "5 min", industry: "AI Computing" },
   },
   question: {
@@ -97,39 +106,50 @@ export const db008JournalEn: JournalBrief = {
   },
   story: {
     paragraphs: [
-      "Large language models and HPC workloads need huge memory and bandwidth, not only more arithmetic units.",
-      "Buyers also need a software path (ROCm) and real design-ins.",
-      "MI300 answers with a portfolio move: 192 GB HBM3-class capacity on MI300X as the headline scarce resource.",
-      "Packaging spans discrete and APU — MI300X for accelerator nodes; MI300A for CPU–GPU coherence in HPC/AI.",
-      "Software is part of the offer: ROCm 6 as the open stack AMD pairs with the hardware.",
+      "For years, the accelerator race sounded simple.",
+      "Faster chips.",
+      "More FLOPs.",
+      "That is not wrong.",
+      "But large language models and HPC often stall on memory — not on finishing FLOPs.",
+      "They need huge memory and bandwidth.",
+      "Buyers also need a software path and real design-ins.",
+      "The product narrative changes.",
+      "Memory and software take the headline.",
+      "MI300X: 192 GB HBM3-class capacity as the scarce resource.",
+      "MI300A: CDNA 3 with Zen 4 — CPU–GPU coherence for HPC/AI.",
+      "ROCm 6 is part of the offer, not an afterthought.",
+      "Whether design-ins become sustained volume is still Unknown.",
     ],
   },
   diagram: {
-    nodes: [
-      "LLM / HPC memory-capacity pressure",
-      "CDNA 3 MI300X high-HBM3 accelerators",
-      "MI300A APU + ROCm 6 software path",
-      "Cloud, OEM, and HPC buyers",
-    ],
-    caption:
-      "Value moves toward high-HBM3 Instinct systems plus ROCm if design-ins become sustained deployments",
+    nodes: ["LLM / HPC memory pressure", "High-HBM3 Instinct accelerators", "ROCm 6 open software path"],
+    caption: "Value migrates: memory bottleneck → high-HBM3 hardware → paired software stack",
   },
   keyInsight: {
     sentence:
-      "If LLM and HPC demand is limited by HBM3-class memory and a usable open software path, value migrates to AMD’s MI300 Instinct portfolio.",
+      "If the bottleneck is HBM3-class memory and a usable open software path, value migrates to AMD’s MI300 Instinct portfolio.",
   },
   analysis: {
     paragraphs: [
-      "6 December 2023: MI300X — 192 GB HBM3, 5.3 TB/s; AMD claims leadership versus NVIDIA H100-class on memory metrics relevant to LLMs. MI300A — CDNA 3 GPU + Zen 4 CPU APU. ROCm 6; AMD claims about 8× improvement versus prior AMD on Llama 2 text generation (vendor claim).",
-      "Named paths: Microsoft Azure, Oracle Cloud Infrastructure, Dell, HPE, Lenovo, Supermicro; El Capitan / LLNL referenced. Process nodes (5nm/6nm class); HBM supplier identity not established as a firm name in the capture used.",
-      "Whether design-ins become sustained volume — and who keeps surplus versus HBM/foundry — is still Unknown. AMD is named as Tier 1.",
-      "MI300 is less “another GPU SKU” than accelerator competition framed around high HBM3, APU packaging, and ROCm. Prices, volumes, and surplus share remain Unknown. Claims are AMD’s until verified elsewhere.",
+      "6 December 2023.",
+      "MI300X: 192 GB HBM3, 5.3 TB/s.",
+      "AMD claims leadership versus NVIDIA H100-class on memory metrics relevant to LLMs.",
+      "MI300A: CDNA 3 GPU + Zen 4 CPU APU.",
+      "ROCm 6; AMD claims about 8× improvement versus prior AMD on Llama 2 text generation (vendor claim).",
+      "Named paths: Microsoft Azure, Oracle Cloud Infrastructure, Dell, HPE, Lenovo, Supermicro.",
+      "El Capitan / LLNL referenced.",
+      "Process nodes (5nm/6nm class); HBM supplier identity not established as a firm name in the capture used.",
+      "AMD is named as Tier 1.",
+      "Whether design-ins become sustained volume — and who keeps surplus versus HBM/foundry — is still Unknown.",
+      "Prices, volumes, and surplus share remain Unknown.",
+      "Claims are AMD’s until verified elsewhere.",
+      "Direction is clear: competition framed around high HBM3, APU packaging, and ROCm — not “another GPU SKU.”",
     ],
   },
   worldModel: {
     title: "World Model",
     principle:
-      "When workloads are limited by memory capacity/bandwidth and a usable software path rather than peak FLOPs, value migrates to whoever delivers the high-memory accelerator stack paired with that software path.",
+      "Don’t only ask who posts higher peak FLOPs. Ask first: who delivers high-capacity memory paired with a usable software path?",
     applyLabel: "Where else can this apply?",
     applyTo: [
       "Generative AI training/inference",

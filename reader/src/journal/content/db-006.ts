@@ -1,7 +1,7 @@
 import type { JournalBrief } from "../types.ts";
 import { CONTINUE_READING, JOURNAL_FOOTER } from "./shared.ts";
 
-/** DB-006 — layout migration only; facts and reasoning preserved. */
+/** DB-006 — Public Beta Sprint 2 editorial rewrite; facts and reasoning unchanged. */
 export const db006JournalZh: JournalBrief = {
   slug: "db-006",
   locale: "zh",
@@ -9,12 +9,12 @@ export const db006JournalZh: JournalBrief = {
   homeHref: "/zh",
   hero: {
     quoteLines: [
-      "稀缺点在对话界面与反馈环，不在又一个 checkpoint。",
-      "T0 上 Tier 1 抓取仍空着。",
+      "稀缺的不是又一个 checkpoint。",
+      "而是对话入口，以及它背后的反馈环。",
     ],
     title: "ChatGPT：对话成大模型公共入口，Tier 1 空着",
     summary:
-      "2022 年 11 月 30 日，OpenAI 在 chat.openai.com 以免费研究预览上线 ChatGPT：GPT-3.5 系列经 RLHF 调成对话，能跟进追问、承认错误、反驳错误前提、拒绝不当请求。训练用 Azure AI；Moderation API 与反馈竞赛（API 额度）支撑迭代部署。若多轮对话成为人们使用大模型的默认方式，价值迁向该界面与反馈环。未披露定价、免费是否持续、云排他条款，以及谁留住盈余。Tier 1 空位；幅度仍属 Unknown。",
+      "2022 年 11 月 30 日，OpenAI 在 chat.openai.com 以免费研究预览上线 ChatGPT——经 RLHF 调成对话的 GPT-3.5。",
     meta: { id: "DB-006", readingTime: "5 min", industry: "AI Computing" },
   },
   question: {
@@ -22,40 +22,45 @@ export const db006JournalZh: JournalBrief = {
   },
   story: {
     paragraphs: [
-      "变的是公共入口形态，不是又发一版基座模型。",
-      "单轮指令与非对话工具，对不上人们怎么求助；用户要多轮上下文、纠错与拒绝行为。",
-      "ChatGPT 的解法：公开对话表面——免费研究预览，入口 chat.openai.com。",
-      "交互模式上移到对话；改进走审核与用户反馈的迭代部署环。",
-      "使用是否粘住、并转成可持久付费产品面，仍属 Unknown。",
+      "过去几年，如果有人问：大模型怎么用？",
+      "答案往往是单轮指令，或非对话工具。",
+      "这些都没有错。",
+      "但人们求助时，要的是多轮上下文、纠错与拒绝。",
+      "入口形态变了。",
+      "不是又发一版基座模型。",
+      "ChatGPT 的答案，是公开对话表面。",
+      "免费研究预览。",
+      "入口：chat.openai.com。",
+      "交互模式上移到对话。",
+      "审核与用户反馈，进入迭代部署环。",
+      "使用是否粘住，并转成可持久付费产品面，仍属 Unknown。",
     ],
   },
   diagram: {
-    nodes: [
-      "单轮指令跟随 / 非对话工具",
-      "经 RLHF 调优的 GPT-3.5 系列对话模型",
-      "免费浏览器聊天界面",
-      "审核 + 反馈 / 迭代部署",
-      "用户与相邻 API 表面",
-    ],
-    caption:
-      "若采用站得住，价值迁向免费、可及的对话式 RLHF 界面与反馈环；T0 免费且无已披露计价留存机制，Tier 1 空位",
+    nodes: ["单轮指令 / 非对话工具", "RLHF 对话 + 审核反馈环", "免费浏览器聊天入口"],
+    caption: "价值迁向：入口形态 → 对话模型与反馈环 → 免费可及表面；T0 Tier 1 空位",
   },
   keyInsight: {
-    sentence:
-      "ChatGPT 卖的是大模型的公共对话入口外加迭代反馈环，不是又一个模型 checkpoint；OpenAI 仅 Tier 2，Tier 1 空位。",
+    sentence: "卖的是公共对话入口与反馈环，不是又一个 checkpoint；OpenAI 仅 Tier 2，Tier 1 空着。",
   },
   analysis: {
     paragraphs: [
-      "2022-11-30：ChatGPT 免费研究预览对话模型；InstructGPT 同系；GPT-3.5 上用 RLHF；入口 chat.openai.com。",
-      "自述强项含跟进、认错、挑战错误前提、拒绝不当请求；同时列幻觉、冗长、提示敏感、安全等失效模式。",
-      "训练伙伴点名 Azure AI；Moderation API；反馈竞赛奖励 API 额度；T0 无订阅价或广告模式。",
-      "OpenAI 为 Tier 2；Tier 1 空位；价格/广告、免费是否持续、云条款与盈余份额仍属 Unknown。",
+      "2022 年 11 月 30 日。",
+      "ChatGPT：免费研究预览对话模型；InstructGPT 同系。",
+      "GPT-3.5 系列上用 RLHF；入口 chat.openai.com。",
+      "自述强项：跟进、认错、挑战错误前提、拒绝不当请求。",
+      "同时列失效模式：幻觉、冗长、提示敏感、安全等。",
+      "训练伙伴点名 Azure AI。",
+      "Moderation API；反馈竞赛奖励 API 额度。",
+      "T0 无订阅价或广告模式。",
+      "OpenAI 为 Tier 2；Tier 1 空位。",
+      "价格/广告、免费是否持续、云条款与盈余份额，仍属 Unknown。",
+      "方向比幅度更清楚。",
     ],
   },
   worldModel: {
     title: "World Model",
-    principle:
-      "当大模型默认交互从单轮补全迁到对话式 RLHF 界面时，价值迁向该表面与反馈环——但免费且无已披露计价留存时，Tier 1 可以空着。",
+    principle: "不要只看又一个 checkpoint。先问自己：谁拥有默认对话入口与反馈环——免费时 Tier 1 是否空着？",
     applyLabel: "Where else can this apply?",
     applyTo: [
       "对话式 LLM 入口",
@@ -85,7 +90,6 @@ export const db006JournalZh: JournalBrief = {
   footer: JOURNAL_FOOTER,
 };
 
-/** DB-006 — layout migration only; facts and reasoning preserved. */
 export const db006JournalEn: JournalBrief = {
   slug: "db-006",
   locale: "en",
@@ -93,12 +97,12 @@ export const db006JournalEn: JournalBrief = {
   homeHref: "/",
   hero: {
     quoteLines: [
-      "The scarce point is the dialogue interface and feedback loop — not another checkpoint.",
-      "Tier 1 capture stays vacant at T0.",
+      "The scarce thing is not another checkpoint.",
+      "It is the dialogue interface — and the feedback loop behind it.",
     ],
     title: "ChatGPT Makes Dialogue the Public Interface to Large Language Models",
     summary:
-      "On 30 November 2022, OpenAI released ChatGPT as a free research preview at chat.openai.com: a GPT-3.5-series model tuned with RLHF for dialogue, able to follow-ups, admit mistakes, challenge premises, and refuse inappropriate requests. Training used Azure AI; a Moderation API and feedback contest (API credits) support iterative deployment. If multi-turn conversation becomes the default way people use large language models, value migrates toward that interface and feedback loop. Pricing, whether free remains free, exclusive cloud terms, and who retains surplus are undisclosed. Tier 1 is vacant; magnitude remains Unknown.",
+      "On 30 November 2022, OpenAI launched ChatGPT as a free research preview at chat.openai.com — GPT-3.5 tuned with RLHF for dialogue.",
     meta: { id: "DB-006", readingTime: "5 min", industry: "AI Computing" },
   },
   question: {
@@ -106,40 +110,48 @@ export const db006JournalEn: JournalBrief = {
   },
   story: {
     paragraphs: [
-      "What changed is the public interface form — not another base-model release.",
-      "Single-turn instruction-following and non-dialogue tools do not match how people ask for help across a conversation.",
-      "ChatGPT answers with a public conversational surface: free research preview at chat.openai.com.",
-      "Interaction mode moves toward dialogue; moderation and user feedback enter the deployment loop.",
+      "For years, using a large language model sounded simple.",
+      "Single-turn instructions.",
+      "Or non-dialogue tools.",
+      "That is not wrong.",
+      "But when people ask for help, they want follow-ups, correction, and refusal across a conversation.",
+      "The public interface form changes.",
+      "Not another base-model release.",
+      "ChatGPT’s answer is a public conversational surface.",
+      "A free research preview.",
+      "At chat.openai.com.",
+      "Interaction mode moves toward dialogue.",
+      "Moderation and user feedback enter the iterative deployment loop.",
       "Whether usage sticks and converts into a durable paid product surface is still Unknown.",
     ],
   },
   diagram: {
-    nodes: [
-      "Single-turn instruction-following / non-dialogue tools",
-      "RLHF-tuned GPT-3.5-series dialogue model",
-      "Free browser chat interface",
-      "Moderation + feedback / iterative deployment",
-      "Users and adjacent API surfaces",
-    ],
-    caption:
-      "Value moves toward a free conversational RLHF interface and feedback loop if adoption holds; Tier 1 vacant at T0 with no disclosed priced retention",
+    nodes: ["Single-turn / non-dialogue tools", "RLHF dialogue + feedback loop", "Free browser chat interface"],
+    caption: "Value migrates: interface form → dialogue model and feedback loop → free accessible surface; Tier 1 vacant at T0",
   },
   keyInsight: {
     sentence:
-      "ChatGPT is less a new model checkpoint than dialogue as the public interface to LLMs, shipped free with an iterative feedback loop — OpenAI Tier 2 only; Tier 1 vacant.",
+      "What ships is a public dialogue interface and feedback loop — not another checkpoint; OpenAI Tier 2 only; Tier 1 vacant.",
   },
   analysis: {
     paragraphs: [
-      "30 Nov 2022: ChatGPT free research preview; InstructGPT sibling; RLHF on GPT-3.5-series; chat.openai.com.",
-      "Strengths named: follow-ups, admitting mistakes, challenging incorrect premises, rejecting inappropriate requests; failure modes include hallucination, verbosity, prompt sensitivity, safety.",
-      "Training partnership named Azure AI; Moderation API; feedback contest offers API credits; no subscription price or ads at T0.",
-      "OpenAI Tier 2; Tier 1 vacant; price/ads, whether free remains free, cloud terms, and surplus share remain Unknown.",
+      "30 November 2022.",
+      "ChatGPT: free research preview dialogue model; InstructGPT sibling.",
+      "RLHF on GPT-3.5-series; chat.openai.com.",
+      "Strengths named: follow-ups, admitting mistakes, challenging incorrect premises, rejecting inappropriate requests.",
+      "Failure modes include hallucination, verbosity, prompt sensitivity, safety.",
+      "Training partnership named Azure AI.",
+      "Moderation API; feedback contest offers API credits.",
+      "No subscription price or ads at T0.",
+      "OpenAI Tier 2; Tier 1 vacant.",
+      "Price/ads, whether free remains free, cloud terms, and surplus share remain Unknown.",
+      "Direction is clearer than magnitude.",
     ],
   },
   worldModel: {
     title: "World Model",
     principle:
-      "When default LLM interaction moves from single-turn completion to a conversational RLHF interface, value migrates to that surface and feedback loop — but Tier 1 can stay vacant while the product is free with no disclosed priced retention.",
+      "Don’t only ask which checkpoint is newer. Ask first: who owns the default dialogue interface and feedback loop — and is Tier 1 vacant while it stays free?",
     applyLabel: "Where else can this apply?",
     applyTo: [
       "Conversational LLM interfaces",
