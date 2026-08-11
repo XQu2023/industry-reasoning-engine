@@ -9,12 +9,31 @@ Documentation Delivery 001 establishes this file as the ongoing log.
 
 ## Table of Contents
 
-1. [2026-08-11 — Delivery 002 Case Factory + Case Standard](#2026-08-11--delivery-002-case-factory--case-standard)
-2. [2026-08-11 — Brief Standard](#2026-08-11--brief-standard)
-3. [2026-08-11 — Case Factory pipeline](#2026-08-11--case-factory-pipeline)
-4. [2026-08-11 — Documentation System V1](#2026-08-11--documentation-system-v1)
-5. [Prior shipped context](#prior-shipped-context)
-6. [How to record changes](#how-to-record-changes)
+1. [2026-08-11 — Delivery E1-001 Editorial Engine](#2026-08-11--delivery-e1-001-editorial-engine)
+2. [2026-08-11 — Delivery 002 Case Factory + Case Standard](#2026-08-11--delivery-002-case-factory--case-standard)
+3. [2026-08-11 — Brief Standard](#2026-08-11--brief-standard)
+4. [2026-08-11 — Case Factory pipeline](#2026-08-11--case-factory-pipeline)
+5. [2026-08-11 — Documentation System V1](#2026-08-11--documentation-system-v1)
+6. [Prior shipped context](#prior-shipped-context)
+7. [How to record changes](#how-to-record-changes)
+
+---
+
+## 2026-08-11 — Delivery E1-001 Editorial Engine
+
+### Added
+
+- [EDITORIAL_ENGINE.md](./EDITORIAL_ENGINE.md) — permanent editorial standard  
+  Mission · Principles · Structure · Hero / Story / Diagram / Insight / World Model / Ending rules · Editorial QA · Editorial Score  
+
+### Changed
+
+- [README.md](./README.md) — index Editorial Engine  
+- [WRITER_GUIDE.md](./WRITER_GUIDE.md) — link Editorial Engine as permanent contract  
+
+### Notes
+
+- Documentation only. Engine, Writer, Journal, Brand, Homepage unmodified.
 
 ---
 

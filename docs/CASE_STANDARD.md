@@ -150,6 +150,7 @@ Return the case to the matching [Case Factory](./CASE_FACTORY.md) step.
 ## Related Documents
 
 - [CASE_FACTORY.md](./CASE_FACTORY.md)
+- [EDITORIAL_ENGINE.md](./EDITORIAL_ENGINE.md) — permanent editorial standard and Editorial Score
 - [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md)
 - [ENGINE_GUIDE.md](./ENGINE_GUIDE.md)
 - [WRITER_GUIDE.md](./WRITER_GUIDE.md)

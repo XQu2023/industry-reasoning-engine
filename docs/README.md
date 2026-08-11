@@ -92,6 +92,7 @@ Guides:
 
 - [CASE_FACTORY.md](./CASE_FACTORY.md)
 - [CASE_STANDARD.md](./CASE_STANDARD.md)
+- [EDITORIAL_ENGINE.md](./EDITORIAL_ENGINE.md)
 - [ENGINE_GUIDE.md](./ENGINE_GUIDE.md)
 - [WRITER_GUIDE.md](./WRITER_GUIDE.md)
 - [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md)
@@ -122,6 +123,7 @@ industry-reasoning-engine/
 │   ├── FORESIGHT_CONSTITUTION.md
 │   ├── CASE_FACTORY.md
 │   ├── CASE_STANDARD.md
+│   ├── EDITORIAL_ENGINE.md
 │   ├── ENGINE_GUIDE.md
 │   ├── WRITER_GUIDE.md
 │   ├── JOURNAL_GUIDE.md
@@ -154,6 +156,7 @@ industry-reasoning-engine/
 | [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md) | Mission, North Star, systems, principles, metrics |
 | [CASE_FACTORY.md](./CASE_FACTORY.md) | Ten-step production pipeline for every Brief |
 | [CASE_STANDARD.md](./CASE_STANDARD.md) | Required sections, length/time limits, score gates |
+| [EDITORIAL_ENGINE.md](./EDITORIAL_ENGINE.md) | Permanent editorial standard, QA, and Editorial Score |
 | [ENGINE_GUIDE.md](./ENGINE_GUIDE.md) | Modules, rules, patterns, bugs, validation, Engine QA |
 | [WRITER_GUIDE.md](./WRITER_GUIDE.md) | Voice, Journal writing structure, Writer QA & score |
 | [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md) | Layout, rhythm, type, spacing, diagram/quote rules, Journal QA |

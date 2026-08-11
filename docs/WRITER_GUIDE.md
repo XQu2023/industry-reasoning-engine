@@ -294,12 +294,14 @@ Score each Brief out of **100** after Writer QA.
 
 Publish also requires Case Standard gates (structure, ≤5 min, ≤2200 Chinese characters, Engine ≥ 95, Journal ≥ 90, Overall ≥ 90): [CASE_STANDARD.md](./CASE_STANDARD.md).
 
-Writer Score is editorial. Engine IRA remains the reasoning fidelity metric ([ENGINE_GUIDE.md](./ENGINE_GUIDE.md)).
+Writer Score is editorial. Permanent editorial contract: [EDITORIAL_ENGINE.md](./EDITORIAL_ENGINE.md).  
+Engine IRA remains the reasoning fidelity metric ([ENGINE_GUIDE.md](./ENGINE_GUIDE.md)).
 
 ---
 
 ## Related Documents
 
+- [EDITORIAL_ENGINE.md](./EDITORIAL_ENGINE.md) — permanent editorial standard
 - [JOURNAL_GUIDE.md](./JOURNAL_GUIDE.md)
 - [FORESIGHT_CONSTITUTION.md](./FORESIGHT_CONSTITUTION.md)
 - [BRAND_SYSTEM.md](./BRAND_SYSTEM.md)
